@@ -1,0 +1,86 @@
+body{
+ background: #f3d163;
+}
+logo{
+    margin: 5px;
+    top:18px;
+    position: relative;
+    display:inline;
+    padding-left:1em;
+}
+header{
+    background: bisque;
+    text-align: center;
+    font-family: Courier New;
+    
+    margin: 0 auto;
+    position: sticky;
+    border: double ;
+    top: 0px;
+    z-index:2;
+    
+    
+}
+h1{
+    color: orangered;
+}
+h2{
+    color: orangered;
+}
+
+h3{
+    color: orangered;
+    padding-left:1em;
+    padding-right:1em;
+    font-family: Courier New;
+}
+.list{
+    position: relative;
+    float: left;
+    top: 10px;
+    width: auto;
+    margin: 0 auto;
+    z-index:1;
+            
+
+
+}
+.para{
+    position:relative;
+    top:5px;
+    width:90%;
+    margin: auto;
+    padding: 5px
+
+}
+#button1{
+    display: inline;
+    border: 1px solid red;
+    padding: 5px;
+
+}
+
+button{
+    font-size: 100%;
+    width:20%;
+    margin-left:30px;
+    cursor: pointer;
+}
+
+/* ============= For smaller screens  ============== */
+@media screen and (max-width: 400px){
+    .list{
+        position: relative;
+        float: none;
+        top: 10px;
+        background: beige;
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 1px;
+        padding-bottom:1px;
+        z-index:1;
+            
+
+
+    }
+}
