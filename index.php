@@ -8,6 +8,7 @@ $stylesheet = '';
 $javascript = '';
 $mycss      = '';
 $pagetitle  = 'Welcome to Tony McDonald\'s page';
+?>
 
 <?php
 require 'tail.php';
