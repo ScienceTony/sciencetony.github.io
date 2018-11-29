@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+define('ISITSAFETORUN', TRUE);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+date_default_timezone_set('Etc/UTC');
+require 'head.php';
+$stylesheet = '';
+$javascript = '';
+$mycss      = '';
+$pagetitle  = 'Welcome to Tony McDonald\'s page';
 
-<!-- # sciencetony.github.io
-Project Website 
-Try to build an about you site with links and files. 
--->
-
-<head>
-  <meta charset="utf-8"/>
-  <title>Website Template</title>
-  <meta name="keywords" content=""/>
-  <meta name="description" content=""/>
-  <meta name="author" content="Author Name"/>
-  <link rel="stylesheet" href="styles.css"/>
-</head>
-
-<body>
-	<!-- An unseen HTML comment -->
-	<header><h1>Tony McDonald</h1></header>
-</body>
-</html>
+<?php
+require 'tail.php';
+?>
