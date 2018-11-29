@@ -1,8 +1,10 @@
 <?php
-if(!defined('ISITSAFETORUN')) {
-   die('cannot be run on its own'); 
-}
+define('ISITSAFETORUN', TRUE);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
 
+<?php
 $stylesheet = '';
 $javascript = '';
 $mycss      = '';
