@@ -3,7 +3,9 @@
 }
 
 body{
- background: #e5f2ff;
+/* background: #e5f2ff;*/
+/* background: #f3d163;*/
+background-color: gainsboro;
 }
 logo{
     margin: 5px;
@@ -12,11 +14,12 @@ logo{
     display:inline;
     padding-left:1em;
 }
+
 header{
     background: #f3d163;
-    
+/*    background: #e5f2ff;*/
     text-align: center;
-    font-family: Courier New;
+    font-family: 'Courier New';
     
     margin: 0 auto;
     position: sticky;
@@ -32,9 +35,9 @@ ul.top {
     padding: 0;
 /*    overflow: hidden;*/
     background-color: navy;
-    position: -webkit-sticky;
+/*    position: -webkit-sticky;*/
     position: sticky;
-    top: 5.2em;
+    top: 5.3em;
     z-index:1;
 }
 /* Notice the dot notation. This is li with class top*/
@@ -98,26 +101,28 @@ li.dropdown {
 .leftcolumn {   
     float: left;
     width: 25%;
-    padding-right: 20px;
-    
+    padding-right: 20px;   
 }
 
 /* Right column */
 .rightcolumn {
     float: left;
     width: 75%;
-    
-
 }
-
 
 /* Add a card effect for articles */
 .card {
-    background-color: bisque;
+    background: aliceblue;
+/*    background-color: whitesmoke;*/
     padding: 20px;
     margin-top: 20px;
 }
 
+img {
+    background-color: white;
+    border: ridge brown 6px;
+    padding: 8px;
+}
 /*===== End left and right columns  ======*/
 
 
@@ -137,14 +142,52 @@ h1, h2{
 
 h3{
     color: orangered;
-
-    font-family: Courier New;
+    font-family: 'Courier New';
 }
 
 
-ul{
+/*
+ul.side{
     list-style-type: none;
 }
+*/
+
+/* Styles the social card list links*/
+li.socialSide a{
+    color: blue;
+    font-family: Courier;
+    list-style-type: none;
+        text-align: left;
+    padding: 0px 0px 20px 0px;
+    text-decoration: none;
+    
+}
+
+li.socialSide a:hover{
+    color: hotpink;
+    font-family: Courier;
+    list-style-type: none;
+        text-align: left;
+    padding: 0px 0px 20px 0px;
+    text-decoration: underline;
+    
+}
+
+li.socialSide a:hover{
+    color: hotpink;
+    font-family: Courier;
+    list-style-type: none;
+        text-align: left;
+    padding: 0px 0px 20px 0px;
+    text-decoration: underline;
+    
+}
+
+/* removes the bullet points in the social card list*/
+li.socialSide {
+    list-style-type: none;
+}
+
 
 #button1{
     display: inline;
