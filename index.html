@@ -7,12 +7,15 @@ Try to build an about you site with links and files.
 -->
 
 <head>
-  <meta charset="utf-8"/>
-  <title>Website Template</title>
-  <meta name="keywords" content="Tony McDonald, Computer Science, Computing"/>
-  <meta name="description" content="About Tony McDonald"/>
-  <meta name="author" content="Tony McDonald"/>
-  <link rel="stylesheet" href="myStyleGH.css"/>
+    <meta charset="utf-8"/>
+    <title>Science Tony</title>
+    <meta name="keywords" content="Tony McDonald, Computer Science, Computing, About"/>
+    <meta name="description" content="About Tony McDonald"/>
+    <meta name="author" content="Tony McDonald"/>
+    <!-- Allows Chrome to react to media queries while in developer tools device mode  -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" href="mtStyleKA.css"/>
 
 <script>
 
@@ -33,40 +36,78 @@ Try to build an about you site with links and files.
         <h1>Tony McDonald</h1>
         <h2>Computing and IT</h2>
     </header><!-- end title-->
-    
-    
-	<div class="list">
-    <logo>
-        <img src="images/IMG_Me_in_garden.jpg" alt="Tony in the garden on a sunny day wearing a grey star wars t-shirt" width="129" height="129">
-    </logo>
-		<h3>My GitHub</h3>
-		<ul>
-			<li><a href="https://github.com/ScienceTony">My GitHub</a></li>
-		</ul>
+        
+<!-- Top nav bar -->    
+    <ul class="top" >
+      <li class="top"><a href="https://sciencetony.github.io/">Home</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+        </li>
+      <li class="right"><a href="https://github.com/ScienceTony" >My GitHub</a></li>
+    </ul>
+<!-- Top nav bar end -->
+        
+<div class="row">
+
+<!-- left sidebar -->
+ <div class="leftcolumn">
+  <div class="card">    
+      <h3>About Me</h3>
+        <img src="images/IMG_Me_in_garden.jpg" alt="Tony in the garden on a sunny day wearing a grey star wars t-shirt" height="100";>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div><!-- End of card -->   
+	
+    <div class="card">
 		<h3>My Social Media</h3>
-		<ul>
+		<ul class="side">
 			<li><a href="https://www.sciencetony.com/">My blog</a></li>
 			<li><a href="https://twitter.com/ScienceTony">My Twitter</a></li>
 			<li><a href="https://www.youtube.com/channel/UCn-6JABRgRUaUklNunQFLsg">My YouTube</a></li>
             <li><a href="https://www.linkedin.com/in/tony-mcdonald-sciencetony">My Linked In</a></li>
-		</ul> 
-	</div>	<!-- sidebar list -->
+		</ul>
+    </div>  <!-- End of card -->
+  </div> <!-- End of leftcolmn -->
     
-    <div class="para">
-        <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat neque, tincidunt eget nulla nec, congue tempus elit. Etiam eu nulla a augue ornare aliquet vitae sit amet ligula. Vivamus eu metus porttitor, dapibus orci vitae, malesuada nunc. Pellentesque sed libero eu augue tempor dictum. Cras non tempor lectus. Phasellus a consequat est. Aliquam justo ante, aliquam ut elementum a, hendrerit efficitur nibh. Duis egestas id ex nec tincidunt. Curabitur eleifend tristique sollicitudin. Sed nulla odio, venenatis eget tristique eu, tempus vel ex.
-</p>
-<p>
-Mauris sodales nibh quam, id fermentum orci iaculis at. Duis massa lacus, pellentesque in purus non, tempor porta sapien. Praesent lacinia ex dapibus finibus posuere. Praesent non libero tortor. Proin sit amet elit quis lectus lobortis placerat. Aenean eros lorem, pellentesque nec feugiat at, tristique in quam. Fusce accumsan sodales sapien, at fringilla odio congue non.
-</p>
-<p>
-Cras maximus lorem vitae magna facilisis, eu ultricies mauris facilisis. Sed mauris nulla, malesuada et nisl nec, sagittis porttitor sem. Curabitur tincidunt, eros sit amet rhoncus ornare, nisl nisl pharetra leo, vel tincidunt massa arcu vitae mauris. Pellentesque et condimentum nulla, tincidunt lobortis risus. Quisque ut feugiat ipsum. Proin varius pharetra justo sit amet pulvinar. Aenean laoreet, massa eleifend volutpat placerat, ex elit dictum sem, nec luctus orci massa a odio. Ut eu placerat felis. Fusce a consectetur ante. Nam non pharetra nisl. Aliquam nec mi molestie, fringilla lorem nec, lacinia velit.
-</p>
-<p>
-Donec ac ligula auctor eros dignissim varius vitae a neque. Cras vel metus quam. Integer non rutrum lacus, ac porta dolor. Nullam neque ipsum, sodales sit amet risus non, faucibus hendrerit ante. Pellentesque fringilla eu lacus non porttitor. Ut facilisis euismod dapibus. Pellentesque tortor justo, ultricies posuere semper in, consequat nec libero.   
-        </p>
-        </div><!-- end para -->
-    <button type="button" onclick="myFunction()"> RSVP           </button><span>&nbsp</span>
-    <span id="button1">&nbsp &lt;---  Click it </span>
+    <div class="rightcolumn">
+            <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+        <div class="card">
+        <button type="button" onclick="myFunction()"> RSVP           </button><span>&nbsp</span>
+        <span id="button1">&nbsp &lt;---  Click it </span>
+        </div>
+  
+    </div><!-- end right column -->
+    
+    
+    </div> <!-- End of row -->
+
+        <div class="footer">
+            <h2>Footer</h2>
+        </div>
     </body>
 </html>
