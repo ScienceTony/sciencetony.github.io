@@ -16,7 +16,8 @@ logo{
 }
 
 header{
-    background: #f3d163;
+/* colour jasmin */
+    background: #f3d163; 
 /*    background: #e5f2ff;*/
     text-align: center;
     font-family: 'Courier New';
@@ -60,10 +61,16 @@ li a, .dropbtn {
 li.top a:hover, .dropdown:hover .dropbtn, li.right:hover {
     background-color: deepskyblue;
 }
+/* Accessablity for tab and focus*/
+li.top a:focus, li.right a:focus , .dropdown a:focus{
+    background-color: deepskyblue;
+}
 
+/* This horozontaly lines up the 2 dropdown menus */
 li.dropdown {
     display: inline-block;
 }
+/* ============  */
 
 .dropdown-content {
     display: none;
@@ -74,6 +81,7 @@ li.dropdown {
     z-index: 2;
 }
 
+
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -83,15 +91,18 @@ li.dropdown {
     
 }
 
+/* Inside dropdown bar */
 .dropdown-content a:hover {
     background-color: #f1f1f1;
     
 }
 
-.dropdown:hover .dropdown-content {
+/* focus within provides accessability to the dropdown menus */
+.dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content  {
     display: block;
 }
-    
+
+
 /*==== End of top menu bar ====*/
 
 /*===== left and right columns ======*/
@@ -117,6 +128,47 @@ li.dropdown {
     padding: 20px;
     margin-top: 20px;
 }
+
+/* Styles the social card list links for my social media */
+.card a {
+    color: blue;
+    font-family: Courier;
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    max-width: 9em;
+    border: solid 3px blue;
+    background-color: white;
+}
+
+.card a:hover{
+    color: hotpink;
+    font-family: Courier;
+    list-style-type: none;
+    text-decoration: underline;
+/*    background-color: #e5f2ff;*/
+/*    background-color: violet;*/
+    background-color: lightcyan;
+
+    
+}
+
+.card a:active {
+    color: hotpink;
+    font-family: Courier;
+    list-style-type: none;
+    text-align: left;
+    padding: 0px 0px 20px 0px;
+    background-color: antiquewhite;
+    
+}
+/* Accessabilty  */
+.card a:focus{
+    background-color: antiquewhite;
+}
+
 
 img {
     background-color: white;
@@ -146,49 +198,6 @@ h3{
 }
 
 
-/*
-ul.side{
-    list-style-type: none;
-}
-*/
-
-/* Styles the social card list links*/
-li.socialSide a{
-    color: blue;
-    font-family: Courier;
-    list-style-type: none;
-        text-align: left;
-    padding: 0px 0px 20px 0px;
-    text-decoration: none;
-    
-}
-
-li.socialSide a:hover{
-    color: hotpink;
-    font-family: Courier;
-    list-style-type: none;
-        text-align: left;
-    padding: 0px 0px 20px 0px;
-    text-decoration: underline;
-    
-}
-
-li.socialSide a:hover{
-    color: hotpink;
-    font-family: Courier;
-    list-style-type: none;
-        text-align: left;
-    padding: 0px 0px 20px 0px;
-    text-decoration: underline;
-    
-}
-
-/* removes the bullet points in the social card list*/
-li.socialSide {
-    list-style-type: none;
-}
-
-
 #button1{
     display: inline;
     border: 1px solid red;
@@ -213,7 +222,7 @@ button{
 
 /* ============= For smaller screens  ============== */
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .leftcolumn, .rightcolumn {   
         width: 100%;
