@@ -92,13 +92,13 @@ li.dropdown {
 }
 
 /* Inside dropdown bar */
-.dropdown-content a:hover {
+.dropdown-content a:hover, dropdown-content a:active {
     background-color: #f1f1f1;
     
 }
 
 /* focus within provides accessability to the dropdown menus */
-.dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content  {
+.dropdown:hover .dropdown-content, .dropdown:active .dropdown-content  {
     display: block;
 }
 
@@ -137,24 +137,30 @@ li.dropdown {
     text-align: center;
     padding: 10px;
     text-decoration: none;
+/* this makes it display as a block  */
     display: block;
+/* this makes the blocks display as a certian size.  */
     max-width: 9em;
-    border: solid 3px blue;
+    border: solid 1px blue;
+    border-radius: 4px;
     background-color: white;
+    box-shadow: 0px 0px 1px 1px navy inset;
 }
 
-.card a:hover{
+.card a:hover, .card a:active{
     color: hotpink;
-    font-family: Courier;
+/*    font-family: Courier;*/
     list-style-type: none;
-    text-decoration: underline;
+    text-decoration: none;
 /*    background-color: #e5f2ff;*/
 /*    background-color: violet;*/
     background-color: lightcyan;
+    box-shadow: 0px 2px 10px navy;
 
     
 }
 
+/*
 .card a:active {
     color: hotpink;
     font-family: Courier;
@@ -162,19 +168,27 @@ li.dropdown {
     text-align: left;
     padding: 0px 0px 20px 0px;
     background-color: antiquewhite;
+    box-shadow: 0px 2px 10px navy;
     
 }
+*/
 /* Accessabilty  */
 .card a:focus{
     background-color: antiquewhite;
 }
 
 
-img {
+img#animated {
     background-color: white;
     border: ridge brown 6px;
     padding: 8px;
+/*    -webkit-animation: mymove 5s infinite;  Safari 4.0 - 8.0 */
+    animation: mymove 6s infinite;
 }
+@keyframes mymove {
+    50% {box-shadow: 0px 1px 10px navy;}
+}
+
 /*===== End left and right columns  ======*/
 
 
@@ -234,6 +248,7 @@ button{
     ul.top, li.top, li.right{
         float: none;
         width: 100%;
+        
     }
 
     li.dropdown {
