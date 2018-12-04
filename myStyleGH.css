@@ -98,7 +98,7 @@ li.dropdown {
 }
 
 /* focus within provides accessability to the dropdown menus */
-.dropdown:hover .dropdown-content, .dropdown:active .dropdown-content  {
+.dropdown:focus-within .dropdown-content, .dropdown:hover .dropdown-content, .dropdown:active .dropdown-content  {
     display: block;
 }
 
