@@ -15,7 +15,7 @@ Try to build an about you site with links and files.
     <!-- Allows Chrome to react to media queries while in developer tools device mode  -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" href="myStyleGH.css"/>
+    <link rel="stylesheet" href="mtStyleKA.css"/>
 
 <script>
 
@@ -24,6 +24,41 @@ Try to build an about you site with links and files.
     document.getElementById("button1").style.color="blue";
     document.getElementById("button1").style.border="none";
     }
+    // Notice that .getElementsByClassName is different in 2 ways.
+    // 1) There is an 's' at the end of Element in .getElementsByClassName
+    // 2) ClassName not just Class in place of ID 
+    // Makes dropdown men 0 work on click for touch screen
+    // 3) It is necessary to use indexing and use a seperate function; hence, menuFunction() and menuFunction1()
+    function menuFunction() {
+      var x = document.getElementsByClassName("dropdown-content");
+
+       if (x[0].style.display === "block") {
+        x[0].style.display = "none";
+        x[1].style.display = "none"; // makes other menu diapaer
+      } else {
+        x[0].style.display = "block";
+        x[1].style.display = "none"; // makes other menu diapaer 
+      }
+    }
+    // Makes dropdown men 1 work on click for touch screen. Note this function has a different name. 
+    function menuFunction1() {
+      var x = document.getElementsByClassName("dropdown-content");
+      if (x[1].style.display === "block") {
+        x[1].style.display = "none";
+        x[0].style.display = "none"; // makes other menu diapaer 
+      } else {
+        x[1].style.display = "block";
+        x[0].style.display = "none"; // makes other menu diapaer       
+      }
+    }
+    // Caller is in the div class="row" This will close the menu. 
+    function closeMenu(){
+        var x = document.getElementsByClassName("dropdown-content");
+        if (x[1].style.display === "block" || x[0].style.display === "block") {
+            x[1].style.display = "none";
+            x[0].style.display = "none";  
+          }
+    }
    
 </script>
 
@@ -31,7 +66,7 @@ Try to build an about you site with links and files.
     
     <body>
 
-    <header>
+    <header onclick="closeMenu()">
 
         <h1>Tony McDonald</h1>
         <h2>Computing &amp; IT</h2>
@@ -40,16 +75,18 @@ Try to build an about you site with links and files.
 <!-- Top nav bar -->    
     <ul class="top" >
       <li class="top"><a href="https://sciencetony.github.io/">Home</a></li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+<!--  Dropdown menu 0  -->
+      <li class="dropdown" onclick="menuFunction()" onfocus="menuFunction()">
+        <a href="javascript:void(0)" class="dropbtn"  >Dropdown</a>
         <div class="dropdown-content">
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
         </div>
       </li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+<!--  Dropdown menu 1  -->
+        <li class="dropdown" onclick="menuFunction1()" onfocus="menuFunction1()">
+            <a href="javascript:void(0)" class="dropbtn" >Dropdown</a>
             <div class="dropdown-content">
               <a href="#">Link 1</a>
               <a href="#">Link 2</a>
@@ -60,10 +97,10 @@ Try to build an about you site with links and files.
     </ul>
 <!-- Top nav bar end -->
         
-<div class="row">
+<div class="row" onclick="closeMenu()">
 
 <!-- left sidebar -->
- <div class="leftcolumn">
+ <div class="leftcolumn" >
   <div class="card">    
       <h3>About Me</h3>
         <img id="animated" src="images/IMG_Me_in_garden.jpg" alt="Tony in the garden on a sunny day wearing a grey star wars t-shirt" height="85">
@@ -106,7 +143,7 @@ Try to build an about you site with links and files.
     
     </div> <!-- End of row -->
 
-        <div class="footer">
+        <div class="footer" onclick="closeMenu()">
             <h2>Footer</h2>
         </div>
     </body>
