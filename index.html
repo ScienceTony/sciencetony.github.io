@@ -14,53 +14,9 @@ Try to build an about you site with links and files.
     <meta name="author" content="Tony McDonald"/>
     <!-- Allows Chrome to react to media queries while in developer tools device mode  -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
-    <link rel="stylesheet" href="myStyleGH.css"/>
-
-<script>
-
-    function myFunction() {
-    document.getElementById("button1").innerHTML = "This button would do something cool!";
-    document.getElementById("button1").style.color="blue";
-    document.getElementById("button1").style.border="none";
-    }
-    // Notice that .getElementsByClassName is different in 2 ways.
-    // 1) There is an 's' at the end of Element in .getElementsByClassName
-    // 2) ClassName not just Class in place of ID 
-    // Makes dropdown men 0 work on click for touch screen
-    // 3) It is necessary to use indexing and use a seperate function; hence, menuFunction() and menuFunction1()
-    function menuFunction() {
-      var x = document.getElementsByClassName("dropdown-content");
-
-       if (x[0].style.display === "block") {
-        x[0].style.display = "none";
-        x[1].style.display = "none"; // makes other menu diapaer
-      } else {
-        x[0].style.display = "block";
-        x[1].style.display = "none"; // makes other menu diapaer 
-      }
-    }
-    // Makes dropdown men 1 work on click for touch screen. Note this function has a different name. 
-    function menuFunction1() {
-      var x = document.getElementsByClassName("dropdown-content");
-      if (x[1].style.display === "block") {
-        x[1].style.display = "none";
-        x[0].style.display = "none"; // makes other menu diapaer 
-      } else {
-        x[1].style.display = "block";
-        x[0].style.display = "none"; // makes other menu diapaer       
-      }
-    }
-    // Caller is in the div class="row" This will close the menu. 
-    function closeMenu(){
-        var x = document.getElementsByClassName("dropdown-content");
-        if (x[1].style.display === "block" || x[0].style.display === "block") {
-            x[1].style.display = "none";
-            x[0].style.display = "none";  
-          }
-    }
-   
-</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="myStyleForMyPage.css"/>
+    <script src="js/myJavaScript.js"></script>
 
 </head>
     
@@ -73,11 +29,11 @@ Try to build an about you site with links and files.
     </header><!-- end title-->
         
 <!-- Top nav bar -->    
-    <ul class="top" >
-      <li class="top"><a href="https://sciencetony.github.io/">Home</a></li>
-<!--  Dropdown menu 0  -->
-      <li class="dropdown" onclick="menuFunction()" onfocus="menuFunction()">
-        <a href="javascript:void(0)" class="dropbtn"  >Dropdown</a>
+    <ul class="top">
+      <li class="top" ><a href="https://sciencetony.github.io/">Home</a></li>
+<!--  Dropdown menu 0 note that useing tab without href="javascript:void(0)" will result in that button being skiped!  -->
+      <li class="dropdown" onclick="menuFunction()" onfocus="menuFunction()" >
+          <a href="javascript:void(0)" class="dropbtn"  >Dropdown <i class="fa fa-caret-down"></i></a>
         <div class="dropdown-content">
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
@@ -86,14 +42,15 @@ Try to build an about you site with links and files.
       </li>
 <!--  Dropdown menu 1  -->
         <li class="dropdown" onclick="menuFunction1()" onfocus="menuFunction1()">
-            <a href="javascript:void(0)" class="dropbtn" >Dropdown</a>
+            <a href="javascript:void(0)" class="dropbtn"  >Dropdown <i class="fa fa-caret-down"></i></a>
             <div class="dropdown-content">
               <a href="#">Link 1</a>
               <a href="#">Link 2</a>
               <a href="#">Link 3</a>
             </div>
         </li>
-      <li class="right"><a href="https://github.com/ScienceTony" >My GitHub</a></li>
+<!--  myGitHub on the right -->
+      <li class="right"><a href="Contact_page.html" >Contact</a></li>
     </ul>
 <!-- Top nav bar end -->
         
@@ -108,13 +65,14 @@ Try to build an about you site with links and files.
     </div><!-- End of card -->   
 	
     <div class="card">
-		<h3>My Social Media</h3>
-<!--		<ul class="side">-->
+		<h3>Say Hello</h3>
+
+            <p><a href="https://github.com/ScienceTony">My GitHub</a></p>
 			<p><a href="https://www.sciencetony.com/">My blog</a></p>
 			<a href="https://twitter.com/ScienceTony">My Twitter</a>
 			<p><a href="https://www.youtube.com/channel/UCn-6JABRgRUaUklNunQFLsg">My YouTube</a></p>
-            <a href="https://www.linkedin.com/in/tony-mcdonald-sciencetony">My Linked In</a>
-<!--		</ul>-->
+            <a href="https://www.linkedin.com/in/tony-mcdonald-sciencetony">My LinkedIn</a>
+
     </div>  <!-- End of card -->
   </div> <!-- End of leftcolmn -->
     
