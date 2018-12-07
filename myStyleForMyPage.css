@@ -7,6 +7,7 @@ body{
 /* background: #f3d163;*/
 background-color: gainsboro;
 }
+
 logo{
     margin: 5px;
     top:18px;
@@ -17,15 +18,14 @@ logo{
 
 header{
 /* colour jasmin */
-    background: #f3d163; 
-/*    background: #e5f2ff;*/
+/*    background: #f3d163; */
+    background: lightblue;
     text-align: center;
     font-family: 'Courier New'; 
     margin: 0 auto;
     position: sticky;
     position: -webkit-sticky; /* Needed for macOS */
     border: double ;
-    box-shadow: 1px 2px 2px navy;
     top: 0px;
     z-index:1;
 }
@@ -36,10 +36,10 @@ ul.top {
     margin: 0;
     padding: 0;
 /*    overflow: hidden;*/
-    background-color: navy;
+    background-color: #f3d163;
+/*    border: solid black;*/
     position: -webkit-sticky; /* Needed for macOS */
     position: sticky;
-    box-shadow: 1px 2px 2px navy;
     top: 5.3em;
     z-index:1;
 }
@@ -54,18 +54,21 @@ li.right{
 
 li a, .dropbtn {
     display: block; /* This has been changed from inline-block, which apeared to stop the menu bar from lining up upderneither each other when the screen was made small*/
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family:sans-serif, serif;
 }
 
-li.top a:hover, .dropdown:hover .dropbtn, li.right:hover {
+li.top a:hover, .dropdown:hover .dropbtn, li.right a:hover {
     background-color: deepskyblue;
+    color: white;
 }
 /* Accessablity for tab and focus*/
 li.top a:focus, li.right a:focus , .dropdown a:focus{
     background-color: deepskyblue;
+    color: white;
 }
 
 /* This horozontaly lines up the 2 dropdown menus */
@@ -122,6 +125,12 @@ li.dropdown {
     float: left;
     width: 75%;
 }
+.rightcolumn_contact{
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+}
+
 
 /* Add a card effect for articles */
 .card {
@@ -224,21 +233,24 @@ button{
 .footer {
     padding: 20px;
     text-align: center;
-    background: #ddd;
+    background: lightblue;
     margin-top: 20px;
+}
+.footer a:hover{
+    color: hotpink;
 }
 
 /* ============= For smaller screens  ============== */
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-    .leftcolumn, .rightcolumn {   
+    .leftcolumn, .rightcolumn, .rightcolumn_contact {   
         width: 100%;
         padding: 0;
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 460px){
     ul.top, li.top, li.right{
         float: none;
         width: 100%;
