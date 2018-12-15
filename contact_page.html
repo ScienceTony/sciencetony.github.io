@@ -14,11 +14,13 @@ Try to build an about you site with links and files.
     <meta name="author" content="Tony McDonald"/>
     <!-- Allows Chrome to react to media queries while in developer tools device mode  -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    
     <link rel="icon" href="images/Fav.png" type="image/png" sizes="16x16">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--  css link  -->
     <link rel="stylesheet" href="myStyleForMyPage.css"/>
     <script src="js/myJavaScript.js"></script>
-
 
 </head>
     
@@ -57,14 +59,37 @@ Try to build an about you site with links and files.
 <!-- Top nav bar end -->
         
 <div class="row" onclick="closeMenu()">  
-  
+<!-- Remebember that the right column on this page is actually the left -->
     <div class="rightcolumn">
-        <div class="card">
-          <h2>Whoops!</h2>
-          <h5>This webpage is still under construction</h5>
-            <img id="whoops" src="images/baukran-3703469_1920.jpg"  alt="Picture of two cranes on a sunny day.">
-        </div>
-    </div>
+    <div class="card">
+    <h3>Contact Form</h3>
+
+    <div class="container">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+<!--
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+-->
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div> <!-- End of container -->
+    </div> <!-- End of card -->
+    </div> <!-- End of rightcolumn -->   
+       
   <div class="rightcolumn_contact" >  
         <div class="card">
 		<h3>Say Hello</h3>
