@@ -177,7 +177,7 @@ li.dropdown {
 .card a:focus{
     color: hotpink;
     background-color: antiquewhite;
-    box-shadow: 0px 2px 10px navy;
+    box-shadow: 0px 2px 5px inset navy;
 }
 
 
