@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- # sciencetony.github.io
+Project Website 
+Try to build an about you site with links and files. 
+-->
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Science Tony</title>
+    <meta name="keywords" content="Tony McDonald, Computer Science, Computing, Earthquakes, quakes, map"/>
+    <meta name="description" content="Earthquakes from 1969 to 2019"/>
+    <meta name="author" content="Tony McDonald"/>
+    <!-- Allows Chrome to react to media queries while in developer tools device mode  -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <link rel="icon" href="images/Fav.png" type="image/png" sizes="16x16">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--  css link  -->
+    <link rel="stylesheet" href="myStyleForMyPage.css"/>
+    <script src="js/myJavaScript.js"></script>
+
+</head>
+    
+    <body>
+
+    <header onclick="closeMenu()">
+
+        <h1>Tony McDonald</h1>
+        <h2>Computing &amp; IT</h2>
+    </header><!-- end title-->
+        
+<!-- Top nav bar -->    
+    <ul class="top">
+      <li class="top" ><a href="https://sciencetony.github.io/">Home</a></li>
+<!--  Dropdown menu 0 note that useing tab without href="javascript:void(0)" will result in that button being skiped!  -->
+      <li class="dropdown" onclick="menuFunction()" onfocus="menuFunction()" >
+          <a href="javascript:void(0)" class="dropbtn"  >Dropdown <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="AIP Random Cat!.html">Code For Random Cats</a>
+          <a href="Examine using SQL magic.html">Using SQL and Magic</a>
+          <a href="#">Link 3</a>
+        </div>
+      </li>
+<!--  Dropdown menu 1  -->
+        <li class="dropdown" onclick="menuFunction1()" onfocus="menuFunction1()">
+            <a href="javascript:void(0)" class="dropbtn"  >Maps <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content">
+              <a href="nuke_map.html">Nuclear Tests Map</a>
+              <a href="earthquake_map.html">Earthquake Map</a>
+              <a href="#">Link 3</a>
+            </div>
+        </li>
+<!--  myGitHub on the right -->
+      <li class="right"><a href="contact_page.html" >Contact</a></li>
+    </ul>
+<!-- Top nav bar end -->
+        
+<div class="row" onclick="closeMenu()">  
+<!-- Remebember that the right column on this page is actually the left -->
+    <div class="rightcolumn">
+    <div class="card">
+    <h1>Top 100 Biggest earthquakes Map (1969-2019)</h1>
+        <p>
+        	This map shows earthquakes from January 1969 to December 2019! Use the map to find one of the earthquakes then click on one of the markers to get more information. 
+        </p>
+
+	<p>
+		<a href="https://sciencetony.github.io/maps/earthquakesWithMarkers.html">Full Screen</a>
+	</p>
+
+ <!-- iframe ######################## -->
+        
+        <iframe style="width: 100%; height: 2000px; overflow: hidden;" src="https://sciencetony.github.io/maps/earthquakesWithMarkers.html" width="100" height="100" scrolling="yes">Iframes not supported
+        </iframe>
+        
+ <!-- end of iframe ######################## -->  
+        
+    </div> <!-- End of card -->
+    </div> <!-- End of rightcolumn -->   
+       
+  <div class="rightcolumn_contact" >  
+        <div class="card">
+		<h3>Say Hello</h3>
+
+            <p><a href="https://github.com/ScienceTony">My GitHub</a></p>
+			<p><a href="https://www.sciencetony.com/">My blog</a></p>
+			<a href="https://twitter.com/ScienceTony">My Twitter</a>
+			<p><a href="https://www.youtube.com/channel/UCn-6JABRgRUaUklNunQFLsg">My YouTube</a></p>
+            <a href="https://www.linkedin.com/in/tony-mcdonald-sciencetony">My LinkedIn</a>
+
+    </div>  <!-- End of card -->
+  </div> <!-- End of leftcolmn -->
+</div> <!-- End of row -->
+
+        <div class="footer" onclick="closeMenu()">
+            <h2><a href="https://www.sciencetony.com/">ScienceTony.com</a></h2>
+        </div>
+    </body>
+</html>
