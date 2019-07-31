@@ -48,8 +48,8 @@ li.top {
     float: left;
 }
 /* Floats the link in the menu bar to the right*/
-li.right{
-    float: right
+li#right{
+    float: right;
 }
 
 li a, .dropbtn {
@@ -61,12 +61,12 @@ li a, .dropbtn {
     font-family:sans-serif, serif;
 }
 
-li.top a:hover, .dropdown:hover .dropbtn, li.right a:hover {
+li.top a:hover, .dropdown:hover .dropbtn, li#right a:hover {
     background-color: deepskyblue;
     color: white;
 }
 /* Accessablity for tab and focus*/
-li.top a:focus, li.right a:focus , .dropdown a:focus{
+li.top a:focus, li#right a:focus , .dropdown a:focus{
     background-color: deepskyblue;
     color: white;
 }
@@ -274,7 +274,14 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
+
+
 /* ========= End of style for contact form ========= */
+
+
+.topnav .icon {
+  display: none;
+}
 
 /* ============= For smaller screens  ============== */
 
@@ -301,7 +308,7 @@ input[type=submit]:hover {
     
     }
     
-/* ======== This controls the width of the dropdowns) and none stops the links from showing*/
+/* ======== This controls the width of the dropdowns */
     .dropdown-content {
         display: none;
         width: 100%;
@@ -326,4 +333,5 @@ input[type=submit]:hover {
     }
 
     
+
 }
