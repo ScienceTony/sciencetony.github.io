@@ -39,4 +39,12 @@
             x[0].style.display = "none";  
           }
     }
-   
+      // this function opens and closes the menu when in @media mode for small 
+    function menuFunction2(){
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += "responsive";
+  } else {
+    x.className = "topnav";
+  }
+} 
