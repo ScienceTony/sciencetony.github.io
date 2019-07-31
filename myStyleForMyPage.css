@@ -301,9 +301,9 @@ input[type=submit]:hover {
     
     }
     
-/* ======== This controls the width of the dropdowns and stacks them on top of each other (block)*/
+/* ======== This controls the width of the dropdowns) and none stops the links from showing*/
     .dropdown-content {
-        display: block;
+        display: none;
         width: 100%;
     }
     
