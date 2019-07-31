@@ -287,22 +287,43 @@ input[type=submit]:hover {
 }
 
 @media screen and (max-width: 460px){
-    ul.top, li.top, li.right{
+    
+    .topnav ul.top, li.top, li#right{
+        
         float: none;
         width: 100%;
         
     }
 
     li.dropdown {
-    display: inline;
+        float: none;
+        display: block;
     
     }
-        .dropdown:hover .dropdown-content {
+    
+/* ======== This controls the width of the dropdowns and stacks them on top of each other (block)*/
+    .dropdown-content {
         display: block;
         width: 100%;
     }
+    
+    /* ========  text a line for the parts within the dropdown.   =========== */
     .dropdown-content a {
         text-align: center;
         
     }
+ /* ========== Hides the menu bar  */ 
+      .topnav li.dropdown, .topnav li#right:not(:first-child) {
+          display: none;
+    }
+ 
+
+/* ========= Displays the hamburger */     
+      .topnav a.icon {
+          display: block;
+
+          
+    }
+
+    
 }
