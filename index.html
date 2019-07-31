@@ -33,16 +33,19 @@ Try to build an about you site with links and files.
     <ul class="top">
       <li class="top" ><a href="https://sciencetony.github.io/">Home</a></li>
 <!--  Dropdown menu 0 note that useing tab without href="javascript:void(0)" will result in that button being skiped!  -->
-      <li class="dropdown" onclick="menuFunction()" onfocus="menuFunction()" >
-          <a href="javascript:void(0)" class="dropbtn"  >Dropdown <i class="fa fa-caret-down"></i></a>
-        <div class="dropdown-content">
-          <a href="ran_cat.html">Code For Random Cats</a>
-          <a href="Examine using SQL magic.html">Using SQL and Magic</a>
-          <a href="#">Link 3</a>
-        </div>
-      </li>
+	       <div class="topnav" id="myTopnav">
+<!--  Dropdown menu 0  -->
+          <li class="dropdown"  onclick="menuFunction()" onfocus="menuFunction()" >
+              <a href="javascript:void(0)" class="dropbtn"  >Dropdown <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content">
+              <a href="ran_cat.html">Code For Random Cats</a>
+              <a href="Examine using SQL magic.html">Using SQL and Magic</a>
+              <a href="#">Link 3</a>
+            </div>
+          </li>
+    
 <!--  Dropdown menu 1  -->
-        <li class="dropdown" onclick="menuFunction1()" onfocus="menuFunction1()">
+        <li class="dropdown"  onclick="menuFunction1()" onfocus="menuFunction1()">
             <a href="javascript:void(0)" class="dropbtn"  >Maps <i class="fa fa-caret-down"></i></a>
             <div class="dropdown-content">
               <a href="nuke_map.html">Nuclear Tests Map</a>
@@ -50,8 +53,13 @@ Try to build an about you site with links and files.
               <a href="comp_map.html">Nuke and Earthquake Map</a>
             </div>
         </li>
+        
 <!--  myGitHub on the right -->
-      <li class="right"><a href="contact_page.html" >Contact</a></li>
+        <li class="dropdown" id="right">
+            <a href="contact_page.html" >Contact</a>
+        </li>
+            <a href="javascript:void(0);" class="icon" onclick="menuFunction2()"><i class="fa fa-bars"></i></a>
+    </div> <!-- End of class="topnav" -->
     </ul>
 <!-- Top nav bar end -->
         
