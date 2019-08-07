@@ -40,11 +40,32 @@
           }
     }
       // this function opens and closes the menu when in @media mode for small 
-    function menuFunction2(){
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += "responsive";
-  } else {
-    x.className = "topnav";
-  }
+    function menuFunction2() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += "responsive";
+      } else {
+        x.className = "topnav";
+      }
 } 
+
+
+// This is for the slide show in index
+var slideimages = new Array();
+slideimages[0] = new Image();
+slideimages[0].src = "images/CRS.jpg";
+slideimages[1] = new Image();
+slideimages[1].src = "images/CRH.jpg";
+slideimages[2] = new Image();
+slideimages[2].src = "images/BHF.jpg";
+
+var step = 0;
+function slideshow() {
+document.getElementById('slide').src = slideimages[step].src;
+if (step < 2) {
+step++;
+} else {
+step = 0;
+}
+setTimeout(slideshow,4000);
+}
