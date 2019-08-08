@@ -1,68 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- # sciencetony.github.io
-Project Website 
-Try to build an about you site with links and files. 
--->
-
-<head>
-    <meta charset="utf-8"/>
-    <title>Science Tony</title>
-    <meta name="keywords" content="Tony McDonald, Computer Science, Computing, About"/>
-    <meta name="description" content="About Tony McDonald"/>
-    <meta name="author" content="Tony McDonald"/>
-    <!-- Allows Chrome to react to media queries while in developer tools device mode  -->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" href="images/fav.ico" type="image/ico" sizes="16x16">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="myStyleForMyPage.css"/>
-    <script src="js/myJavaScript.js"></script>
-
-</head>
-    
-    <body>
-
-    <header onclick="closeMenu()">
-
-        <h1>Tony McDonald</h1>
-        <h2>Computing &amp; IT</h2>
-    </header><!-- end title-->
-        
-<!-- Top nav bar -->    
-    <ul class="top">
-      <li class="top" ><a href="https://sciencetony.github.io/">Home</a></li>
-<!--  Dropdown menu 0 note that useing tab without href="javascript:void(0)" will result in that button being skiped!  -->
-	       <div class="topnav" id="myTopnav">
-<!--  Dropdown menu 0  -->
-          <li class="dropdown"  onclick="menuFunction()" onfocus="menuFunction()" >
-              <a href="javascript:void(0)" class="dropbtn"  >Dropdown <i class="fa fa-caret-down"></i></a>
-            <div class="dropdown-content">
-              <a href="ran_cat.html">Code For Random Cats</a>
-              <a href="Examine using SQL magic.html">Using SQL and Magic</a>
-              <a href="testpage.html">Test it!</a>
-            </div>
-          </li>
-    
-<!--  Dropdown menu 1  -->
-        <li class="dropdown"  onclick="menuFunction1()" onfocus="menuFunction1()">
-            <a href="javascript:void(0)" class="dropbtn"  >Maps <i class="fa fa-caret-down"></i></a>
-            <div class="dropdown-content">
-              <a href="nuke_map.html">Nuclear Tests Map</a>
-              <a href="earthquake_map.html">Earthquake Map</a>
-              <a href="comp_map.html">Nuke and Earthquake Map</a>
-            </div>
-        </li>
-        
-<!--  myGitHub on the right -->
-        <li class="dropdown" id="right">
-            <a href="contact_page.html" >Contact</a>
-        </li>
-            <a href="javascript:void(0);" class="icon" onclick="menuFunction2()"><i class="fa fa-bars"></i></a>
-    </div> <!-- End of class="topnav" -->
-    </ul>
-<!-- Top nav bar end -->
-        
+---
+layout: default
+title: ScienceTony
+---
+{% include headerSlide.html %}
+{% include navbar.html %}
 <div class="row" onclick="closeMenu()">
 
 <!-- left sidebar -->
@@ -86,15 +27,26 @@ Try to build an about you site with links and files.
   </div> <!-- End of leftcolmn -->
     
     <div class="rightcolumn">
-            <div class="card">
+    <!-- Intro card with slide show -->
+    <div class="card" >
       <h2>INTRODUCTION</h2>
-      <h5>About this site.</h5>
+        <hr>
+          <h3>Volunteering.</h3>
 
-      <p>Some text..</p>
+          <p>I volunteer to gain experience of working with people, raising money for a worthwhile cause and to give me a change from programing and analysing data.  If i staid in all the time it would drive me mad. </p>
+           <h4>Me volunteering.</h4> 
+ 
+<!-- slide show  -->
+            <div class="slide1" >
+            <img src="images/CRS.jpg" id="slide"  style="width:100%" alt="A slide show of me and people i volunteer with"/>
+            </div>
+                         
       <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     </div>
+    
+    
     <div class="card">
-      <h2>TITLE HEADING</h2>
+      <h2>Things I Like</h2>
       <h5>Title description, Sep 2, 2017</h5>
 
       <p>Some text..</p>
@@ -109,9 +61,3 @@ Try to build an about you site with links and files.
     
     
     </div> <!-- End of row -->
-
-        <div class="footer" onclick="closeMenu()">
-            <h2><a href="https://www.sciencetony.com/">ScienceTony.com</a></h2>
-        </div>
-    </body>
-</html>
