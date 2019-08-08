@@ -53,7 +53,7 @@
 // This is for the slide show in index
 var slideimages = new Array();
 slideimages[0] = new Image();
-slideimages[0].src = "images/CRS.jpg";
+slideimages[0].src = "images/CRS2.jpg";
 slideimages[1] = new Image();
 slideimages[1].src = "images/CRH.jpg";
 slideimages[2] = new Image();
