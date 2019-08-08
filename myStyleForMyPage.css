@@ -31,6 +31,13 @@ header{
 }
 
 /*========= The Nav Bar with Dropdown menu ========*/
+#myTopnav {
+    position: -webkit-sticky; /* Needed for macOS */
+    position: sticky;
+    top: 5.3em;
+    z-index:1;    
+}
+
 ul.top {
     list-style-type: none;
     margin: 0;
@@ -61,7 +68,7 @@ li a, .dropbtn {
     font-family:sans-serif, serif;
 }
 
-li.top a:hover, .dropdown:hover .dropbtn, li#right a:hover {
+ li.top a:hover, .dropdown:hover .dropbtn, li#right a:hover {
     background-color: deepskyblue;
     color: white;
 }
@@ -283,6 +290,24 @@ input[type=submit]:hover {
   display: none;
 }
 
+/* ========= Fading animation ===================*/ 
+
+.slide1 {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 /* ============= For smaller screens  ============== */
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
