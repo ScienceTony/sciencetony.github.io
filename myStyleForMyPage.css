@@ -86,7 +86,7 @@ li.dropdown {
 
 .dropdown-content {
     display: none;
-    position: absolute;
+    position:absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -285,8 +285,8 @@ input[type=submit]:hover {
 
 /* ========= End of style for contact form ========= */
 
-
-.topnav .icon {
+/* ========= Hides the hamburger */
+#myTopnav .icon {
   display: none;
 }
 
@@ -316,6 +316,22 @@ input[type=submit]:hover {
         width: 100%;
         padding: 0;
     }
+    /* ========= Hides the hamburger */     
+      #myTopnav a.icon {
+          display: none;
+       
+    }
+    header{
+        position: relative;
+    }
+    #myTopnav {
+        position: -webkit-sticky; /* Needed for macOS */
+        position: sticky;
+        top: 0;
+        z-index:1;    
+    }
+
+
 }
 
 @media screen and (max-width: 460px){
@@ -332,6 +348,7 @@ input[type=submit]:hover {
         display: block;
     
     }
+        
     
 /* ======== This controls the width of the dropdowns */
     .dropdown-content {
@@ -345,13 +362,13 @@ input[type=submit]:hover {
         
     }
  /* ========== Hides the menu bar  */ 
-      .topnav li.dropdown, .topnav li#right:not(:first-child) {
+      .topnav li.dropdown {
           display: none;
     }
  
 
 /* ========= Displays the hamburger */     
-      .topnav a.icon {
+      #myTopnav a.icon {
           display: block;
 
           
