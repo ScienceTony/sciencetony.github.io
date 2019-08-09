@@ -13,5 +13,6 @@ This will make maintainace much easier now.
 <br>
 <br>
 Resouces:<br>
-[This gets me stared and has info about blog](http://jmcglone.com/guides/github-pages/)<br>
-[Video leasons on Jekyll](https://youtu.be/HfcJeRby2a8)
+This gets me stared and has info about blog http://jmcglone.com/guides/github-pages/
+<br>
+Video leasons on Jekyll https://youtu.be/HfcJeRby2a8
