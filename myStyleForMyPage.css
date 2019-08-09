@@ -5,7 +5,7 @@
 body{
 /* background: #e5f2ff;*/
 /* background: #f3d163;*/
-background-color: gainsboro;
+background-color: white;
 }
 
 logo{
@@ -19,13 +19,15 @@ logo{
 header{
 /* colour jasmin */
 /*    background: #f3d163; */
-    background: lightblue;
+    background: lightskyblue;
+    text-shadow: 2px 2px blue;
+    color: antiquewhite;
     text-align: center;
     font-family: 'Courier New'; 
     margin: 0 auto;
     position: sticky;
     position: -webkit-sticky; /* Needed for macOS */
-    border: double ;
+    border-style: groove ;
     top: 0px;
     z-index:1;
 }
@@ -43,8 +45,9 @@ ul.top {
     margin: 0;
     padding: 0;
 /*    overflow: hidden;*/
-    background-color: #f3d163;
+/*    background-color: #f3d163; */
 /*    border: solid black;*/
+    background-color: white; ;
     position: -webkit-sticky; /* Needed for macOS */
     position: sticky;
     top: 5.3em;
@@ -69,12 +72,12 @@ li a, .dropbtn {
 }
 
  li.top a:hover, .dropdown:hover .dropbtn, li#right a:hover {
-    background-color: deepskyblue;
+    background-color: goldenrod;
     color: white;
 }
 /* Accessablity for tab and focus*/
 li.top a:focus, li#right a:focus , .dropdown a:focus{
-    background-color: deepskyblue;
+    background-color: goldenrod;
     color: white;
 }
 
@@ -141,17 +144,17 @@ li.dropdown {
 
 /* Add a card effect for articles */
 .card {
-    background: aliceblue;
+    background: whitesmoke;
 /*    background-color: whitesmoke;*/
     padding: 20px;
-    margin-top: 20px;
-    box-shadow: 1px 2px 2px navy;
+    margin-top: 10px;
+    /* box-shadow: 1px  navy; */
 }
 
-/* Styles the social card list links for my social media */
+/* Styles the social media list links (buttons) for Say hello! */
 .card a {
     color: blue;
-    font-family: Courier;
+    font-family: Courier, sans-serif;
     list-style-type: none;
     text-align: center;
     padding: 10px;
@@ -183,20 +186,20 @@ li.dropdown {
 /* Accessabilty  */
 .card a:focus{
     color: hotpink;
-    background-color: antiquewhite;
+    background-color: khaki;
     box-shadow: 0px 2px 5px inset navy;
 }
 
-
+/* ========== My picture ===========*/
 img#animated {
     background-color: white;
-    border: ridge brown 6px;
+    border: ridge darkorange 6px;
     padding: 8px;
 /*    -webkit-animation: mymove 5s infinite;  Safari 4.0 - 8.0 */
     animation: mymove 5s infinite;
 }
 @keyframes mymove {
-    50% {box-shadow: 0px 1px 15px navy;}
+    50% {box-shadow: 0px 0px 25px orangered;}
 }
 
 /*===== End left and right columns  ======*/
@@ -210,11 +213,11 @@ img#animated {
     clear: both;
 }
 
-h1, h2{
-    color: blue;
+
+
+h2 {
+    font-family: 'Courier New';
 }
-
-
 
 h3{
     color: orangered;
@@ -242,7 +245,7 @@ button{
 .footer {
     padding: 20px;
     text-align: center;
-    background: lightblue;
+    background: skyblue;
     margin-top: 20px;
 }
 .footer a:hover{
@@ -311,7 +314,7 @@ input[type=submit]:hover {
 /* ============= For smaller screens  ============== */
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     .leftcolumn, .rightcolumn, .rightcolumn_contact {   
         width: 100%;
         padding: 0;
@@ -330,6 +333,9 @@ input[type=submit]:hover {
         top: 0;
         z-index:1;    
     }
+    ul.top {
+        background-color: #f3d163;
+    }
 
 
 }
@@ -341,6 +347,9 @@ input[type=submit]:hover {
         float: none;
         width: 100%;
         
+    }
+    ul.top {
+        background-color: #f3d163;
     }
 
     li.dropdown {
@@ -362,7 +371,7 @@ input[type=submit]:hover {
         
     }
  /* ========== Hides the menu bar  */ 
-      .topnav li.dropdown {
+      .topnav li.dropdown, .topnav li.top  {
           display: none;
     }
  
