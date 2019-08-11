@@ -342,6 +342,18 @@ input[type=submit]:hover {
 /* ============= For smaller screens  ============== */
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 1500px) {
+    .card a.downloadLink {
+
+/* deals with position and  */    
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+}
+}
+
 @media screen and (max-width: 750px) {
     .leftcolumn, .rightcolumn, .rightcolumn_contact {   
         width: 100%;
