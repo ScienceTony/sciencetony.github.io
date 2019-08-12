@@ -9,7 +9,7 @@ title: ScienceTony
 
 <div class="rightcolumn">
 	<div class="card"> 
-
+        
 		<h2>INTRODUCTION</h2>
 		<hr>
 		<h3>About me</h3>
@@ -24,23 +24,64 @@ title: ScienceTony
 	    
     <!-- Intro card with slide show -->
     <div class="card" >
-      <h2>IN MY SPARE TIME</h2>
+        <h2>IN MY SPARE TIME</h2>
         <hr>
-          <h3>Volunteering</h3>
+        
 
-          <p>I volunteer to gain experience of working with people, raising money for a worthwhile cause and to give
-		  me a change from programing and analysing data.  
-		  If i staid in all the time it would drive me mad. </p>
-           <h4>Me volunteering.</h4> 
- 
-<!-- slide show  -->
+        <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Volunteering')">Volunteering</button>
+        <button class="tablinks" onclick="openCity(event, 'Garden')">Gardening</button>
+        <button class="tablinks" onclick="openCity(event, 'Church')">Church</button>
+        </div>
+
+        <div id="Volunteering" class="tabcontent">
+
+            <h3>Volunteering</h3>
+
+            <p>I volunteer to gain experience of working with people, raising money for a worthwhile cause and to give
+            me a change from programing and analysing data.  
+            If i staid in all the time it would drive me mad. </p>
+            <h4>Me volunteering.</h4> 
+
+            <!-- slide show 1 -->
             <div class="slide1" >
             <img src="images/CRS2.jpg" id="slide"  style="width:100%" alt="A slide show of me and people i volunteer with"/>
             </div>
-                         
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-    
+
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        
+
+        <div id="Garden" class="tabcontent hidtab" >
+        <h3>Gardening</h3>
+            <p>I to spend some time in the garden with the flowers and the wildlife. Gardening is a great way of ubwinding and can bring a great sence of joy.  The local wild life adds to the fun.  For instance, o could watch the bees buzzing around the flowers gathering polen for hours. </p>
+            <h4>My Garden.</h4> 
+
+            <!-- slide show 2 -->
+            <div class="slide2" >
+                <img src="images/Garden/sf.jpg" id="slide2"  style="width:100%" alt="A slideshow of a flowers and wildlive" />
+            </div>
+
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> 
+        </div>
+
+         
+            <div id="Church" class="tabcontent hidtab">
+            <h3>Church</h3>
+            <p>I volunteer to gain experience of working with people, raising money for a worthwhile cause and to give
+            me a change from programing and analysing data.  
+            If i staid in all the time it would drive me mad. </p>
+            <h4>All Saints.</h4> 
+
+            <!-- slide show 3 -->
+            <div class="slide3" >
+            <img src="images/Church/Church.jpg" id="slide3"  style="width:100%" alt="A slide show of a church i attend"/>
+            </div>
+            
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            
+        </div> <!-- End of Intro card -->
     
     <div class="card">
       <h2>Things I Like</h2>
