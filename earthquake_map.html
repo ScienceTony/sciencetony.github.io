@@ -95,12 +95,16 @@ Try to build an about you site with links and files.
     </div> <!-- End of card -->
     </div> <!-- End of rightcolumn -->   
        
-  <div class="rightcolumn_contact" >  
-	<div class="card">
-		 {% include about_me.html %}
-	</div>  <!-- End of card -->
-	  	{% include mediaLinks.html %}
-  </div> <!-- End of leftcolmn -->
+  <div class="rightcolumn_contact" > 
+	 
+	<!-- note about me does not come in a div tag because it is used within other tags with class card -->  
+        <div class="card"> 
+	{% include about_me.html %}
+	</div><!-- End of card --> 
+	  
+	{% include mediaLinks.html %}
+	  
+  </div> <!-- End of rightcolumn_contact -->
 </div> <!-- End of row -->
 
         <div class="footer" onclick="closeMenu()">
