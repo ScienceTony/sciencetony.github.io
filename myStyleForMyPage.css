@@ -32,6 +32,7 @@ background-color: white;
 
     animation: mymove2 3s infinite;
 }
+
 @keyframes mymove2 {
     50% {box-shadow: 0px 0px 10px darkgreen;}
     }
@@ -39,11 +40,58 @@ background-color: white;
 .card a.downloadLink:hover{
     color: greenyellow;
     background-color: black;
-    box-shadow: 0px 0px 10px red;
+    box-shadow: 0px 0px 10px red;   
+}
 
+.card a.downloadLink:focus {
+    color: hotpink;
+    box-shadow: none;
+}
+
+/* Buttons */
+
+/* Styles the social media list links (buttons) for Say hello! */
+.card#mediaLinks a, a.ButtonLinks {
+    color: blue;
+    font-family: sans-serif;
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+/* this makes it display as a block  */
+    display: block;
     
+/* this makes the blocks display as a certian size.  */
+    max-width: 9em;
+    border: solid 1px blue;
+    border-radius: 4px;
+    text-transform: capitalize;
+    background-color: white;
+    box-shadow: 0px 0px 1px 1px navy inset;
 }
+
+.card#mediaLinks a:hover, a.ButtonLinks:hover, .card#mediaLinks a:active, a.ButtonLinks:active  {
+    color:cyan;
+/*    font-family: Courier;*/
+    list-style-type: none;
+    text-decoration: none;
+/*    background-color: #e5f2ff;*/
+/*    background-color: violet;*/
+    background-color: black;
+    box-shadow: 0px 0px 10px blue;
+    font-weight: bold;
+   
 }
+
+/* Accessabilty  */
+.card#mediaLinks a:focus, a.ButtonLinks:focus{
+    color: hotpink;
+    background-color: khaki;
+    box-shadow: 0px 2px 5px inset navy;
+}
+
+
+/* js buttons such as the one on index page */
 #button1{
     display: inline;
     border: 1px solid red;
@@ -201,47 +249,6 @@ li.dropdown {
     /* box-shadow: 1px  navy; */
 }
 
-/* Styles the social media list links (buttons) for Say hello! */
-.card#mediaLinks a {
-    color: blue;
-    font-family: sans-serif;
-    list-style-type: none;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-/* this makes it display as a block  */
-    display: block;
-    
-/* this makes the blocks display as a certian size.  */
-    max-width: 9em;
-    border: solid 1px blue;
-    border-radius: 4px;
-    text-transform: capitalize;
-    background-color: white;
-    box-shadow: 0px 0px 1px 1px navy inset;
-}
-
-.card#mediaLinks a:hover, .card#mediaLinks a:active  {
-    color:cyan;
-/*    font-family: Courier;*/
-    list-style-type: none;
-    text-decoration: none;
-/*    background-color: #e5f2ff;*/
-/*    background-color: violet;*/
-    background-color: black;
-    box-shadow: 0px 0px 10px blue;
-    font-weight: bold;
-
-    
-}
-
-
-/* Accessabilty  */
-.card#mediaLinks a:focus{
-    color: hotpink;
-    background-color: khaki;
-    box-shadow: 0px 2px 5px inset navy;
-}
 
 /* ========== My picture ===========*/
 img#animated {
