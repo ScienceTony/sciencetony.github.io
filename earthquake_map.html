@@ -96,16 +96,10 @@ Try to build an about you site with links and files.
     </div> <!-- End of rightcolumn -->   
        
   <div class="rightcolumn_contact" >  
-        <div class="card">
-		<h3>Say Hello</h3>
-
-            <p><a href="https://github.com/ScienceTony">My GitHub</a></p>
-			<p><a href="https://www.sciencetony.com/">My blog</a></p>
-			<a href="https://twitter.com/ScienceTony">My Twitter</a>
-			<p><a href="https://www.youtube.com/channel/UCn-6JABRgRUaUklNunQFLsg">My YouTube</a></p>
-            <a href="https://www.linkedin.com/in/tony-mcdonald-sciencetony">My LinkedIn</a>
-
-    </div>  <!-- End of card -->
+	<div class="card">
+		 {% include about_me %}
+	</div>  <!-- End of card -->
+	  	{% include mediaLinks.html %}
   </div> <!-- End of leftcolmn -->
 </div> <!-- End of row -->
 
