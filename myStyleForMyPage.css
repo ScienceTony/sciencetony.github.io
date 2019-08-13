@@ -55,6 +55,8 @@ body {
 /* Styles the social media list links (buttons) for Say hello! */
 .card#mediaLinks a, a.ButtonLinks {
     color: blue;
+    text-transform: capitalize;
+    background-color: lightcyan;
     font-family: sans-serif;
     list-style-type: none;
     text-align: center;
@@ -68,9 +70,7 @@ body {
     max-width: 9em;
     border: solid 1px blue;
     border-radius: 4px;
-    text-transform: capitalize;
-    background-color: white;
-    box-shadow: 0px 0px 1px 1px navy inset;
+    box-shadow: 0px 0px 5px 2px skyblue inset;
 }
 
 
@@ -297,6 +297,7 @@ h3{
     text-transform: capitalize;
     margin: 0px 0px 20px 0px;
 
+
 }
 
 h4{
@@ -401,7 +402,6 @@ input[type=submit]:hover {
 
 /* Style the buttons inside the tab */
 .tab button.tablinks {
-    background-color: inherit;
     float: left;
     border: solid skyblue 1px;
     outline: none;
@@ -411,7 +411,7 @@ input[type=submit]:hover {
     min-width: 7em;
     margin-left: 0;
     margin-bottom: 0;
-    transition: 0.5s;
+    transition: 0.3s;
     font-size: 17px;
     border-top-right-radius: 30px;
     border-top-left-radius: 10px;
@@ -426,6 +426,7 @@ input[type=submit]:hover {
 /* Change background color of buttons on hover */
 .tab button:hover {
   background-color: lightcyan;
+    font-weight: bold;
 }
 
 /* Create an active/current tablink class */
