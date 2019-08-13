@@ -416,7 +416,7 @@ input[type=submit]:hover {
     border-top-right-radius: 30px;
     border-top-left-radius: 10px;
     background-color: white;
-    box-shadow: 0 0px 8px 1px deepskyblue inset;
+    box-shadow: 0 0px 5px 1px deepskyblue inset;
 }
 .hidtab {
     display: none;
