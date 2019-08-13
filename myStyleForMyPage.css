@@ -293,7 +293,9 @@ h3{
     background-color: white;
     width:100%;
     padding: 1em;
-    border-left: solid orangered;   
+    border-left: solid orangered; 
+    text-transform: capitalize;
+    margin: 0px 0px 20px 0px;
 
 }
 
@@ -303,7 +305,8 @@ h4{
 }
 
 /* Side Cards */
-/* i used a id for this side card because it  */
+/* i used an id for this side card  */
+
 #mediaLinks a{
     display: block;
     margin-left: auto;
@@ -413,12 +416,11 @@ input[type=submit]:hover {
     border-top-right-radius: 30px;
     border-top-left-radius: 10px;
     background-color: white;
-    box-shadow: 0 0 5px 1px skyblue inset;
+    box-shadow: 0 0px 8px 1px deepskyblue inset;
 }
 .hidtab {
     display: none;
 }
-
 
 
 /* Change background color of buttons on hover */
@@ -432,6 +434,21 @@ input[type=submit]:hover {
 }
 
 /* Style the tab content */
+.tabcontent {
+  -webkit-animation: fadeEffect 0.5s;
+  animation: fadeEffect 0.5s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 
 /* ========= Hides the hamburger */
 #myTopnav .icon {
