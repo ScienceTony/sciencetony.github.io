@@ -32,7 +32,7 @@ body {
     max-width: 11em;
     border-radius: 10px;
     box-shadow: 0px 0px 10px deepskyblue;
-
+    transition: 0.2s;
     animation: mymove2 3s infinite;
 }
 
@@ -42,6 +42,7 @@ body {
 
 .card a.downloadLink:hover{
     color: greenyellow;
+    transition: 0.4s;
     background-color: black;
     box-shadow: 0px 0px 10px red;   
 }
@@ -140,7 +141,7 @@ header{
 #myTopnav {
     position: -webkit-sticky; /* Needed for macOS */
     position: sticky;
-    top: 5.3em;
+    top: 4em;
     z-index:1;    
 }
 
@@ -151,10 +152,10 @@ ul.top {
 /*    overflow: hidden;*/
 /*    background-color: #f3d163; */
 /*    border: solid black;*/
-    background-color: white; ;
+    background-color: #E6E8FA; ;
     position: -webkit-sticky; /* Needed for macOS */
     position: sticky;
-    top: 5.3em;
+    top: 4em;
     z-index:1;
 }
 /* Notice the dot notation. This is li with class top*/
@@ -543,9 +544,11 @@ input[type=submit]:hover {
 
 /* ========= Displays the hamburger */     
       #myTopnav a.icon {
+          display: block;   
+    }
+      #myTopnav a.icon:hover {
           display: block;
-
-          
+        background-color:darkgoldenrod;
     }
 
     
