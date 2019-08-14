@@ -7,6 +7,7 @@ body {
     /* background: #f3d163;*/
     background-color: white;
     font-family: sans-serif;
+    line-height:1.5em;
     
 }
 
@@ -47,6 +48,7 @@ body {
 
 .card a.downloadLink:focus {
     color: hotpink;
+    background-color: black;
     box-shadow: none;
 }
 
@@ -254,6 +256,8 @@ li.dropdown {
 }
 
 
+
+
 /* ========== My picture ===========*/
 img#animated {
     background-color: white;
@@ -333,7 +337,9 @@ h4{
 
 .whiteCard:hover{
     background-color: white;
+    border:double;
 }
+
 
 .whiteCardLink:link {
     text-decoration: none;   
@@ -424,7 +430,7 @@ input[type=submit]:hover {
 
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.tab button:hover, .tab button:focus{
   background-color: lightcyan;
     font-weight: bold;
 }
@@ -469,7 +475,7 @@ input[type=submit]:hover {
     margin-right: auto;
     width: 100%;
 
-}
+    }
 }
 
 @media screen and (max-width: 750px) {
