@@ -565,15 +565,15 @@ title: ScienceTony
   
 </div><!-- end main column -->
 
-   <!-- Right sidebar -->
- <div class="rightcolumn_contact" >
-    	<div class="card sideCard" id="mediaLinks">
-      {% include about_me.html %}
-	 </div> <!-- End of mediaLinks -->
-      {% include mediaLinks.html %}
-      {% include webBlogs.html %}
- 
- </div>
-   </div> <!-- End of rightcolumn_contact --> 
-       
+  <div class="rightcolumn_contact" > 
+	 
+	<!-- note about me does not come in a div tag because it is used within other tags with class card -->  
+        <div class="card"> 
+	{% include about_me.html %}
+	</div><!-- End of card --> 
+	  
+	{% include mediaLinks.html %}
+	  
+  </div> <!-- End of rightcolumn_contact -->
 </div> <!-- End of row -->
+
