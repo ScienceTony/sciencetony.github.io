@@ -15,30 +15,56 @@
        if (x[0].style.display === "block") {
         x[0].style.display = "none";
         x[1].style.display = "none"; // makes other menu diapaer
+        x[2].style.display = "none"; // makes other menu diapaer
       } else {
         x[0].style.display = "block";
         x[1].style.display = "none"; // makes other menu diapaer 
+        x[2].style.display = "none"; // makes other menu diapaer
       }
     }
-    // Makes dropdown men 1 work on click for touch screen. Note this function has a different name. 
+    // Makes dropdown men 1 work on click for touch screen. Note this function has a different name.
+
+// Maps
     function menuFunction1() {
       var x = document.getElementsByClassName("dropdown-content");
       if (x[1].style.display === "block") {
         x[1].style.display = "none";
-        x[0].style.display = "none"; // makes other menu diapaer 
+        x[0].style.display = "none"; // makes other menu diapaer
+        x[2].style.display = "none"; // makes other menu diapaer
       } else {
         x[1].style.display = "block";
-        x[0].style.display = "none"; // makes other menu diapaer       
+        x[0].style.display = "none"; // makes other menu diapaer 
+        x[2].style.display = "none"; // makes other menu diapaer
       }
     }
     // Caller is in the div class="row" This will close the menu. 
+
+// Code
+    function menuFunction3() {
+      var x = document.getElementsByClassName("dropdown-content");
+
+       if (x[2].style.display === "block") {
+        x[1].style.display = "none";
+        x[0].style.display = "none"; // makes other menu diapaer 
+        x[2].style.display = "none"; // makes other menu diapaer
+
+      } else {
+        x[2].style.display = "block";
+        x[1].style.display = "none"; // makes other menu diapaer 
+        x[0].style.display = "none"; // makes other menu diapaer
+
+      }
+    }
     function closeMenu(){
         var x = document.getElementsByClassName("dropdown-content");
-        if (x[1].style.display === "block" || x[0].style.display === "block") {
+        if (x[1].style.display === "block" || x[0].style.display === "block" || x[2].style.display === "block") {
             x[1].style.display = "none";
-            x[0].style.display = "none";  
+            x[0].style.display = "none"; 
+            x[2].style.display = "none";
           }
     }
+
+
       // this function opens and closes the menu when in @media mode for small 
     function menuFunction2() {
       var x = document.getElementById("myTopnav");
@@ -116,7 +142,7 @@ setTimeout(slideshow3, 4000);
 }
 
 
-
+/*  This is the function for my spare time  */
 
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
