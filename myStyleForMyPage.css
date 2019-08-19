@@ -200,7 +200,7 @@ li a, .dropbtn {
     font-family:sans-serif, serif;
 }
 
- li.top a:hover, .dropdown:hover .dropbtn, li#right a:hover {
+ li.top a:hover, .dropdown:hover .dropbtn, li#right a:hover, #myTopnav a.icon:hover {
     background-color: goldenrod;
     color: white;
 }
@@ -447,7 +447,7 @@ input[type=submit]:hover {
     border-top-right-radius: 30px;
     border-top-left-radius: 10px;
     background-color: white;
-    box-shadow: 0 0px 5px 1px deepskyblue inset;
+    box-shadow: 0 0px 8px 2px deepskyblue inset;
 }
 .hidtab {
     display: none;
@@ -485,6 +485,11 @@ input[type=submit]:hover {
 /* ========= Hides the hamburger */
 #myTopnav .icon {
   display: none;
+}
+
+iframe {
+    width: "515"; 
+    height: "270";
 }
 
 
@@ -526,11 +531,15 @@ input[type=submit]:hover {
         background-color: #f3d163; 
 
     }
+    iframe{
+        width: auto;
+        height: auto;
+    }
 
 
 }
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 500px){
     
     .topnav ul.top, li.top, li#right{
         
@@ -571,7 +580,7 @@ input[type=submit]:hover {
           display: block;   
     }
       #myTopnav a.icon:hover {
-          display: block;
+          display: block; 
         background-color:darkgoldenrod;
     }
 
