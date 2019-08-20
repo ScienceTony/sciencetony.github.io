@@ -541,10 +541,10 @@ iframe {
 
     }
     iframe{
-        width: auto;
-        height: auto;
+        width: 415px;
+        height: 270px;
     }
-
+/* width="515" height="270" */
 
 }
 
@@ -591,6 +591,11 @@ iframe {
       #myTopnav a.icon:hover {
           display: block; 
         background-color:darkgoldenrod;
+    }
+    
+        iframe{
+        width: 270px;
+        height: 230px;
     }
 
     
