@@ -357,8 +357,17 @@ h4{
     border:solid black;
     box-shadow: 0 0 5px;
     text-decoration: none;
-    border-radius: 5px
+    border-radius: 5px;
 }
+
+#reportPanel {
+    display: inline-block;
+    height: 250px;
+    width:200px;
+}
+
+
+
 
 .whiteCard:hover{
     background-color: white;
