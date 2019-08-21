@@ -22,6 +22,15 @@ a:hover {
     color: darkgoldenrod;
 }
 
+/* ============ This is for the blog links within sciencetony's journal =================*/
+li.blogLink a{
+    display: inline;
+    color: blue;
+    text-align: left;
+    padding: 0;
+    text-decoration: underline;
+}
+
 #counter{
     background-color: black;
     padding-top: 8px;
