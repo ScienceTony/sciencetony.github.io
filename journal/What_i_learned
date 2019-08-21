@@ -21,4 +21,16 @@ Video leasons on Jekyll https://youtu.be/HfcJeRby2a8
 
 ## Task
 Create an about me file for includes, so i just have the one file to change. <br>
-Complete this the weekend. 
+Complete this the weekend.
+
+This was striaght forward. 
+
+# Date: 21 August 2019
+
+## Task 
+Checking html validation. 
+
+## Outcome
+I learned that <b> cannot be a child or parent of <ul>. 
+<br>
+I also learned that border is no longer used in iframe.  iframe borders must be done with CSS. 
