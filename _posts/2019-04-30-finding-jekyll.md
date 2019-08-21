@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "ScienceTony Launches Site"
+title: "Finding out about Jekyll"
 date: 2019-04-30
 ---
 
 # Date: 07 August 2019
 
 ## Task
-Since i cannot use php i need an alternative. <br><br>
-Today, i learnt about **Jekyll** and how i can use include.  Fisrt i needed to make an `_includes` directory and then i set about making the files.
+Since I cannot use php, I need an alternative. <br><br>
+Today, I learnt about **Jekyll** and how i can use include.  Fisrt I needed to make an `_includes` directory and then I set about making the files.
 <br>
 <br>
 Where php uses require, **Jekyll** uses include as follows:
