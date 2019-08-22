@@ -12,4 +12,4 @@ Today, I learnt about **Jekyll** and how i can use include.  First I needed to m
 <br>
 <br>
 Where php uses require, **Jekyll** uses include as follows:
-  `{% include [insert name of html file] %}`.  Note, you will not need the [] brackets. <br>
+  `\{% include [insert name of html file] %}`.  Note, you will not need the [] brackets. <br>
