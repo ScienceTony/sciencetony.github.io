@@ -1,3 +1,4 @@
 name: Tony McDonald
 markdown: kramdown
 title: ScienceTony
+permalink: /blog/:year/:month/:day/:title
