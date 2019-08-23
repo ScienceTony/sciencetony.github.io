@@ -12,15 +12,23 @@ body {
 }
 
 /* intext links */
-a {
-    color: green;
+a.inTextLink {
+    color;
     text-decoration:none;
     font-weight: normal;
 }
 
-a:hover {
+a.inTextLink:hover {
     color: darkgoldenrod;
+    text-decoration:underline;
+}
 
+a:visited {
+    color: green;
+}
+
+a.backButton:hover{
+    color: darkgoldenrod;
 }
 
 /* ============ This is for the blog links within sciencetony's journal =================*/
@@ -409,9 +417,16 @@ h4{
     background: skyblue;
     margin-top: 20px;
 }
+
+.footer a {
+    text-decoration: none;
+}
 .footer a:hover{
     color: hotpink;
+    text-decoration:underline;
 }
+
+
 
 /* ========================= Style for contact form ===================  */
 
