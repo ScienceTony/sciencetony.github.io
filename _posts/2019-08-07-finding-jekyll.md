@@ -20,6 +20,6 @@ This will make maintenance much easier now.
 <br>
 <br>
 ### Resources:<br>
-This gets me stared and has [info about blog](http://jmcglone.com/guides/github-pages/)
+This gets me stared and has [info about making a blog](http://jmcglone.com/guides/github-pages/)
 <br>
 Video lessons on [Jekyll](https://youtu.be/HfcJeRby2a8)
