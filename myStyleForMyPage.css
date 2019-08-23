@@ -28,7 +28,6 @@ a {
 }
 a:hover {
     color: darkgoldenrod;
-    text-decoration:underline;
 }
 /**/
 a.backButton:hover{
