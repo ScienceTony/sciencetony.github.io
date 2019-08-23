@@ -4,8 +4,6 @@ title: "Using Includes"
 date: 2019-08-09
 ---
 
-# Date: 09 August 2019
-
 ## Task outline
 Create an about me file for includes, so i just have the one file to change. <br>
 Complete this the weekend.
