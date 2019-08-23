@@ -6,7 +6,7 @@ Today, i learnt about **Jekyll** and how i can use include.  Fisrt i needed to m
 <br>
 <br>
 Where php uses require, **Jekyll** uses include as follows:
-  `{% include [insert name of html file] %}`.  Note, you will not need the [ ] brackes. <br>
+  \{% include [insert name of html file] %\}.  Note, you will not need the [ ] brackes. <br>
 Like php, i can now create blocks of code and then use include to call them when i need them.  I can also us different defult templates and storm them in the `_Layouts` folder. <br>
 I made a `_layouts` directory and added a default template to it. <br><br>
 This will make maintainace much easier now. 
