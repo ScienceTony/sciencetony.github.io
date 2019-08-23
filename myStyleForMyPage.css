@@ -13,7 +13,7 @@ body {
 
 /* intext links */
 a.inTextLink {
-    color;
+    color: blue;
     text-decoration:none;
     font-weight: normal;
 }
