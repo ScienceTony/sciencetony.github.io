@@ -17,31 +17,21 @@ a.inTextLink {
     text-decoration:none;
     font-weight: normal;
 }
-/* a:visited must come before a:hover */
-a.inTextLink:visited {
-    color: green;
-}
 
 a.inTextLink:hover {
     color: darkgoldenrod;
     text-decoration:underline;
 }
 
+a:visited {
+    color: green;
+}
+
 a.backButton:hover{
     color: darkgoldenrod;
 }
 
-/* ============ This is for the blog links within sciencetony's journal =================*/
-li.blogLink a{
-    display: inline;
-    color: blue;
-    text-align: left;
-    padding: 0;
-}
 
-li.blogLink a:hover {
-    text-decoration: underline;
-}
 
 #counter{
     background-color: black;
@@ -52,10 +42,21 @@ li.blogLink a:hover {
     border-radius: 10px;
     box-shadow: -1px 1px 4px 1px inset lawngreen;
     text-align: center;
-
-    
     
 }
+
+/* ============ This is for the blog links within sciencetony's journal =================*/
+li.blogLink a{
+    display: inline;
+    color: blue;
+    text-align: left;
+    padding: 0;
+}
+li.blogLink a:hover {
+    text-decoration: underline;
+}
+
+
 
 .card a.downloadLink {
 /* Deals with the text in box */
@@ -213,7 +214,7 @@ li#right{
     float: right;
 }
 
-li a, .dropbtn {
+li a {
     display: block; /* This has been changed from inline-block, which apeared to stop the menu bar from lining up upderneither each other when the screen was made small*/
     color: black;
     text-align: center;
@@ -230,6 +231,10 @@ li a, .dropbtn {
 li.top a:focus, li#right a:focus , .dropdown a:focus{
     background-color: goldenrod;
     color: white;
+}
+
+li.top a:visited {
+    color:black;
 }
 
 /* This horozontaly lines up the 2 dropdown menus */
@@ -424,7 +429,8 @@ h4{
 
 .footer a:visited{
     color: green;
-
+    
+}
 .footer a:hover{
     color: hotpink;
     text-decoration:underline;
