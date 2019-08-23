@@ -23,9 +23,6 @@ a.inTextLink:hover {
     text-decoration:underline;
 }
 
-a:visited {
-    color: green;
-}
 
 a.backButton:hover{
     color: darkgoldenrod;
@@ -233,9 +230,6 @@ li.top a:focus, li#right a:focus , .dropdown a:focus{
     color: white;
 }
 
-li.top a:visited {
-    color:black;
-}
 
 /* This horozontaly lines up the 2 dropdown menus */
 li.dropdown {
