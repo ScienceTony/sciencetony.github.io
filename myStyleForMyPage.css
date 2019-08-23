@@ -20,6 +20,7 @@ a {
 
 a:hover {
     color: darkgoldenrod;
+    text-decoration: underline;
 }
 
 /* ============ This is for the blog links within sciencetony's journal =================*/
@@ -28,6 +29,9 @@ li.blogLink a{
     color: blue;
     text-align: left;
     padding: 0;
+}
+
+li.blogLink a:hover {
     text-decoration: underline;
 }
 
