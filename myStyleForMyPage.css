@@ -25,6 +25,7 @@ a.inTextLink:hover {
 /**/
 a {
     color: green;
+    text-decoration:none;
 }
 a:hover {
     color: darkgoldenrod;
