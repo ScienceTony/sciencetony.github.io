@@ -17,7 +17,7 @@ Complete this the weekend.
 
 ## Comments on knowledge and skills demonstrated 
 
-* This is a liquid tag: /{% include file.html %/}
+* This is a liquid tag: /{ % include file.html % /}
 * The liquid tags must be correct or the file will not compile. 
 * The liquide tags must be in the location I want them.
 
