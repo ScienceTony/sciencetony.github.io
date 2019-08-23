@@ -22,8 +22,14 @@ a.inTextLink:hover {
     color: darkgoldenrod;
     text-decoration:underline;
 }
-
-
+/**/
+a {
+    color: green;
+}
+a:hover {
+    color: darkgoldenrod;
+}
+/**/
 a.backButton:hover{
     color: darkgoldenrod;
 }
