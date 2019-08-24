@@ -207,7 +207,7 @@ i {
 }
 /**/
 
-#myTopnav {
+#myTopnav,  #myTopnav2{
     position: -webkit-sticky; /* Needed for macOS */
     position: sticky;
     top: 4em;
@@ -567,7 +567,7 @@ iframe {
 @media screen and (max-width: 1500px) {
     .card a.downloadLink {
 
-/* deals with position and  */    
+/* deals with position  */    
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -588,7 +588,7 @@ iframe {
     header{
         position: relative;
     }
-    #myTopnav {
+    #myTopnav, #myTopnav2 {
         position: -webkit-sticky; /* Needed for macOS */
         position: sticky;
         top: 0;
@@ -640,6 +640,18 @@ iframe {
       .topnav li.dropdown, .topnav li.top  {
           display: none;
     }
+    
+/* This is foe nav2 */
+      #myTopnav2 li.dropdown, #myTopnav2 li.top  {
+          display: inline-block;
+          /*width: 40%;*/
+      
+    }
+    #myTopnav2 li.top {
+        float: left;
+        width: auto;
+    }
+
  
 
 /* ========= Displays the hamburger */     
@@ -654,6 +666,9 @@ iframe {
         iframe{
         width: 270px;
         height: 230px;
+    }
+    i {
+        border: none;
     }
 
     
