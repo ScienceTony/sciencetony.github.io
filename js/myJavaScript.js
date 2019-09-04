@@ -101,7 +101,7 @@ setTimeout(slideshow1,4000);
 
 var slideimages2 = new Array();
 slideimages2[0] = new Image();
-slideimages2[0].src = "images/Garden/sf.jpg";
+slideimages2[0].src = "images/Garden/sf.JPG";
 slideimages2[1] = new Image();
 slideimages2[1].src = "images/Garden/rsf.jpg";
 slideimages2[2] = new Image();
