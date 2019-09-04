@@ -21,8 +21,8 @@ However, the recommended formats do not cover all the browsers. For instance, we
 * Determination. 
 
 ## What I Learned
-* There are next gen formats for images, but they do not yet cover all browsers. See [webP browser support](https://caniuse.com/#feat=webp), [jpeg 2000](https://caniuse.com/#feat=jpeg2000) and [jpeg XR](https://caniuse.com/#feat=jpegxr).  This is very reminiscent of the browser wars of the 1980s.  
-* Next gen formats.
+There are next gen formats for images, but they do not yet cover all browsers. See [webP browser support](https://caniuse.com/#feat=webp), [jpeg 2000](https://caniuse.com/#feat=jpeg2000) and [jpeg XR](https://caniuse.com/#feat=jpegxr).  This is very reminiscent of the browser wars of the 1980s.  
+__Next gen formats:__
 * WebP.
 * jpeg 2000.
 * jpeg XR.
