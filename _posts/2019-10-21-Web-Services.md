@@ -21,5 +21,5 @@ SOAP uses xml, has headers, a body, is transported over the internet using http 
 * Spent a lot of time at the OU library reading
 
 ### Resources:
-[What is SOAP](https://www.w3schools.com/xml/xml_soap.asp)
+[What is SOAP](https://www.w3schools.com/xml/xml_soap.asp)<br>
 [What is REST](https://www.w3schools.in/category/restful-web-services/)
