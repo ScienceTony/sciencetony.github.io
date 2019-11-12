@@ -123,11 +123,11 @@ setTimeout(slideshow2,4000);
 
 var slideimages3 = new Array();
 slideimages3[0] = new Image();
-slideimages3[0].src = "images/Church/Church.jpg";
+slideimages3[0].src = "images/Church/ChristChurch.jpg";
 slideimages3[1] = new Image();
 slideimages3[1].src = "images/Church/BBQ.jpg";
 slideimages3[2] = new Image();
-slideimages3[2].src = "images/Church/nav.jpg";
+slideimages3[2].src = "images/Church/ChristChurch.jpg";
 
 
 var step3 = 0;
