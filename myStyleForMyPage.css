@@ -71,7 +71,16 @@ Share links START
 .resp-sharing-button--twitter:hover {
     background-color: #2795e9;
 }
+/* ======================== Mastodon =====================*/
+.resp-sharing-button--Mastodon {
+  background-color: #55acee;
+  min-width: 12em;    
+}
 
+.resp-sharing-button--Mastodon:hover {
+    background-color: #2795e9;
+}
+/* ======================== Remeber to look further down for the other 3 parts =====================*/
 
 .resp-sharing-button--facebook {
     background-color: #3b5998;
