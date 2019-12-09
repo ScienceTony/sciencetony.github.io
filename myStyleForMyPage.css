@@ -173,6 +173,17 @@ Share links START
   border-color: #046293;
 }
 
+.resp-sharing-button--Mastodon {
+  background-color: #skyblue;
+  border-color: #55acee;
+}
+
+.resp-sharing-button--Mastodon:hover,
+.resp-sharing-button--Mastodon:active {
+  background-color: #2795e9;
+  border-color: #2795e9;
+}
+
 .resp-sharing-button--reddit {
   background-color: #5f99cf;
   border-color: #5f99cf;
