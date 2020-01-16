@@ -13,6 +13,23 @@ body {
     
 }
 
+/* ===================
+Like and dislike cards
+=====================*/
+
+.LikeCard {
+    background: palegreen;
+    min-width: 19em;
+    display: inline-block;
+    font-family: sans-serif;
+    padding: inherit;
+    line-height:1.5em;
+}
+
+.LikeCard#Dislikes {
+    background: #ffcccc;
+}
+
 /* ==================================
 Share links START
 ====================================*/
@@ -628,6 +645,7 @@ img#animated {
 
 h2 {
     font-family: "Courier new";
+    text-transform: uppercase;
 }
 
 h3{
