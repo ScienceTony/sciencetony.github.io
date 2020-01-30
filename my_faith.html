@@ -1,0 +1,26 @@
+---
+layout: default
+title: ScienceTony
+---
+{% include header.html %}
+{% include navbar.html %}
+
+
+<div class="row" onclick="closeMenu()">  
+<!-- Remebember that the right column on this page is actually the left -->
+    
+{% include my_faith_card.html %}
+    
+        
+    <!-- Right sidebar -->
+    <div class="rightcolumn_contact" >
+	<div class="card">
+	{% include about_me.html %}
+	</div><!-- End of card -->
+	    
+	{% include mediaLinks.html %}
+	{% include my_degree_short.html %}
+    </div> <!-- End of rightcolumn_contact -->
+    
+  
+</div> <!-- End of row -->
