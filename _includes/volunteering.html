@@ -1,0 +1,50 @@
+---
+layout: default
+title: ScienceTony
+---
+{% include header.html %}
+{% include navbar.html %}
+
+
+<div class="row" onclick="closeMenu()">  
+<!-- Remebember that the right column on this page is actually the left -->
+    
+ <!-- ================================================ -->
+    
+    <div class="rightcolumn">
+        <div class="card">
+        <h2>volunteering</h2>
+        <hr>
+
+            <!-- likes card -->
+            <div class="card sideCard" id="moreAboutMe">
+                <p>At current I volunteer for Cancer Research and The Salvation Army.  In both instances I work on a till and deal with custermor service. Custermor service is very different from dealing with maths, coding or database problems and is a welcome change.</p>
+                <p>Here are three blogs about volunteering.</p>
+                
+                    <p><a href="https://www.sciencetony.com/2017/11/volunteering-can-change-your-life-and.html" >How Volunteering can Change Your Life and Boost Your Career.</a></p>
+                
+                    <p><a href="https://www.sciencetony.com/2019/08/why-people-volunteer.html" >Why People Volunteer.</a></p>
+                
+                    <p><a href="https://www.sciencetony.com/2017/03/three-reasons-why-i-like-volunteering.html" >Three reasons why I like volunteering for local IT charities.</a></p>
+
+            </div>  <!-- End of card --> 
+        </div> <!-- End of More about me card -->
+        
+
+    </div> <!-- End of right column -->   
+ 
+
+ <!-- ================================================ --> 
+        
+    <!-- Right sidebar -->
+    <div class="rightcolumn_contact" >
+	<div class="card">
+	{% include about_me.html %}
+	</div><!-- End of card -->
+	    
+	{% include mediaLinks.html %}
+	{% include my_degree_short.html %}
+    </div> <!-- End of rightcolumn_contact -->
+    
+  
+</div> <!-- End of row -->
