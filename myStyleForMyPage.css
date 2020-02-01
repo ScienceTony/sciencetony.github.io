@@ -911,7 +911,7 @@ iframe {
 
 }
 
-@media screen and (max-width: 510px){
+@media screen and (max-width: 515px){
     
     .topnav ul.top, li.top, li#right{
         
@@ -988,4 +988,4 @@ iframe {
         display:block;
     }
 
-}/* @media screen and (max-width: 510px) */
+}/* @media screen and (max-width: 515px) */
