@@ -17,17 +17,33 @@ body {
 Like and dislike cards
 =====================*/
 
-.LikeCard {
-    background: palegreen;
-    min-width: 19em;
-    display: inline-block;
-    font-family: sans-serif;
-    padding: inherit;
-    line-height:1.5em;
+/* Create two equal columns that floats next to each other */
+.columnLike {
+    flex: 50%;
+    margin: 5px;
 }
 
-.LikeCard#Dislikes {
-    background: #ffcccc;
+/* Clear floats after the columns */
+#Likes {
+  display: flex;
+    background-color: whitesmoke
+}
+
+.LikeCard {
+    background: palegreen;
+    min-width: 10em;
+    /*display: inline-block;*/
+    font-family: sans-serif;
+    /*padding: inherit;*/
+    line-height:1.5em;
+    
+}
+#things_i_like{
+   background: palegreen; 
+}
+
+#dislikes{
+   background: #ffcccc; 
 }
 
 /* ==================================
@@ -895,7 +911,7 @@ iframe {
 
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 510px){
     
     .topnav ul.top, li.top, li#right{
         
@@ -966,7 +982,10 @@ iframe {
         margin: auto;
         padding: 10px;
     }
-
     
 
-}
+    #Likes {
+        display:block;
+    }
+
+}/* @media screen and (max-width: 510px) */
