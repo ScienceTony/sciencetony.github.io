@@ -850,6 +850,12 @@ input[type=submit]:hover {
   animation: fadeEffect 0.5s;
 }
 
+.tabcontent h4 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}
