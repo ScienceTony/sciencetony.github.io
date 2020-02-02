@@ -689,9 +689,11 @@ h4{
     text-transform: capitalize;
 }
 
-/* Side Cards */
-/* i used an id for this side card  */
+/* ===========
+Side Cards 
+============== */
 
+/* i used an id for this side card  */
 #mediaLinks a{
     display: block;
     margin-left: auto;
@@ -699,7 +701,7 @@ h4{
     width: 92%;
 }
 
-.sideCard h3, h4 {
+.sideCard h3, h4 {  /* This will crentre align the headings h3 and h4 */
     text-align: center;
 }
 
@@ -722,8 +724,6 @@ h4{
 }
 
 
-
-
 .whiteCard:hover{
     background-color: white;
     border:double;
@@ -743,7 +743,9 @@ h4{
 }
 
 
-/* Footer */
+/* ==============
+Footer 
+================= */
 .footer {
     padding: 4px;
     text-align: center;
@@ -798,11 +800,11 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
-
-
 /* ========= End of style for contact form ========= */
 
-/* Style the tab */
+
+
+/* ========== Style the tab ============= */
 .tab {
     overflow: hidden;
 }
