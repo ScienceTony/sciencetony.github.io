@@ -702,7 +702,7 @@ Side Cards
     width: 92%;
 }
 
-.sideCard h3, h4 {  /* This will crentre align the headings h3 and h4 */
+.sideCard h3, h4 {  /* This will centre align the headings h3 and h4 for any card with sideCard as a class */
     text-align: center;
 }
 
