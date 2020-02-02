@@ -692,7 +692,7 @@ h4{
     width: 92%;
 }
 
-.sideCard h4 {
+.sideCard h3, h4 {
     text-align: center;
 }
 
