@@ -2,8 +2,6 @@
     box-sizing: border-box;
 }
 
-
-
 body {
     /* background: #e5f2ff;*/
     /* background: #f3d163;*/
@@ -39,11 +37,11 @@ Like and dislike cards
     
 }
 #things_i_like{
-   background: palegreen; 
+   background: #d4fcdf; /* very pale green */
 }
 
 #dislikes{
-   background: #ffcccc; 
+   background: #ffcccc; /* very pale pink */
 }
 
 /* ==================================
@@ -250,7 +248,9 @@ Share links START
 Share links END
 ===================================*/
 
-/* intext links */
+/* ===============
+intext links 
+================= */
 a.inTextLink {
     color: green;
     text-decoration:none;
@@ -260,7 +260,7 @@ a.inTextLink {
 a.inTextLink:hover {
     color: darkgoldenrod;
 }
-/**/
+
 a {
     color: blue;
     text-decoration:none;
@@ -268,12 +268,14 @@ a {
 a:hover {
     color: darkgoldenrod;
 }
-/**/
+
 a.backButton:hover{
     color: darkgoldenrod;
 }
 
-
+/* ================ 
+page visit counter
+=================== */
 
 #counter{
     background-color: black;
@@ -287,7 +289,10 @@ a.backButton:hover{
     
 }
 
-/* ============ This is for the blog links within sciencetony's journal =================*/
+/* ====================================================
+This is for the blog links within sciencetony's journal 
+====================================================== */
+
 li.blogLink a{
     display: inline;
     color: blue;
@@ -303,7 +308,9 @@ li.blogLink a:hover {
     text-decoration: underline;
 }
 
-
+/* ============
+Download Link 
+=============== */
 
 .card a.downloadLink {
 /* Deals with the text in box */
