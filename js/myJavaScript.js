@@ -31,6 +31,23 @@
    
     // End of Quiz two . 
 
+// Quiz 3 buttons and answers.
+
+    function myQuiz3(evt, btn) {
+        
+        if(btn === "buttonB"){
+            document.getElementById(btn).innerHTML = "&#10003";
+            document.getElementById(btn).style.color="limegreen";
+        }
+                
+        else {
+            document.getElementById(btn).innerHTML = "&#10008";
+            document.getElementById(btn).style.color="red";          
+           }
+    }
+   
+// End of Quiz three. 
+
     function menuFunction() {
       var x = document.getElementsByClassName("dropdown-content");
 
