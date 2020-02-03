@@ -461,20 +461,56 @@ for social media icons
 }
 
 
-/* js buttons such as the one on index page */
-#button1{
-    display: inline;
-    border: 1px solid red;
-    padding: 5px;
-
-}
+/* ======================================
+js buttons for quiz
+========================================= */
 
 button{
     font-size: 100%;
-    width:20%;
-    margin-left:30px;
+    width:9em;
+    /* margin-left:30px; */
     cursor: pointer;
+    display:inline-block; /* This makes the span tag display beneith the button */
+    padding: 5px;
+    margin: 5px;
 }
+
+#button1{ /* This is for the test button this will do something cool*/
+    display: inline; 
+    border: 1px solid red;
+    padding: 5px;
+}
+
+/* ======== Quiz one button =========== */
+
+#button2{
+    padding-left: 1em;
+    padding-top: 1em;
+    display:block; /* This makes the span tag display beneith the button */
+    font-size: 1.5em
+}
+
+#button3{ /* This is for the test button this will do something cool*/
+    display: inline; 
+    border: 1px solid green;
+    padding: 5px;
+}
+
+/* ======== Quiz two buttons =========== */
+
+#buttonA, #buttonB, #buttonC{
+    display:inline-block;
+    font-size: 1.5em; 
+}
+
+
+.Q2button {
+    text-align: left;
+}
+
+/* ======================================
+End of js buttons for quiz
+========================================= */
 
 logo{
     margin: 5px;
@@ -687,7 +723,6 @@ h3{
 h4{
     font-family:sans-serif;
     text-transform: capitalize;
-    text-align: left;
 }
 
 /* ===========
@@ -717,6 +752,7 @@ Side Cards
     text-decoration: none;
     border-radius: 5px;
 }
+
 
 #reportPanel {
     display: inline-block;
@@ -849,7 +885,6 @@ input[type=submit]:hover {
   -webkit-animation: fadeEffect 0.5s;
   animation: fadeEffect 0.5s;
 }
-
 .tabcontent h4 {
     text-align: center;
     text-decoration: underline;
