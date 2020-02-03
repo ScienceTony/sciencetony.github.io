@@ -4,11 +4,33 @@
     document.getElementById("button1").style.color="blue";
     document.getElementById("button1").style.border="none";
     }
-    // Notice that .getElementsByClassName is different in 2 ways.
-    // 1) There is an 's' at the end of Element in .getElementsByClassName
-    // 2) ClassName not just Class in place of ID 
-    // Makes dropdown men 0 work on click for touch screen
-    // 3) It is necessary to use indexing and use a seperate function; hence, menuFunction() and menuFunction1()
+
+    // Quiz 1 button and anwser.
+
+    function myQuiz1() {
+    document.getElementById("button2").innerHTML = "N Korea in 2007";
+    document.getElementById("button2").style.color="blue";
+    document.getElementById("button2").style.border="none";
+    }
+
+    // Quiz 2 buttons and answers.
+
+    function myQuiz2(evt, btn) {
+        
+        if(btn === "buttonC"){
+            document.getElementById(btn).innerHTML = "&#10003";
+            document.getElementById(btn).style.color="limegreen";
+        }
+                
+        else {
+            document.getElementById(btn).innerHTML = "&#10008";
+            document.getElementById(btn).style.color="red";
+            
+           }
+    }
+   
+    // End of Quiz two . 
+
     function menuFunction() {
       var x = document.getElementsByClassName("dropdown-content");
 
@@ -158,7 +180,6 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
     
 }
-
 
 
 function start() {
