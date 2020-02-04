@@ -357,7 +357,7 @@ Download Link
 /* Buttons */
 
 /* Styles the social media list links (buttons) for Say hello! */
-.mediaLinks a, a.ButtonLinks, #youtubeLinks a {
+.mediaLinks a, a.ButtonLinks {
     color: blue;
     text-transform: capitalize;
     background-color: lightcyan;
@@ -389,6 +389,13 @@ Download Link
     box-shadow: 0px 0px 10px blue;
     font-weight: bold;
    
+}
+
+#youtubeLinks a{
+    margin: 5px; 
+}
+.fullWidthButton a{
+    max-width: none;
 }
 /* =================== 
 for social media icons 
