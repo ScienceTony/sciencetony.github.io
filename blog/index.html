@@ -5,7 +5,7 @@ title: ScienceTony's Journal
 {% include header.html %}
 {% include navbar.html %}
 
-<blog onclick="closeMenu()">
+<<div class="card" onclick="closeMenu()">
 	<h1>{{ page.title }}</h1>
 	<ul class="posts">
 
@@ -13,5 +13,5 @@ title: ScienceTony's Journal
 	    <li class="blogLink" ><span>{{ post.date | date_to_string }}</span> » <a class="blogLink" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 	  {% endfor %}
 	</ul>
-</blog>
+</div>
 
