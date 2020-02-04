@@ -357,7 +357,7 @@ Download Link
 /* Buttons */
 
 /* Styles the social media list links (buttons) for Say hello! */
-.card#mediaLinks a, a.ButtonLinks {
+.card#mediaLinks a, a.ButtonLinks, #youtubeLinks a {
     color: blue;
     text-transform: capitalize;
     background-color: lightcyan;
