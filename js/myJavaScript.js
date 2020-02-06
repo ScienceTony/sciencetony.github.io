@@ -481,11 +481,11 @@ function slideshow2() {
 
 var slideimages3 = [];
 slideimages3[0] = new Image();
-slideimages3[0].src = "images/Church/ChristChurch.jpeg";
+slideimages3[0].src = "images/Church/ChristChurch.jpg";
 slideimages3[1] = new Image();
 slideimages3[1].src = "images/Church/BBQ.jpg";
 slideimages3[2] = new Image();
-slideimages3[2].src = "images/Church/ChristChurch.jpeg";
+slideimages3[2].src = "images/Church/ChristChurch.jpg";
 
 
 var step3 = 0;
