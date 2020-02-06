@@ -199,7 +199,7 @@ function myQuizWebAnswerQ4() {
         document.getElementById('radioAQ4').innerHTML = "&#10008";
         document.getElementById('radioAQ4').style.color="red";
         
-        document.getElementById("radioA_WrittenAnswerQ4").innerHTML = '&nbsp;&nbsp; Wrong! &nbsp;&nbsp;.'; document.getElementById("radioA_WrittenAnswerQ4").style.backgroundColor = "#ffbfc5"; 
+        document.getElementById("radioA_WrittenAnswerQ4").innerHTML = '&nbsp;&nbsp; This will look for an id of red, but will then do nothing. &nbsp;&nbsp;.'; document.getElementById("radioA_WrittenAnswerQ4").style.backgroundColor = "#ffbfc5"; 
         var newBrTag = document.createElement("BR"); document.getElementById("radioA_WrittenAnswerQ4").appendChild(newBrTag);
         number = 1;
         attemptsCount();
@@ -209,7 +209,7 @@ function myQuizWebAnswerQ4() {
         document.getElementById('radioCQ4').innerHTML = "&#10008";
         document.getElementById('radioCQ4').style.color="red";
         
-        document.getElementById("radioC_WrittenAnswerQ4").innerHTML = '&nbsp;&nbsp; Wrong! &nbsp;&nbsp;'; document.getElementById("radioC_WrittenAnswerQ4").style.backgroundColor = "#ffbfc5"; 
+        document.getElementById("radioC_WrittenAnswerQ4").innerHTML = '&nbsp;&nbsp; This will look for an element with class name instead of id. &nbsp;&nbsp;'; document.getElementById("radioC_WrittenAnswerQ4").style.backgroundColor = "#ffbfc5"; 
         var newBrTag = document.createElement("BR"); document.getElementById("radioC_WrittenAnswerQ4").appendChild(newBrTag);
         number = 1;
         attemptsCount();
@@ -241,7 +241,7 @@ function myQuizWebAnswerQ5() {
         document.getElementById('radioAQ5').innerHTML = "&#10008";
         document.getElementById('radioAQ5').style.color = "red";
         
-        document.getElementById("radioA_WrittenAnswerQ5").innerHTML = ' &nbsp;&nbsp; Wrong! &nbsp;&nbsp;. '; document.getElementById("radioA_WrittenAnswerQ5").style.backgroundColor = "#ffbfc5"; 
+        document.getElementById("radioA_WrittenAnswerQ5").innerHTML = ' &nbsp;&nbsp; This would use capitalised. &nbsp;&nbsp; '; document.getElementById("radioA_WrittenAnswerQ5").style.backgroundColor = "#ffbfc5"; 
         var newBrTag = document.createElement("BR"); document.getElementById("radioA_WrittenAnswerQ5").appendChild(newBrTag);
         number = 1;
         attemptsCount();
@@ -304,22 +304,27 @@ function myQuizWebAnswerQ6() {
 
 }
 
-// Total counter ++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++
+// Total counter 
+// ++++++++++++++++++++++++++++++++++++
 var counter = document.getElementById("quizCounter");
 function correctAnswerCount(){
 
     counter +=1;
 //   document.getElementById("quizCounter").value = counter;
 
-    // The for iterates over the length of the list and inserts the
-    // value into all tags in the array. ****
+    // The for loop iterates over the length of the list and inserts the
+    // value into all tags in the array. 
     // This is because '.getElementsByClassName' returns an array unlike '.getElementById', which reurns a value.
     for (i = 0; i < document.getElementsByClassName("displayCount").length; i++){
         document.getElementsByClassName("displayCount")[i].innerHTML = counter;
     }
     attemptsCount();
 }
-// Total questions answered. 
+
+// ************************
+// Total questions answered.
+// ************************
 var attempts = document.getElementById("numberOfQuestionsAttempted");
 function attemptsCount(){   
     attempts +=1;
@@ -331,12 +336,15 @@ function attemptsCount(){
         document.getElementById("getResults").disabled = false;
     }
 }
-
+// ************
+// Quiz result
+// ************
 function calculateResults() {
 // denominator = attempts
 // numerator = counter
     var answer = (counter / attempts) * 100;
-    document.getElementById("percetDisplay").innerHTML = answer;
+    // Note: .toFixed() returns a string!
+    document.getElementById("percetDisplay").innerHTML = answer.toFixed();
     
 }
 
