@@ -1,54 +1,348 @@
-
-    function myFunction() {
+function myFunction() {
     document.getElementById("button1").innerHTML = "This button would do something cool!";
-    document.getElementById("button1").style.color="blue";
-    document.getElementById("button1").style.border="none";
-    }
+    document.getElementById("button1").style.color = "blue";
+    document.getElementById("button1").style.border = "none";
+}
 
     // Quiz 1 button and anwser.
 
-    function myQuiz1() {
+function myQuiz1() {
     document.getElementById("button2").innerHTML = "N Korea in 2007";
-    document.getElementById("button2").style.color="blue";
-    document.getElementById("button2").style.border="none";
-    }
+    document.getElementById("button2").style.color = "blue";
+    document.getElementById("button2").style.border = "none";
+}
 
     // Quiz 2 buttons and answers.
 
-    function myQuiz2(evt, btn) {
+function myQuiz2(evt, btn) {
         
-        if(btn === "buttonC"){
-            document.getElementById(btn).innerHTML = "&#10003";
-            document.getElementById(btn).style.color="limegreen";
-        }
-                
-        else {
-            document.getElementById(btn).innerHTML = "&#10008";
-            document.getElementById(btn).style.color="red";
-            
-           }
+    if (btn === "buttonC") {
+        document.getElementById(btn).innerHTML = "&#10003";
+        document.getElementById(btn).style.color = "limegreen";
+    } else {
+        document.getElementById(btn).innerHTML = "&#10008";
+        document.getElementById(btn).style.color = "red";
     }
+}
    
-    // End of Quiz two . 
+// End of Quiz two. 
 
 // Quiz 3 buttons and answers.
 
-    function myQuiz3(evt, btn) {
+function myQuiz3(evt, btn) {
         
-        if(btn === "buttonB"){
-            document.getElementById(btn).innerHTML = "&#10003";
-            document.getElementById(btn).style.color="limegreen";
-        }
-                
-        else {
-            document.getElementById(btn).innerHTML = "&#10008";
-            document.getElementById(btn).style.color="red";          
-           }
+    if (btn === "buttonB") {
+        document.getElementById(btn).innerHTML = "&#10003";
+        document.getElementById(btn).style.color = "limegreen";
+    } else {
+        document.getElementById(btn).innerHTML = "&#10008";
+        document.getElementById(btn).style.color = "red";
     }
-   
+}
+
 // End of Quiz three. 
 
-    function menuFunction() {
+// Web Quizes ===============================
+
+// The user answer for the radio buttons is pass to and
+// then stored in var with the id result.
+function myWebQuiz(inputChoice) {
+    document.getElementById("result").value = inputChoice;
+}
+
+// *************************************
+// Web Quiz 1
+// *************************************
+function myQuizWebAnswerQ1() {
+    var number = 0;
+    var inputChoice = document.getElementById("result").value;
+    if (inputChoice === "choice2") {
+        document.getElementById('radioB').innerHTML = "&#10003";
+        document.getElementById('radioB').style.color = "limegreen";
+        
+        document.getElementById("radioB_WrittenAnswer").innerHTML = 'Correct! This is the standard tag used to emphasise text.';
+        document.getElementById("radioB_WrittenAnswer").style.backgroundColor = "palegreen";
+        var newBrTag = document.createElement("BR"); document.getElementById("radioB_WrittenAnswer").appendChild(newBrTag); 
+        number = 1;
+        correctAnswerCount();
+        
+}
+
+    if (inputChoice === "choice1") {
+        document.getElementById('radioA').innerHTML = "&#10008";
+        document.getElementById('radioA').style.color = "red";
+        
+        document.getElementById("radioA_WrittenAnswer").innerHTML = ' Although this tag can be used to emphasise text, it is also used for another which will cause problems in your code. For this reason, it is not the standard tag for emphasising text anymore. '; document.getElementById("radioA_WrittenAnswer").style.backgroundColor = "#ffbfc5"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioA_WrittenAnswer").appendChild(newBrTag);
+        number = 1;
+        attemptsCount();
+    }
+    
+    if (inputChoice === "choice3") {
+        document.getElementById('radioC').innerHTML = "&#10008";
+        document.getElementById('radioC').style.color="red";
+        
+        document.getElementById("radioC_WrittenAnswer").innerHTML = ' This is not a tag in HTML. '; document.getElementById("radioC_WrittenAnswer").style.backgroundColor = "#ffbfc5"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioC_WrittenAnswer").appendChild(newBrTag);
+        number = 1;
+        attemptsCount();
+    }
+    if (number >= 1) {
+     document.getElementById("mySubmit1").disabled = true;
+    }
+
+}
+
+// *************************************
+// Web Quiz 2
+// *************************************
+
+function myQuizWebAnswerQ2() {
+    var number = 0;
+    var inputChoice = document.getElementById("result").value;
+    
+    if (inputChoice === "choice1q2") {
+        document.getElementById('radioAQ2').innerHTML = "&#10003";
+        document.getElementById('radioAQ2').style.color="limegreen";
+        
+        document.getElementById("radioA_WrittenAnswerQ2").innerHTML = '&nbsp;&nbsp; This the correct doctype declaration for HTML5 and should by at the top of the source code before the &lt; html &gt; opening tag. &nbsp;&nbsp;'; document.getElementById("radioA_WrittenAnswerQ2").style.backgroundColor = "palegreen"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioA_WrittenAnswerQ2").appendChild(newBrTag); 
+        number = 1;
+        correctAnswerCount();
+    }
+
+    if (inputChoice === "choice2q2") {
+        document.getElementById('radioBQ2').innerHTML = "&#10008";
+        document.getElementById('radioBQ2').style.color="red";
+        
+        document.getElementById("radioB_WrittenAnswerQ2").innerHTML = '&nbsp;&nbsp; This is the doctype declaration for HTML4 not 5. &nbsp;&nbsp;'; document.getElementById("radioB_WrittenAnswerQ2").style.backgroundColor = "#ffbfc5"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioB_WrittenAnswerQ2").appendChild(newBrTag);
+        number = 1;
+        attemptsCount();
+    }
+    
+    if (inputChoice === "choice3q2") {
+        document.getElementById('radioCQ2').innerHTML = "&#10008";
+        document.getElementById('radioCQ2').style.color="red";
+        
+        document.getElementById("radioC_WrittenAnswerQ2").innerHTML = '&nbsp;&nbsp; This is not the correct way to start an HTML5 documnet. &nbsp;&nbsp;'; document.getElementById("radioC_WrittenAnswerQ2").style.backgroundColor = "#ffbfc5"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioC_WrittenAnswerQ2").appendChild(newBrTag);
+        number = 1;
+        attemptsCount();
+       }
+    if (number >= 1) {
+     document.getElementById("mySubmit2").disabled = true;
+    }
+
+}
+
+// *************************************
+// Web Quiz 3
+// *************************************
+
+function myQuizWebAnswerQ3() {
+    var number = 0;
+    var inputChoice = document.getElementById("result").value;
+    if (inputChoice === "choice1q3") {
+        document.getElementById('radioAQ3').innerHTML = "&#10003";
+        document.getElementById('radioAQ3').style.color="limegreen";
+        
+        document.getElementById("radioA_WrittenAnswerQ3").innerHTML = '&nbsp;&nbsp; function is the correct way to declaire a method in javaScript since methods are called function. &nbsp;&nbsp;'; document.getElementById("radioA_WrittenAnswerQ3").style.backgroundColor = "palegreen"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioA_WrittenAnswerQ3").appendChild(newBrTag); 
+        number = 1;
+        correctAnswerCount();
+    }
+
+    if (inputChoice === "choice2q3") {
+        document.getElementById('radioBQ3').innerHTML = "&#10008";
+        document.getElementById('radioBQ3').style.color="red";
+        
+        document.getElementById("radioB_WrittenAnswerQ3").innerHTML = "&nbsp;&nbsp; 'def' is the the keyword to declaire a method in python not in javaScript &nbsp;&nbsp;"; document.getElementById("radioB_WrittenAnswerQ3").style.backgroundColor = "#ffbfc5"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioB_WrittenAnswerQ3").appendChild(newBrTag);
+        number = 1;
+        attemptsCount();
+       }
+    
+    if (inputChoice === "choice3q3") {
+        document.getElementById('radioCQ3').innerHTML = "&#10008";
+        document.getElementById('radioCQ3').style.color = "red";
+        
+        document.getElementById("radioC_WrittenAnswerQ3").innerHTML = '&nbsp;&nbsp; Although function is a keyword in javaScript, this keyword has no angeled brackets. &nbsp;&nbsp;'; document.getElementById("radioC_WrittenAnswerQ3").style.backgroundColor = "#ffbfc5"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioC_WrittenAnswerQ3").appendChild(newBrTag);
+        number = 1;
+        attemptsCount();
+       }
+    if (number >= 1) {
+     document.getElementById("mySubmit3").disabled = true;
+    }
+
+}
+
+// *************************************
+// Web Quiz 4
+// *************************************
+
+function myQuizWebAnswerQ4() {
+    var number = 0;
+    var inputChoice = document.getElementById("result").value;
+    if (inputChoice === "choice2q4") {
+        document.getElementById('radioBQ4').innerHTML = "&#10003";
+        document.getElementById('radioBQ4').style.color="limegreen";
+        
+        document.getElementById("radioB_WrittenAnswerQ4").innerHTML = '&nbsp;&nbsp; Yes, this will find the element with attribute myColour and chage it to red. &nbsp;&nbsp;'; document.getElementById("radioB_WrittenAnswerQ4").style.backgroundColor = "palegreen"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioB_WrittenAnswerQ4").appendChild(newBrTag); 
+        number = 1;
+        correctAnswerCount();
+    }
+
+    if (inputChoice === "choice1q4") {
+        document.getElementById('radioAQ4').innerHTML = "&#10008";
+        document.getElementById('radioAQ4').style.color="red";
+        
+        document.getElementById("radioA_WrittenAnswerQ4").innerHTML = '&nbsp;&nbsp; Wrong! &nbsp;&nbsp;.'; document.getElementById("radioA_WrittenAnswerQ4").style.backgroundColor = "#ffbfc5"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioA_WrittenAnswerQ4").appendChild(newBrTag);
+        number = 1;
+        attemptsCount();
+       }
+    
+    if (inputChoice === "choice3q4") {
+        document.getElementById('radioCQ4').innerHTML = "&#10008";
+        document.getElementById('radioCQ4').style.color="red";
+        
+        document.getElementById("radioC_WrittenAnswerQ4").innerHTML = '&nbsp;&nbsp; Wrong! &nbsp;&nbsp;'; document.getElementById("radioC_WrittenAnswerQ4").style.backgroundColor = "#ffbfc5"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioC_WrittenAnswerQ4").appendChild(newBrTag);
+        number = 1;
+        attemptsCount();
+       }
+    if (number >= 1) {
+     document.getElementById("mySubmit4").disabled = true;
+    }
+
+}
+
+// *************************************
+// Web Quiz 5
+// *************************************
+
+function myQuizWebAnswerQ5() {
+    var number = 0;
+    var inputChoice = document.getElementById("result").value;
+    if (inputChoice === "choice2q5") {
+        document.getElementById('radioBQ5').innerHTML = "&#10003";
+        document.getElementById('radioBQ5').style.color = "limegreen";
+        
+        document.getElementById("radioB_WrittenAnswerQ5").innerHTML = '&nbsp;&nbsp; Correct!&nbsp;&nbsp;'; document.getElementById("radioB_WrittenAnswerQ5").style.backgroundColor = "palegreen"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioB_WrittenAnswerQ5").appendChild(newBrTag); 
+        number = 1;
+        correctAnswerCount();
+    }
+
+    if (inputChoice === "choice1q5") {
+        document.getElementById('radioAQ5').innerHTML = "&#10008";
+        document.getElementById('radioAQ5').style.color = "red";
+        
+        document.getElementById("radioA_WrittenAnswerQ5").innerHTML = ' &nbsp;&nbsp; Wrong! &nbsp;&nbsp;. '; document.getElementById("radioA_WrittenAnswerQ5").style.backgroundColor = "#ffbfc5"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioA_WrittenAnswerQ5").appendChild(newBrTag);
+        number = 1;
+        attemptsCount();
+       }
+    
+    if (inputChoice === "choice3q5") {
+        document.getElementById('radioCQ5').innerHTML = "&#10008";
+        document.getElementById('radioCQ5').style.color="red";
+        
+        document.getElementById("radioC_WrittenAnswerQ5").innerHTML = ' &nbsp;&nbsp; Wrong! &nbsp;&nbsp; '; document.getElementById("radioC_WrittenAnswerQ5").style.backgroundColor = "#ffbfc5"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioC_WrittenAnswerQ5").appendChild(newBrTag);
+        number = 1;
+        attemptsCount();
+       }
+    if (number >= 1) {
+     document.getElementById("mySubmit5").disabled = true;
+    }
+
+}
+
+// *************************************
+// Web Quiz 6
+// *************************************
+
+function myQuizWebAnswerQ6() {
+    var number = 0;
+    var inputChoice = document.getElementById("result").value;
+    if (inputChoice === "choice3q6") {
+        document.getElementById('radioCQ6').innerHTML = "&#10003";
+        document.getElementById('radioCQ6').style.color = "limegreen";
+        
+        document.getElementById("radioC_WrittenAnswerQ6").innerHTML = '&nbsp;&nbsp; Correct! &nbsp;&nbsp;.'; document.getElementById("radioC_WrittenAnswerQ6").style.backgroundColor = "palegreen"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioC_WrittenAnswerQ6").appendChild(newBrTag); 
+        number = 1;
+        correctAnswerCount();
+    }
+
+    if (inputChoice === "choice1q6") {
+        document.getElementById('radioAQ6').innerHTML = "&#10008";
+        document.getElementById('radioAQ6').style.color="red";
+        
+        document.getElementById("radioA_WrittenAnswerQ6").innerHTML = ' &nbsp;&nbsp; Wrong! &nbsp;&nbsp;. '; document.getElementById("radioA_WrittenAnswerQ6").style.backgroundColor = "#ffbfc5"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioA_WrittenAnswerQ6").appendChild(newBrTag);
+        number = 1;
+        attemptsCount();
+       }
+    
+    if (inputChoice === "choice2q6") {
+        document.getElementById('radioBQ6').innerHTML = "&#10008";
+        document.getElementById('radioBQ6').style.color="red";
+        
+        document.getElementById("radioB_WrittenAnswerQ6").innerHTML = ' &nbsp;&nbsp; Wrong! &nbsp;&nbsp;. '; document.getElementById("radioB_WrittenAnswerQ6").style.backgroundColor = "#ffbfc5"; 
+        var newBrTag = document.createElement("BR"); document.getElementById("radioB_WrittenAnswerQ6").appendChild(newBrTag);
+        number = 1;
+        attemptsCount();
+       }
+    if (number >= 1){
+     document.getElementById("mySubmit6").disabled = true;
+    }
+
+}
+
+// Total counter ++++++++++++++++++++++++++++++++++++
+var counter = document.getElementById("quizCounter");
+function correctAnswerCount(){
+
+    counter +=1;
+//   document.getElementById("quizCounter").value = counter;
+
+    // The for iterates over the length of the list and inserts the
+    // value into all tags in the array. ****
+    // This is because '.getElementsByClassName' returns an array unlike '.getElementById', which reurns a value.
+    for (i = 0; i < document.getElementsByClassName("displayCount").length; i++){
+        document.getElementsByClassName("displayCount")[i].innerHTML = counter;
+    }
+    attemptsCount();
+}
+// Total questions answered. 
+var attempts = document.getElementById("numberOfQuestionsAttempted");
+function attemptsCount(){   
+    attempts +=1;
+    //   document.getElementById("quizCounter").value = counter;
+    
+    document.getElementsByClassName("displayCount2")[0].innerHTML = attempts;
+    
+    if (attempts > 5){
+        document.getElementById("getResults").disabled = false;
+    }
+}
+
+function calculateResults() {
+// denominator = attempts
+// numerator = counter
+    var answer = (counter / attempts) * 100;
+    document.getElementById("percetDisplay").innerHTML = answer;
+    
+}
+
+// End of Web Quizes ======================
+
+function menuFunction() {
       var x = document.getElementsByClassName("dropdown-content");
 
        if (x[0].style.display === "block") {
@@ -60,8 +354,8 @@
         x[1].style.display = "none"; // makes other menu diapaer 
         x[2].style.display = "none"; // makes other menu diapaer
       }
-    }
-    // Makes dropdown men 1 work on click for touch screen. Note this function has a different name.
+}
+// Makes dropdown men 1 work on click for touch screen. Note this function has a different name.
 
 // Maps
     function menuFunction1() {
@@ -197,7 +491,6 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
     
 }
-
 
 function start() {
     slideshow1();
