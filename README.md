@@ -4,4 +4,5 @@ Project Website
 __Project at__ https://sciencetony.github.io/ .
 
 # Discription 
-Primary: Website aimed at introducing myself. 
+Primary: Learn HTML, CSS and JavaScript by using it.
+Secondary: Website aimed at introducing myself. 
