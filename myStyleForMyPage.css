@@ -10,6 +10,14 @@ body {
     line-height:1.5em;
     
 }
+/* =========================== 
+Displayed answers after submiting a radio 
+============================ */
+
+.displayedAnswerSpan{
+
+}
+
 
 /* ===================
 Like and dislike cards
@@ -372,7 +380,6 @@ Buttons
     display: block;
     
 /* this makes the blocks display as a certian size.  */    
-
     max-width: 9em;
     border: solid 1px blue;
     border-radius: 4px;
@@ -734,6 +741,17 @@ h4{
     text-transform: capitalize;
 }
 
+#percetDisplay{
+    color:red;
+    font-size: 1.5em;
+}
+
+#yourScore{
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+
 /* ===========
 Side Cards 
 ============== */
@@ -843,6 +861,12 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: blue;
+}
+
+input[type=submit]:disabled,
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .container {
