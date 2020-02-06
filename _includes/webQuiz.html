@@ -1,0 +1,252 @@
+<!-- quiz WebQuiz card -->
+	<div class="card" id="WebQuiz">
+		
+		<h3>web quiz</h3>
+        
+<!-- ****************
+Question 1 
+********************* 
+This collects the value of the radio button
+and passess it to myWebQuiz() where it is stored
+in a variable.  The variable has a var tag.  -->
+        <div class="allWebQuestions" id="radQuest1" >
+        <p>Answer these few simple questions about web technologies.</p>
+        
+        <!-- This holds the variable of the selected radio button. -->
+        <var id="result"></var>
+        <!-- number of correct answers -->
+        <var id="quizCounter" ></var>
+        <!-- This must reach 6 before the calculate percentages button is avaliable. -->
+        <var id="numberOfQuestionsAttempted"></var>
+        
+        
+            
+            <h4>Question 1</h4>
+            <p>HTML stands for Hypertext Mark-up Language and is one of the major web technologies in building a website. In addition, HTML uses tags and attributes in its elements.</p>
+            <p>What is the standard tag used to emphasise text? </p>
+
+
+            <input type="radio" name="q1" onclick="myWebQuiz(this.value)" value="choice1"> &lt;i&gt;
+            <!-- Button revealed  -->
+            <span id="radioA"></span><br>
+            <span class="displayedAnswerSpan" id="radioA_WrittenAnswer"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q1" onclick="myWebQuiz(this.value)" value="choice2"> &lt;em&gt;
+            <!-- Button revealed  -->
+            <span id="radioB"></span><br>
+            <span class="displayedAnswerSpan" id="radioB_WrittenAnswer"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q1" onclick="myWebQuiz(this.value)" value="choice3"> &lt;italic&gt;
+            <!-- Button revealed  -->
+            <span id="radioC"></span><br>
+            <span class="displayedAnswerSpan" id="radioC_WrittenAnswer"></span>
+            <!-- Button revealed end -->
+            
+            <!-- This holds the variable of the selected radio button. -->
+
+        <br>
+        <!-- ****** This button passess the choice 
+        to myQuizWebAnswer() for processing ****** -->
+        <input type="submit" value="Check Answer" id="mySubmit1" onclick="myQuizWebAnswerQ1()" >
+            
+        <p>
+            Correct Answers: <span class="displayCount" >0</span>&nbsp;out of 6.<br>
+            Total answered: <span class="displayCount2" >0</span>&nbsp;out of 6.
+        </p>
+        </div><!-- Question 1 end ********* -->
+       
+<!-- ****************
+Question 2 
+********************* -->        
+        <div class="allWebQuestions" id="radQuest2" > <hr>
+            <h4>Question 2</h4>
+            <p>How should an HTML5 documnet start?</p>
+            
+            <input type="radio" name="q2" onclick="myWebQuiz(this.value)" value="choice1q2"> &lt;!DOCTYPE html&gt;
+            <!-- Button revealed  -->
+            <span id="radioAQ2"></span><br>
+            <span  class="displayedAnswerSpan" id="radioA_WrittenAnswerQ2"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q2" onclick="myWebQuiz(this.value)" value="choice2q2"> &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd"&gt;
+            <!-- Button revealed  -->
+            <span id="radioBQ2"></span><br>
+            <span class="displayedAnswerSpan" id="radioB_WrittenAnswerQ2"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q2" onclick="myWebQuiz(this.value)" value="choice3q2"> &lt;HTML5 doc&gt;
+            <!-- Button revealed  -->
+            <span id="radioCQ2"></span><br>
+            <span class="displayedAnswerSpan" id="radioC_WrittenAnswerQ2"></span>
+            <!-- Button revealed end -->
+        
+        <br>
+        <input type="submit" id="mySubmit2" value="Check Answer" onclick="myQuizWebAnswerQ2()"> 
+        
+        <p>
+            Correct Answers: <span class="displayCount">0</span>&nbsp;out of 6.
+        </p> 
+        </div><!-- Question 2 end *********** -->
+        
+<!-- ****************** 
+Question 3 
+*********************** -->
+        
+        <div class="allWebQuestions" id="radQuest3" > <hr>
+            
+            <h4>Question 3</h4>
+            <p>JavaScript is a clint side scripting language used to make a website more interactive. </p>
+            <p>What is the keyword for a javaScript method? </p>
+
+
+            <input type="radio" name="q3" onclick="myWebQuiz(this.value)" value="choice1q3"> function
+            <!-- Button revealed  -->
+            <span id="radioAQ3"></span><br>
+            <span class="displayedAnswerSpan" id="radioA_WrittenAnswerQ3"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q3" onclick="myWebQuiz(this.value)" value="choice2q3"> def
+            <!-- Button revealed  -->
+            <span id="radioBQ3"></span><br>
+            <span class="displayedAnswerSpan" id="radioB_WrittenAnswerQ3"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q3" onclick="myWebQuiz(this.value)" value="choice3q3"> &lt;function&gt;
+            <!-- Button revealed  -->
+            <span id="radioCQ3"></span><br>
+            <span class="displayedAnswerSpan" id="radioC_WrittenAnswerQ3"></span>
+            <!-- Button revealed end -->
+            
+            <!-- This holds the variable of the selected radio button. -->
+
+        <br>
+        <!-- ****** This button passess the choice 
+        to myQuizWebAnswer() for processing ****** -->
+        <input type="submit" value="Check Answer" id="mySubmit3" onclick="myQuizWebAnswerQ3()" >
+            
+        <p>
+            Correct Answers: <span class="displayCount" >0</span>&nbsp;out of 6.
+        </p>
+        </div><!-- Question 1 end ********* -->
+       
+<!-- ****************
+Question 4 
+********************* -->        
+        <div class="allWebQuestions" id="radQuest4" > <hr>
+            <h4>Question 4</h4>
+            <p>How would you change the colour of some text in a paragraph element with the attribute id with value 'myColour' to red using javaScript? </p>
+            
+            <input type="radio" name="q4" onclick="myWebQuiz(this.value)" value="choice1q4"> document.getElementById('red').style.color="id=myColour" 
+            <!-- Button revealed  -->
+            <span id="radioAQ4"></span><br>
+            <span class="displayedAnswerSpan" id="radioA_WrittenAnswerQ4"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q4" onclick="myWebQuiz(this.value)" value="choice2q4"> document.getElementById('myColour').style.color="red";
+            <!-- Button revealed  -->
+            <span id="radioBQ4"></span><br>
+            <span class="displayedAnswerSpan" id="radioB_WrittenAnswerQ4"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q4" onclick="myWebQuiz(this.value)" value="choice3q4"> document.getElementsByClassName('myColour').style.color="red";
+            <!-- Button revealed  -->
+            <span id="radioCQ4"></span><br>
+            <span class="displayedAnswerSpan" id="radioC_WrittenAnswerQ4"></span>
+            <!-- Button revealed end -->
+            
+            
+        </div><!-- Question 2 end *********** -->
+        
+        <br>
+        <input type="submit" id="mySubmit4" value="Check Answer" onclick="myQuizWebAnswerQ4()"> 
+        
+        <p>
+            Correct Answers: <span class="displayCount">0</span>&nbsp;out of 6.
+        </p> 
+        
+<!-- **************** 
+Question 5 
+********************* 
+  -->
+        <div class="allWebQuestions" id="radQuest5" > <hr>
+            
+            <h4>Question 5</h4>
+            <p>CSS stands for Cascading Style Sheets.  CSS is used to style HTML elements to change the way a webpage looks.</p>
+            <p>What would the selector h2 with the declaration block &#123;color: blue; text-transform: uppercase;&#125;  </p>
+
+
+            <input type="radio" name="q5" onclick="myWebQuiz(this.value)" value="choice1q5"> The background of the second level header will be blue and each word capitalised. 
+            <!-- Button revealed  -->
+            <span id="radioAQ5"></span><br>
+            <span class="displayedAnswerSpan" id="radioA_WrittenAnswerQ5"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q5" onclick="myWebQuiz(this.value)" value="choice2q5"> The second level header will be blue and all uppercase letters. 
+            <!-- Button revealed  -->
+            <span id="radioBQ5"></span><br>
+            <span class="displayedAnswerSpan" id="radioB_WrittenAnswerQ5"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q5" onclick="myWebQuiz(this.value)" value="choice3q5"> The second level header will be blue and each word capitalised.
+            <!-- Button revealed  -->
+            <span id="radioCQ5"></span><br>
+            <span class="displayedAnswerSpan" id="radioC_WrittenAnswerQ5"></span>
+            <!-- Button revealed end -->
+            
+            <!-- This holds the variable of the selected radio button. -->
+
+        <br>
+        <!-- ****** This button passess the choice 
+        to myQuizWebAnswer() for processing ****** -->
+        <input type="submit" value="Check Answer" id="mySubmit5" onclick="myQuizWebAnswerQ5()" >
+            
+        <p>
+            Correct Answers: <span class="displayCount" >0</span>&nbsp;out of 6.
+        </p>
+        </div><!-- Question 5 end ********* -->
+       
+<!-- ****************
+Question 6 
+********************* -->        
+        <div class="allWebQuestions" id="radQuest6"> 
+        <hr>
+            <h4>Question 6</h4>
+            <p>What selector would i use to style a html tag &lt;div id="sideBar"&gt;</p>
+            
+            <input type="radio" name="q6" onclick="myWebQuiz(this.value)" value="choice1q6"> .div&#123;sideBar&#125; 
+            <!-- Button revealed  -->
+            <span id="radioAQ6"></span><br>
+            <span class="displayedAnswerSpan" id="radioA_WrittenAnswerQ6"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q6" onclick="myWebQuiz(this.value)" value="choice2q6"> .sideBar
+            <!-- Button revealed  -->
+            <span id="radioBQ6"></span><br>
+            <span class="displayedAnswerSpan" id="radioB_WrittenAnswerQ6"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q6" onclick="myWebQuiz(this.value)" value="choice3q6"> &#35;sideBar
+            <!-- Button revealed  -->
+            <span id="radioCQ6"></span><br>
+            <span class="displayedAnswerSpan" id="radioC_WrittenAnswerQ6"></span>
+            <!-- Button revealed end -->
+            
+            
+        </div><!-- Question 6 end *********** -->
+        
+        <br>
+        <input type="submit" id="mySubmit6" value="Check Answer"  onclick="myQuizWebAnswerQ6()"> 
+        
+        <p>
+            Correct Answers: <span class="displayCount">0</span>&nbsp;out of 6.
+        </p>
+        <br>
+         <button type="button" id="getResults"  onclick="calculateResults()" disabled>Calculate Reseults</button> 
+        <div id="yourScore">
+        <p >&nbsp;&nbsp;You scored: <span id="percetDisplay" >0</span>%</p>
+        </div> 
+        
+	</div>  <!-- End of web quiz card -->
