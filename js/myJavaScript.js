@@ -15,7 +15,7 @@
 // Variable counter is used in: 
 // • Total counter 'correctAnswerCount()' and the for loop within the same function. 
 // • Results calculator 'calculateResults()'
-var attempts = document.getElementById("numberOfQuestionsAttempted"), counter = document.getElementById("quizCounter"), newBrTag = document.createElement("BR");
+var attempts = document.getElementById("numberOfQuestionsAttempted"), counter = document.getElementById("quizCounter");
 
 // ********* End of global variables ********
 
@@ -136,7 +136,7 @@ function myWebQuiz(inputChoice) {
 
 function myQuizWebAnswerQ1() {
     "use strict";
-    var number = 0, inputChoice = document.getElementById("result").value;
+    var number = 0, inputChoice = document.getElementById("result").value, newBrTag = document.createElement("BR");
     if (inputChoice === "choice2") {
         document.getElementById('radioB').innerHTML = "&#10003";
         document.getElementById('radioB').style.color = "limegreen";
@@ -183,7 +183,7 @@ function myQuizWebAnswerQ1() {
 function myQuizWebAnswerQ2() {
     "use strict";
     // Local variables
-    var number = 0, inputChoice = document.getElementById("result").value;
+    var number = 0, inputChoice = document.getElementById("result").value, newBrTag = document.createElement("BR");
     // Global var used: newBrTag
     
     if (inputChoice === "choice1q2") {
@@ -230,7 +230,7 @@ function myQuizWebAnswerQ2() {
 function myQuizWebAnswerQ3() {
     "use strict";
     // Local var
-    var number = 0, inputChoice = document.getElementById("result").value;
+    var number = 0, inputChoice = document.getElementById("result").value, newBrTag = document.createElement("BR");
     // global var used: newBrTag
     if (inputChoice === "choice1q3") {
         document.getElementById('radioAQ3').innerHTML = "&#10003";
@@ -274,7 +274,7 @@ function myQuizWebAnswerQ3() {
 
 function myQuizWebAnswerQ4() {
     "use strict";
-    var number = 0, inputChoice = document.getElementById("result").value;
+    var number = 0, inputChoice = document.getElementById("result").value, newBrTag = document.createElement("BR");
     if (inputChoice === "choice2q4") {
         document.getElementById('radioBQ4').innerHTML = "&#10003";
         document.getElementById('radioBQ4').style.color = "limegreen";
@@ -316,11 +316,11 @@ function myQuizWebAnswerQ4() {
 
 function myQuizWebAnswerQ5() {
     "use strict";
-    var number = 0, inputChoice = document.getElementById("result").value;
+    var number = 0, inputChoice = document.getElementById("result").value, newBrTag = document.createElement("BR");
     if (inputChoice === "choice2q5") {
         document.getElementById('radioBQ5').innerHTML = "&#10003";
         document.getElementById('radioBQ5').style.color = "limegreen";
-        document.getElementById("radioB_WrittenAnswerQ5").innerHTML = '&nbsp;&nbsp; Correct!&nbsp;&nbsp;';
+        document.getElementById("radioB_WrittenAnswerQ5").innerHTML = "&nbsp;&nbsp; That's correct! The selector h2 referes to the 2nd level headers while the declaration block stles the colour to blue and converts all letters to upercase.&nbsp;&nbsp;";
         document.getElementById("radioB_WrittenAnswerQ5").style.backgroundColor = "palegreen";
         document.getElementById("radioB_WrittenAnswerQ5").appendChild(newBrTag);
         number = 1;
@@ -330,7 +330,7 @@ function myQuizWebAnswerQ5() {
     if (inputChoice === "choice1q5") {
         document.getElementById('radioAQ5').innerHTML = "&#10008";
         document.getElementById('radioAQ5').style.color = "red";
-        document.getElementById("radioA_WrittenAnswerQ5").innerHTML = ' &nbsp;&nbsp; Wrong! &nbsp;&nbsp;. ';
+        document.getElementById("radioA_WrittenAnswerQ5").innerHTML = ' &nbsp;&nbsp; Background-color is used to style the background and capitalised will just uppercase the first letter of each word. &nbsp;&nbsp; ';
         document.getElementById("radioA_WrittenAnswerQ5").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioA_WrittenAnswerQ5").appendChild(newBrTag);
         number = 1;
@@ -340,7 +340,7 @@ function myQuizWebAnswerQ5() {
     if (inputChoice === "choice3q5") {
         document.getElementById('radioCQ5').innerHTML = "&#10008";
         document.getElementById('radioCQ5').style.color = "red";
-        document.getElementById("radioC_WrittenAnswerQ5").innerHTML = ' &nbsp;&nbsp; Wrong! &nbsp;&nbsp; ';
+        document.getElementById("radioC_WrittenAnswerQ5").innerHTML = ' &nbsp;&nbsp;While the 2nd level header will be blue, capitalised will just uppercase the first letter of each word &nbsp;&nbsp; ';
         document.getElementById("radioC_WrittenAnswerQ5").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioC_WrittenAnswerQ5").appendChild(newBrTag);
         number = 1;
@@ -357,7 +357,7 @@ function myQuizWebAnswerQ5() {
 
 function myQuizWebAnswerQ6() {
     "use strict";
-    var number = 0, inputChoice = document.getElementById("result").value;
+    var number = 0, inputChoice = document.getElementById("result").value, newBrTag = document.createElement("BR");
     if (inputChoice === "choice3q6") {
         document.getElementById('radioCQ6').innerHTML = "&#10003";
         document.getElementById('radioCQ6').style.color = "limegreen";
