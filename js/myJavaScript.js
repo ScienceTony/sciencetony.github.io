@@ -1,7 +1,8 @@
 /*eslint-env browser*/
 /* exported myFunction, myQuiz1, myQuiz2, myQuiz3, myQuizWebAnswerQ1, myQuizWebAnswerQ2, myQuizWebAnswerQ3, myQuizWebAnswerQ4, myQuizWebAnswerQ5, myQuizWebAnswerQ6, myWebQuiz, calculateResults */
 
-// Auther: Tony McDonald 
+// Author: Tony McDonald 
+// Twitter: ScienceTony
 
 // Learning note: variables outside of any functions are global variables and can be used by numerous functions anywhere in the program providing they are decllaired before a function attempts to use them.
 
