@@ -1,573 +1,260 @@
-/*eslint-env browser*/
-/* exported myFunction, myQuiz1, myQuiz2, myQuiz3, myQuizWebAnswerQ1, myQuizWebAnswerQ2, myQuizWebAnswerQ3, myQuizWebAnswerQ4, myQuizWebAnswerQ5, myQuizWebAnswerQ6, myWebQuiz, calculateResults */
+<!-- quiz WebQuiz card -->
+	<div class="card" id="WebQuiz">
+		
+		<h3>web quiz</h3>
+        
+<!-- ****************
+Question 1 
+********************* 
+This collects the value of the radio button
+and passess it to myWebQuiz() where it is stored
+in a variable.  The variable has a var tag.  -->
+        <div class="allWebQuestions" id="radQuest1" >
+        <p>Answer these few simple questions about web technologies.</p>
+        
+        <!-- This holds the variable of the selected radio button. -->
+        <var id="result"></var>
+        <!-- number of correct answers -->
+        <var id="quizCounter" ></var>
+        <!-- This must reach 6 before the calculate percentages button is avaliable. -->
+        <var id="numberOfQuestionsAttempted"></var>
+        
+        
+            
+            <h4>Question 1</h4>
+            <p>HTML stands for Hypertext Mark-up Language and is one of the major web technologies in building a website. In addition, HTML uses tags and attributes in its elements.</p>
+            <p>What is the standard tag used to emphasise text? </p>
 
-// Auther: Tony McDonald 
 
-// Learning note: variables outside of any functions are global variables and can be used by numerous functions anywhere in the program providing they are decllaired before a function attempts to use them.
+            <input type="radio" name="q1" onclick="myWebQuiz(this.value)" value="choice1"> &lt;i&gt;
+            <!-- Button revealed  -->
+            <span id="radioA"></span><br>
+            <span class="displayedAnswerSpan" id="radioA_WrittenAnswer"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q1" onclick="myWebQuiz(this.value)" value="choice2"> &lt;em&gt;
+            <!-- Button revealed  -->
+            <span id="radioB"></span><br>
+            <span class="displayedAnswerSpan" id="radioB_WrittenAnswer"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q1" onclick="myWebQuiz(this.value)" value="choice3"> &lt;italic&gt;
+            <!-- Button revealed  -->
+            <span id="radioC"></span><br>
+            <span class="displayedAnswerSpan" id="radioC_WrittenAnswer"></span>
+            <!-- Button revealed end -->
+            
+            <!-- This holds the variable of the selected radio button. -->
 
-// *****************************
-// Global Variables 
-// *****************************
+        <br>
+        <!-- ****** This button passess the choice 
+        to myQuizWebAnswer() for processing ****** -->
+        <input type="submit" value="Check Answer" id="mySubmit1" onclick="myQuizWebAnswerQ1()" >
+            
+        <p>
+            Correct Answers: <span class="displayCount" >0</span>&nbsp;out of 6.<br>
+            Total answered: <span class="displayCount2" >0</span>&nbsp;out of 6.
+        </p>
+        </div><!-- Question 1 end ********* -->
+       
+<!-- ****************
+Question 2 
+********************* -->        
+        <div class="allWebQuestions" id="radQuest2" > <hr>
+            <h4>Question 2</h4>
+            <p>How should an HTML5 documnet start?</p>
+            
+            <input type="radio" name="q2" onclick="myWebQuiz(this.value)" value="choice1q2"> &lt;!DOCTYPE html&gt;
+            <!-- Button revealed  -->
+            <span id="radioAQ2"></span><br>
+            <span  class="displayedAnswerSpan" id="radioA_WrittenAnswerQ2"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q2" onclick="myWebQuiz(this.value)" value="choice2q2"><span class="break"> &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd"&gt;</span>
+            <!-- Button revealed  -->
+            <span id="radioBQ2"></span><br>
+            <span class="displayedAnswerSpan" id="radioB_WrittenAnswerQ2"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q2" onclick="myWebQuiz(this.value)" value="choice3q2"> &lt;HTML5 doc&gt;
+            <!-- Button revealed  -->
+            <span id="radioCQ2"></span><br>
+            <span class="displayedAnswerSpan" id="radioC_WrittenAnswerQ2"></span>
+            <!-- Button revealed end -->
+        
+        <br>
+        <input type="submit" id="mySubmit2" value="Check Answer" onclick="myQuizWebAnswerQ2()"> 
+        
+        <p>
+            Correct Answers: <span class="displayCount">0</span>&nbsp;out of 6.
+            <br>
+            Total answered: <span class="displayCount2" >0</span>&nbsp;out of 6.
+        </p> 
+        </div><!-- Question 2 end *********** -->
+        
+<!-- ****************** 
+Question 3 
+*********************** -->
+        
+        <div class="allWebQuestions" id="radQuest3" > <hr>
+            
+            <h4>Question 3</h4>
+            <p>JavaScript is a clint side scripting language used to make a website more interactive. </p>
+            <p>What is the keyword for a javaScript method? </p>
 
-// Variable attempts is used in: 
-// • Total questions answered 'attemptsCount()' 
-// • Calculating the result 'calculateResults()'
-// Variable counter is used in: 
-// • Total counter 'correctAnswerCount()' and the for loop within the same function. 
-// • Results calculator 'calculateResults()'
-var attempts = document.getElementById("numberOfQuestionsAttempted"), counter = document.getElementById("quizCounter"), newBrTag = document.createElement("BR");
 
-// ********* End of global variables ********
+            <input type="radio" name="q3" onclick="myWebQuiz(this.value)" value="choice1q3"> function
+            <!-- Button revealed  -->
+            <span id="radioAQ3"></span><br>
+            <span class="displayedAnswerSpan" id="radioA_WrittenAnswerQ3"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q3" onclick="myWebQuiz(this.value)" value="choice2q3"> def
+            <!-- Button revealed  -->
+            <span id="radioBQ3"></span><br>
+            <span class="displayedAnswerSpan" id="radioB_WrittenAnswerQ3"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q3" onclick="myWebQuiz(this.value)" value="choice3q3"> &lt;function&gt;
+            <!-- Button revealed  -->
+            <span id="radioCQ3"></span><br>
+            <span class="displayedAnswerSpan" id="radioC_WrittenAnswerQ3"></span>
+            <!-- Button revealed end -->
+            
+            <!-- This holds the variable of the selected radio button. -->
 
-// Test button 
-function myFunction() {
-    "use strict";
-    document.getElementById("button1").innerHTML = "This button would do something cool!";
-    document.getElementById("button1").style.color = "blue";
-    document.getElementById("button1").style.border = "none";
-}
+        <br>
+        <!-- ****** This button passess the choice 
+        to myQuizWebAnswer() for processing ****** -->
+        <input type="submit" value="Check Answer" id="mySubmit3" onclick="myQuizWebAnswerQ3()" >
+            
+        <p>
+            Correct Answers: <span class="displayCount" >0</span>&nbsp;out of 6.
+            <br>
+            Total answered: <span class="displayCount2" >0</span>&nbsp;out of 6.
+        </p>
+        </div><!-- Question 1 end ********* -->
+       
+<!-- ****************
+Question 4 
+********************* -->        
+        <div class="allWebQuestions" id="radQuest4" > <hr>
+            <h4>Question 4</h4>
+            <p>How would you change the colour of some text in a paragraph element with the attribute id with value 'myColour' to red using javaScript? </p>
+            
+            <input type="radio" name="q4" onclick="myWebQuiz(this.value)" value="choice1q4"> <span class="break"> document.getElementById('red').style.color="id=myColour"</span>
+            <!-- Button revealed  -->
+            <span id="radioAQ4"></span><br>
+            <span class="displayedAnswerSpan" id="radioA_WrittenAnswerQ4"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q4" onclick="myWebQuiz(this.value)" value="choice2q4"><span class="break"> document.getElementById('myColour').style.color="red";</span>
+            <!-- Button revealed  -->
+            <span id="radioBQ4"></span><br>
+            <span class="displayedAnswerSpan" id="radioB_WrittenAnswerQ4"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q4" onclick="myWebQuiz(this.value)" value="choice3q4"><span class="break"> document.getElementsByClassName('myColour').style.color="red";</span>
+            <!-- Button revealed  -->
+            <span id="radioCQ4"></span><br>
+            <span class="displayedAnswerSpan" id="radioC_WrittenAnswerQ4"></span>
+            <!-- Button revealed end -->
+            
+            
+        </div><!-- Question 2 end *********** -->
+        
+        <br>
+        <input type="submit" id="mySubmit4" value="Check Answer" onclick="myQuizWebAnswerQ4()"> 
+        
+        <p>
+            Correct Answers: <span class="displayCount">0</span>&nbsp;out of 6.
+            <br>
+            Total answered: <span class="displayCount2" >0</span>&nbsp;out of 6.
+        </p> 
+        
+<!-- **************** 
+Question 5 
+********************* 
+  -->
+        <div class="allWebQuestions" id="radQuest5" > <hr>
+            
+            <h4>Question 5</h4>
+            <p>CSS stands for Cascading Style Sheets.  CSS is used to style HTML elements to change the way a webpage looks.</p>
+            <p>What would the selector h2 with the declaration block &#123;color: blue; text-transform: uppercase;&#125;  </p>
 
-// Quiz 1 button and anwser.
 
-function myQuiz1() {
-    "use strict";
-    document.getElementById("button2").innerHTML = "N Korea in 2007";
-    document.getElementById("button2").style.color = "blue";
-    document.getElementById("button2").style.border = "none";
-}
+            <input type="radio" name="q5" onclick="myWebQuiz(this.value)" value="choice1q5"> The background of the second level header will be blue and each word capitalised. 
+            <!-- Button revealed  -->
+            <span id="radioAQ5"></span><br>
+            <span class="displayedAnswerSpan" id="radioA_WrittenAnswerQ5"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q5" onclick="myWebQuiz(this.value)" value="choice2q5"> The second level header will be blue and all uppercase letters. 
+            <!-- Button revealed  -->
+            <span id="radioBQ5"></span><br>
+            <span class="displayedAnswerSpan" id="radioB_WrittenAnswerQ5"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q5" onclick="myWebQuiz(this.value)" value="choice3q5"> The second level header will be blue and each word capitalised.
+            <!-- Button revealed  -->
+            <span id="radioCQ5"></span><br>
+            <span class="displayedAnswerSpan" id="radioC_WrittenAnswerQ5"></span>
+            <!-- Button revealed end -->
+            
+            <!-- This holds the variable of the selected radio button. -->
 
-// ***************************
-// Quiz 2 buttons and answers.
-// ***************************
-
-// @ evt indicates and event has occured.
-// @ Contains an id from selected button.
-// Output: TRUE, a green tick is displayed. (buttonC === TRUE)
-// Output: FALSE, a red cross is displayed. 
-function myQuiz2(evt, btn) {
-    "use strict";
-    if (btn === "buttonC") {
-        document.getElementById(btn).innerHTML = "&#10003";
-        document.getElementById(btn).style.color = "limegreen";
-    } else {
-        document.getElementById(btn).innerHTML = "&#10008";
-        document.getElementById(btn).style.color = "red";
-    }
-}
+        <br>
+        <!-- ****** This button passess the choice 
+        to myQuizWebAnswer() for processing ****** -->
+        <input type="submit" value="Check Answer" id="mySubmit5" onclick="myQuizWebAnswerQ5()" >
+            
+        <p>
+            Correct Answers: <span class="displayCount" >0</span>&nbsp;out of 6.
+            <br>
+            Total answered: <span class="displayCount2" >0</span>&nbsp;out of 6.
+        </p>
+        </div><!-- Question 5 end ********* -->
+       
+<!-- ****************
+Question 6 
+********************* -->        
+        <div class="allWebQuestions" id="radQuest6"> 
+        <hr>
+            <h4>Question 6</h4>
+            <p>What selector would i use to style a html tag &lt;div id="sideBar"&gt;</p>
+            
+            <input type="radio" name="q6" onclick="myWebQuiz(this.value)" value="choice1q6"> .div&#123;sideBar&#125; 
+            <!-- Button revealed  -->
+            <span id="radioAQ6"></span><br>
+            <span class="displayedAnswerSpan" id="radioA_WrittenAnswerQ6"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q6" onclick="myWebQuiz(this.value)" value="choice2q6"> .sideBar
+            <!-- Button revealed  -->
+            <span id="radioBQ6"></span><br>
+            <span class="displayedAnswerSpan" id="radioB_WrittenAnswerQ6"></span>
+            <!-- Button revealed end -->
+            
+            <input type="radio" name="q6" onclick="myWebQuiz(this.value)" value="choice3q6"> &#35;sideBar
+            <!-- Button revealed  -->
+            <span id="radioCQ6"></span><br>
+            <span class="displayedAnswerSpan" id="radioC_WrittenAnswerQ6"></span>
+            <!-- Button revealed end -->   
+        <br>
+        <input type="submit" id="mySubmit6" value="Check Answer"  onclick="myQuizWebAnswerQ6()"> 
+        
+        <p>
+            Correct Answers: <span class="displayCount">0</span>&nbsp;out of 6.
+            <br>
+            Total answered: <span class="displayCount2" >0</span>&nbsp;out of 6.
+        </p>
    
-// *********  End of Quiz two. *********
-
-// ***************************
-// Quiz 3 buttons and answers.
-// ***************************
-
-// @ evt indicates and event has occured.
-// @ Contains an id from selected button.
-// Output: TRUE, a green tick is displayed. (buttonB === TRUE)
-// Output: FALSE, a red cross is displayed.  
-function myQuiz3(evt, btn) {
-    "use strict";
-    if (btn === "buttonB") {
-        document.getElementById(btn).innerHTML = "&#10003";
-        document.getElementById(btn).style.color = "limegreen";
-    } else {
-        document.getElementById(btn).innerHTML = "&#10008";
-        document.getElementById(btn).style.color = "red";
-    }
-}
-
-// *********** End of Quiz three. *************
-
-// ++++++++++++++++++++++++++++++++
-// Web Quizes 
-// ================================
-
-
-// Total questions answered.
-
-function attemptsCount() {
-    "use strict";
-    var iTotal;
-    // NOTE: attempts is a global var. 
-    attempts += 1;
-    
-    // Iterates over the arry and posts to span tags.
-    for (iTotal = 0; iTotal < document.getElementsByClassName("displayCount").length; iTotal += 1) {
-        document.getElementsByClassName("displayCount2")[iTotal].innerHTML = attempts;
-    }
-    
-    // Checks if all questions have been answered
-    if (attempts > 5) {
-        document.getElementById("getResults").disabled = false;
-    }
-}
-
-// Total counter ++++++++++++++++++++++++++++++++++++
-
-function correctAnswerCount() {
-    "use strict";
-    // Local variable
-    var i;
-    counter += 1;
-    // document.getElementById("quizCounter").value = counter;
-
-    // The 'for loop' iterates over the length of the list and inserts the
-    // value into all tags in the array. ****
-    // This is because '.getElementsByClassName' 
-    // returns an array unlike '.getElementById', which reurns a value.
-
-    for (i = 0; i < document.getElementsByClassName("displayCount").length; i += 1) {
-        document.getElementsByClassName("displayCount")[i].innerHTML = counter;
-    }
-    attemptsCount();
-}
-
-
-// The user answer for the radio buttons is pass to and
-// then stored in var with the id result.
-function myWebQuiz(inputChoice) {
-    "use strict";
-    document.getElementById("result").value = inputChoice;
-}
-
-// *************************************
-// Web Quiz 1
-// *************************************
-
-function myQuizWebAnswerQ1() {
-    "use strict";
-    var number = 0, inputChoice = document.getElementById("result").value;
-    if (inputChoice === "choice2") {
-        document.getElementById('radioB').innerHTML = "&#10003";
-        document.getElementById('radioB').style.color = "limegreen";
+        </div><!-- Question 6 end *********** -->
         
-        document.getElementById("radioB_WrittenAnswer").innerHTML = 'Correct! This is the standard tag used to emphasise text.';
-        document.getElementById("radioB_WrittenAnswer").style.backgroundColor = "palegreen";
-        document.getElementById("radioB_WrittenAnswer").appendChild(newBrTag);
-        number = 1;
-        correctAnswerCount();
+         <button type="button" id="getResults"  onclick="calculateResults()" disabled>Calculate Reseults</button> 
+        <div id="yourScore">
+        <p >&nbsp;You scored: &nbsp;<span id="percetDisplay" >0</span>%</p>
+        </div> 
         
-    }
-
-    if (inputChoice === "choice1") {
-        document.getElementById('radioA').innerHTML = "&#10008";
-        document.getElementById('radioA').style.color = "red";
-        
-        document.getElementById("radioA_WrittenAnswer").innerHTML = ' Although this tag can be used to emphasise text, it is also used for another which will cause problems in your code. For this reason, it is not the standard tag for emphasising text anymore. ';
-        document.getElementById("radioA_WrittenAnswer").style.backgroundColor = "#ffbfc5";
-        document.createElement("BR");
-        document.getElementById("radioA_WrittenAnswer").appendChild(newBrTag);
-        number = 1;
-        attemptsCount();
-    }
-    
-    if (inputChoice === "choice3") {
-        document.getElementById('radioC').innerHTML = "&#10008";
-        document.getElementById('radioC').style.color = "red";
-        document.getElementById("radioC_WrittenAnswer").innerHTML = ' This is not a tag in HTML. ';
-        document.getElementById("radioC_WrittenAnswer").style.backgroundColor = "#ffbfc5";
-        document.createElement("BR");
-        document.getElementById("radioC_WrittenAnswer").appendChild(newBrTag);
-        number = 1;
-        attemptsCount();
-    }
-    if (number >= 1) {
-        document.getElementById("mySubmit1").disabled = true;
-    }
-}
-
-// *************************************
-// Web Quiz 2
-// *************************************
-
-function myQuizWebAnswerQ2() {
-    "use strict";
-    // Local variables
-    var number = 0, inputChoice = document.getElementById("result").value;
-    // Global var used: newBrTag
-    
-    if (inputChoice === "choice1q2") {
-        document.getElementById('radioAQ2').innerHTML = "&#10003";
-        document.getElementById('radioAQ2').style.color = "limegreen";
-        document.getElementById("radioA_WrittenAnswerQ2").innerHTML = '&nbsp;&nbsp; This the correct doctype declaration for HTML5 and should by at the top of the source code before the &lt; html &gt; opening tag. &nbsp;&nbsp;';
-        document.getElementById("radioA_WrittenAnswerQ2").style.backgroundColor = "palegreen";
-        document.getElementById("radioA_WrittenAnswerQ2").appendChild(newBrTag);
-        number = 1;
-        correctAnswerCount();
-    }
-
-    if (inputChoice === "choice2q2") {
-        document.getElementById('radioBQ2').innerHTML = "&#10008";
-        document.getElementById('radioBQ2').style.color = "red";
-        document.getElementById("radioB_WrittenAnswerQ2").innerHTML = '&nbsp;&nbsp; This is the doctype declaration for HTML4 not 5. &nbsp;&nbsp;';
-        document.getElementById("radioB_WrittenAnswerQ2").style.backgroundColor = "#ffbfc5";
-        document.createElement("BR");
-        document.getElementById("radioB_WrittenAnswerQ2").appendChild(newBrTag);
-        number = 1;
-        attemptsCount();
-    }
-    
-    if (inputChoice === "choice3q2") {
-        document.getElementById('radioCQ2').innerHTML = "&#10008";
-        document.getElementById('radioCQ2').style.color = "red";
-        document.getElementById("radioC_WrittenAnswerQ2").innerHTML = '&nbsp;&nbsp; This is not the correct way to start an HTML5 documnet. &nbsp;&nbsp;';
-        document.getElementById("radioC_WrittenAnswerQ2").style.backgroundColor = "#ffbfc5";
-        document.createElement("BR");
-        document.getElementById("radioC_WrittenAnswerQ2").appendChild(newBrTag);
-        number = 1;
-        attemptsCount();
-    }
-    if (number >= 1) {
-        document.getElementById("mySubmit2").disabled = true;
-    }
-
-}
-
-// *************************************
-// Web Quiz 3
-// *************************************
-
-function myQuizWebAnswerQ3() {
-    "use strict";
-    // Local var
-    var number = 0, inputChoice = document.getElementById("result").value;
-    // global var used: newBrTag
-    if (inputChoice === "choice1q3") {
-        document.getElementById('radioAQ3').innerHTML = "&#10003";
-        document.getElementById('radioAQ3').style.color = "limegreen";
-        document.getElementById("radioA_WrittenAnswerQ3").innerHTML = "&nbsp;&nbsp; 'function' is the correct way to declaire a method in javaScript since methods are called function. &nbsp;&nbsp;";
-        document.getElementById("radioA_WrittenAnswerQ3").style.backgroundColor = "palegreen";
-        document.getElementById("radioA_WrittenAnswerQ3").appendChild(newBrTag);
-        number = 1;
-        correctAnswerCount();
-    }
-
-    if (inputChoice === "choice2q3") {
-        document.getElementById('radioBQ3').innerHTML = "&#10008";
-        document.getElementById('radioBQ3').style.color = "red";
-        document.getElementById("radioB_WrittenAnswerQ3").innerHTML = "&nbsp;&nbsp; 'def' is the the keyword to declaire a method in python not in javaScript &nbsp;&nbsp;";
-        document.getElementById("radioB_WrittenAnswerQ3").style.backgroundColor = "#ffbfc5";
-        document.getElementById("radioB_WrittenAnswerQ3").appendChild(newBrTag);
-        number = 1;
-        attemptsCount();
-    }
-    
-    if (inputChoice === "choice3q3") {
-        document.getElementById('radioCQ3').innerHTML = "&#10008";
-        document.getElementById('radioCQ3').style.color = "red";
-        
-        document.getElementById("radioC_WrittenAnswerQ3").innerHTML = '&nbsp;&nbsp; Although function is a keyword in javaScript, this keyword has no angeled brackets. &nbsp;&nbsp;';
-        document.getElementById("radioC_WrittenAnswerQ3").style.backgroundColor = "#ffbfc5";
-        document.getElementById("radioC_WrittenAnswerQ3").appendChild(newBrTag);
-        number = 1;
-        attemptsCount();
-    }
-    if (number >= 1) {
-        document.getElementById("mySubmit3").disabled = true;
-    }
-
-}
-
-// *************************************
-// Web Quiz 4
-// *************************************
-
-function myQuizWebAnswerQ4() {
-    "use strict";
-    var number = 0, inputChoice = document.getElementById("result").value;
-    if (inputChoice === "choice2q4") {
-        document.getElementById('radioBQ4').innerHTML = "&#10003";
-        document.getElementById('radioBQ4').style.color = "limegreen";
-        
-        document.getElementById("radioB_WrittenAnswerQ4").innerHTML = '&nbsp;&nbsp; Yes, this will find the element with attribute myColour and chage it to red. &nbsp;&nbsp;';
-        document.getElementById("radioB_WrittenAnswerQ4").style.backgroundColor = "palegreen";
-        document.getElementById("radioB_WrittenAnswerQ4").appendChild(newBrTag);
-        number = 1;
-        correctAnswerCount();
-    }
-
-    if (inputChoice === "choice1q4") {
-        document.getElementById('radioAQ4').innerHTML = "&#10008";
-        document.getElementById('radioAQ4').style.color = "red";
-        document.getElementById("radioA_WrittenAnswerQ4").innerHTML = '&nbsp;&nbsp; This will look for an id of red, but will then do nothing. &nbsp;&nbsp;';
-        document.getElementById("radioA_WrittenAnswerQ4").style.backgroundColor = "#ffbfc5";
-        document.getElementById("radioA_WrittenAnswerQ4").appendChild(newBrTag);
-        number = 1;
-        attemptsCount();
-    }
-    
-    if (inputChoice === "choice3q4") {
-        document.getElementById('radioCQ4').innerHTML = "&#10008";
-        document.getElementById('radioCQ4').style.color = "red";
-        document.getElementById("radioC_WrittenAnswerQ4").innerHTML = '&nbsp;&nbsp; This will look for an element with class name instead of id. &nbsp;&nbsp;';
-        document.getElementById("radioC_WrittenAnswerQ4").style.backgroundColor = "#ffbfc5";
-        document.getElementById("radioC_WrittenAnswerQ4").appendChild(newBrTag);
-        number = 1;
-        attemptsCount();
-    }
-    if (number >= 1) {
-        document.getElementById("mySubmit4").disabled = true;
-    }
-}
-
-// *************************************
-// Web Quiz 5
-// *************************************
-
-function myQuizWebAnswerQ5() {
-    "use strict";
-    var number = 0, inputChoice = document.getElementById("result").value;
-    if (inputChoice === "choice2q5") {
-        document.getElementById('radioBQ5').innerHTML = "&#10003";
-        document.getElementById('radioBQ5').style.color = "limegreen";
-        document.getElementById("radioB_WrittenAnswerQ5").innerHTML = '&nbsp;&nbsp; Correct!&nbsp;&nbsp;';
-        document.getElementById("radioB_WrittenAnswerQ5").style.backgroundColor = "palegreen";
-        document.getElementById("radioB_WrittenAnswerQ5").appendChild(newBrTag);
-        number = 1;
-        correctAnswerCount();
-    }
-
-    if (inputChoice === "choice1q5") {
-        document.getElementById('radioAQ5').innerHTML = "&#10008";
-        document.getElementById('radioAQ5').style.color = "red";
-        document.getElementById("radioA_WrittenAnswerQ5").innerHTML = ' &nbsp;&nbsp; Wrong! &nbsp;&nbsp;. ';
-        document.getElementById("radioA_WrittenAnswerQ5").style.backgroundColor = "#ffbfc5";
-        document.getElementById("radioA_WrittenAnswerQ5").appendChild(newBrTag);
-        number = 1;
-        attemptsCount();
-    }
-    
-    if (inputChoice === "choice3q5") {
-        document.getElementById('radioCQ5').innerHTML = "&#10008";
-        document.getElementById('radioCQ5').style.color = "red";
-        document.getElementById("radioC_WrittenAnswerQ5").innerHTML = ' &nbsp;&nbsp; Wrong! &nbsp;&nbsp; ';
-        document.getElementById("radioC_WrittenAnswerQ5").style.backgroundColor = "#ffbfc5";
-        document.getElementById("radioC_WrittenAnswerQ5").appendChild(newBrTag);
-        number = 1;
-        attemptsCount();
-    }
-    if (number >= 1) {
-        document.getElementById("mySubmit5").disabled = true;
-    }
-}
-
-// *************************************
-// Web Quiz 6
-// *************************************
-
-function myQuizWebAnswerQ6() {
-    "use strict";
-    var number = 0, inputChoice = document.getElementById("result").value;
-    if (inputChoice === "choice3q6") {
-        document.getElementById('radioCQ6').innerHTML = "&#10003";
-        document.getElementById('radioCQ6').style.color = "limegreen";
-        document.getElementById("radioC_WrittenAnswerQ6").innerHTML = '&nbsp;&nbsp; Correct! &nbsp;&nbsp;';
-        document.getElementById("radioC_WrittenAnswerQ6").style.backgroundColor = "palegreen";
-        document.getElementById("radioC_WrittenAnswerQ6").appendChild(newBrTag);
-        number = 1;
-        correctAnswerCount();
-    }
-
-    if (inputChoice === "choice1q6") {
-        document.getElementById('radioAQ6').innerHTML = "&#10008";
-        document.getElementById('radioAQ6').style.color = "red";
-        document.getElementById("radioA_WrittenAnswerQ6").innerHTML = ' &nbsp;&nbsp; Wrong! &nbsp;&nbsp; ';
-        document.getElementById("radioA_WrittenAnswerQ6").style.backgroundColor = "#ffbfc5";
-        document.getElementById("radioA_WrittenAnswerQ6").appendChild(newBrTag);
-        number = 1;
-        attemptsCount();
-    }
-    
-    if (inputChoice === "choice2q6") {
-        document.getElementById('radioBQ6').innerHTML = "&#10008";
-        document.getElementById('radioBQ6').style.color = "red";
-        document.getElementById("radioB_WrittenAnswerQ6").innerHTML = ' &nbsp;&nbsp; Wrong! &nbsp;&nbsp;. ';
-        document.getElementById("radioB_WrittenAnswerQ6").style.backgroundColor = "#ffbfc5";
-        document.getElementById("radioB_WrittenAnswerQ6").appendChild(newBrTag);
-        number = 1;
-        attemptsCount();
-    }
-    if (number >= 1) {
-        document.getElementById("mySubmit6").disabled = true;
-    }
-}
-
-// Results
-function calculateResults() {
-    "use strict";
-// denominator = attempts
-// numerator = counter
-    var answer = (counter / attempts) * 100;
-    // .toFixed() converts to a string!
-    document.getElementById("percetDisplay").innerHTML = answer.toFixed();
-}
-
-// End of Web Quizes ======================
-/* exported menuFunction */
-function menuFunction() {
-    "use strict";
-    var x = document.getElementsByClassName("dropdown-content");
-
-    if (x[0].style.display === "block") {
-        x[0].style.display = "none";
-        x[1].style.display = "none"; // makes other menu diapaer
-        x[2].style.display = "none"; // makes other menu diapaer
-    } else {
-        x[0].style.display = "block";
-        x[1].style.display = "none"; // makes other menu diapaer 
-        x[2].style.display = "none"; // makes other menu diapaer
-    }
-}
-// Makes dropdown men 1 work on click for touch screen. Note this function has a different name.
-
-// Maps
-/* exported menuFunction1 */
-function menuFunction1() {
-    "use strict";
-    var x = document.getElementsByClassName("dropdown-content");
-    if (x[1].style.display === "block") {
-        x[1].style.display = "none";
-        x[0].style.display = "none"; // makes other menu diapaer
-        x[2].style.display = "none"; // makes other menu diapaer
-    } else {
-        x[1].style.display = "block";
-        x[0].style.display = "none"; // makes other menu diapaer 
-        x[2].style.display = "none"; // makes other menu diapaer
-    }
-}
-    // Caller is in the div class="row" This will close the menu. 
-
-/* exported menuFunction3 */
-function menuFunction3() {
-    "use strict";
-    var x = document.getElementsByClassName("dropdown-content");
-
-    if (x[2].style.display === "block") {
-        x[1].style.display = "none";
-        x[0].style.display = "none"; // makes other menu diapaer 
-        x[2].style.display = "none"; // makes other menu diapaer
-
-    } else {
-        x[2].style.display = "block";
-        x[1].style.display = "none"; // makes other menu diapaer 
-        x[0].style.display = "none"; // makes other menu diapaer
-
-    }
-}
-/* exported closeMenu */
-function closeMenu() {
-    "use strict";
-    var x = document.getElementsByClassName("dropdown-content");
-    if (x[1].style.display === "block" || x[0].style.display === "block" ||   x[2].style.display === "block") {
-        x[1].style.display = "none";
-        x[0].style.display = "none";
-        x[2].style.display = "none";
-    }
-}
-
-
-// this function opens and closes the menu when in @media mode for small 
-/* exported menuFunction2 */
-function menuFunction2() {
-    "use strict";
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += "responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-
- 
-
-// This is for the slide show in index
-var slideimages = [];
-slideimages[0] = new Image();
-slideimages[0].src = "images/CRS2.jpg";
-slideimages[1] = new Image();
-slideimages[1].src = "images/CRH.jpg";
-slideimages[2] = new Image();
-slideimages[2].src = "images/BHF.jpg";
-
-var step = 0;
-function slideshow1() {
-    "use strict";
-    document.getElementById('slide').src = slideimages[step].src;
-    if (step < 2) {
-        step += 1;
-    } else {
-        step = 0;
-    }
-    setTimeout(slideshow1, 4000);
-}
-
-
-var slideimages2 = [];
-slideimages2[0] = new Image();
-slideimages2[0].src = "images/Garden/sf.JPG";
-slideimages2[1] = new Image();
-slideimages2[1].src = "images/Garden/rsf.jpg";
-slideimages2[2] = new Image();
-slideimages2[2].src = "images/Garden/cat.jpg";
-
-
-var step2 = 0;
-function slideshow2() {
-    "use strict";
-    document.getElementById('slide2').src = slideimages2[step2].src;
-    if (step2 < 2) {
-        step2 += 1;
-    } else {
-        step2 = 0;
-    }
-    setTimeout(slideshow2, 4000);
-}
-
-// ========== slideshow 3 ===========  
-
-var slideimages3 = [];
-slideimages3[0] = new Image();
-slideimages3[0].src = "images/Church/ChristChurch.jpg";
-slideimages3[1] = new Image();
-slideimages3[1].src = "images/Church/BBQ.jpg";
-slideimages3[2] = new Image();
-slideimages3[2].src = "images/Church/ChristChurch.jpg";
-
-
-var step3 = 0;
-function slideshow3() {
-    "use strict";
-    document.getElementById('slide3').src = slideimages3[step3].src;
-    if (step3 < 2) {
-        step3 += 1;
-    } else {
-        step3 = 0;
-    }
-    setTimeout(slideshow3, 4000);
-}
-
-
-/*  This is the function for my spare time  */
-/* exported openCity */
-function openCity(evt, cityName) {
-    "use strict";
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i += 1) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i += 1) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-/* exported start */
-function start() {
-    "use strict";
-    slideshow1();
-    slideshow2();
-    slideshow3();
-}
+	</div>  <!-- End of web quiz card -->
