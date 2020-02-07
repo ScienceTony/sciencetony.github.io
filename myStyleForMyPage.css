@@ -524,6 +524,11 @@ button{
     text-align: left;
 }
 
+/* This will breakup any long groups of text such as the long peices of code with no spaces. Q2 and Q4 */
+.break {
+    word-break: break-all;
+}
+
 /* ======================================
 End of js buttons for quiz
 ========================================= */
