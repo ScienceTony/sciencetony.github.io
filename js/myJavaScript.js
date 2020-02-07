@@ -1,5 +1,25 @@
 /*eslint-env browser*/
 /* exported myFunction, myQuiz1, myQuiz2, myQuiz3, myQuizWebAnswerQ1, myQuizWebAnswerQ2, myQuizWebAnswerQ3, myQuizWebAnswerQ4, myQuizWebAnswerQ5, myQuizWebAnswerQ6, myWebQuiz, calculateResults */
+
+// Auther: Tony McDonald 
+
+// Learning note: variables outside of any functions are global variables and can be used by numerous functions anywhere in the program providing they are decllaired before a function attempts to use them.
+
+// *****************************
+// Global Variables 
+// *****************************
+
+// Variable attempts is used in: 
+// • Total questions answered 'attemptsCount()' 
+// • Calculating the result 'calculateResults()'
+// Variable counter is used in: 
+// • Total counter 'correctAnswerCount()' and the for loop within the same function. 
+// • Results calculator 'calculateResults()'
+var attempts = document.getElementById("numberOfQuestionsAttempted"), counter = document.getElementById("quizCounter"), newBrTag = document.createElement("BR");
+
+// ********* End of global variables ********
+
+// Test button 
 function myFunction() {
     "use strict";
     document.getElementById("button1").innerHTML = "This button would do something cool!";
@@ -7,7 +27,7 @@ function myFunction() {
     document.getElementById("button1").style.border = "none";
 }
 
-    // Quiz 1 button and anwser.
+// Quiz 1 button and anwser.
 
 function myQuiz1() {
     "use strict";
@@ -16,9 +36,16 @@ function myQuiz1() {
     document.getElementById("button2").style.border = "none";
 }
 
-    // Quiz 2 buttons and answers.
+// ***************************
+// Quiz 2 buttons and answers.
+// ***************************
 
-function myQuiz2(evt, btn) { "use strict";
+// @ evt indicates and event has occured.
+// @ Contains an id from selected button.
+// Output: TRUE, a green tick is displayed. (buttonC === TRUE)
+// Output: FALSE, a red cross is displayed. 
+function myQuiz2(evt, btn) {
+    "use strict";
     if (btn === "buttonC") {
         document.getElementById(btn).innerHTML = "&#10003";
         document.getElementById(btn).style.color = "limegreen";
@@ -26,12 +53,18 @@ function myQuiz2(evt, btn) { "use strict";
         document.getElementById(btn).innerHTML = "&#10008";
         document.getElementById(btn).style.color = "red";
     }
-    }
+}
    
-// End of Quiz two. 
+// *********  End of Quiz two. *********
 
+// ***************************
 // Quiz 3 buttons and answers.
+// ***************************
 
+// @ evt indicates and event has occured.
+// @ Contains an id from selected button.
+// Output: TRUE, a green tick is displayed. (buttonB === TRUE)
+// Output: FALSE, a red cross is displayed.  
 function myQuiz3(evt, btn) {
     "use strict";
     if (btn === "buttonB") {
@@ -43,37 +76,46 @@ function myQuiz3(evt, btn) {
     }
 }
 
-// End of Quiz three. 
+// *********** End of Quiz three. *************
 
+// ++++++++++++++++++++++++++++++++
 // Web Quizes 
-// =================================================
+// ================================
 
-// Total questions answered. 
-var attempts = document.getElementById("numberOfQuestionsAttempted");
+
+// Total questions answered.
+
 function attemptsCount() {
     "use strict";
+    var iTotal;
+    // NOTE: attempts is a global var. 
     attempts += 1;
-    //   document.getElementById("quizCounter").value = counter;
     
-    document.getElementsByClassName("displayCount2")[0].innerHTML = attempts;
+    // Iterates over the arry and posts to span tags.
+    for (iTotal = 0; iTotal < document.getElementsByClassName("displayCount").length; iTotal += 1) {
+        document.getElementsByClassName("displayCount2")[iTotal].innerHTML = attempts;
+    }
     
+    // Checks if all questions have been answered
     if (attempts > 5) {
         document.getElementById("getResults").disabled = false;
     }
 }
 
 // Total counter ++++++++++++++++++++++++++++++++++++
-var counter = document.getElementById("quizCounter"), i;
 
 function correctAnswerCount() {
     "use strict";
+    // Local variable
+    var i;
     counter += 1;
-//   document.getElementById("quizCounter").value = counter;
+    // document.getElementById("quizCounter").value = counter;
 
-    // The for iterates over the length of the list and inserts the
+    // The 'for loop' iterates over the length of the list and inserts the
     // value into all tags in the array. ****
-    // This is because '.getElementsByClassName' returns an array unlike '.getElementById', which reurns a value.
-    
+    // This is because '.getElementsByClassName' 
+    // returns an array unlike '.getElementById', which reurns a value.
+
     for (i = 0; i < document.getElementsByClassName("displayCount").length; i += 1) {
         document.getElementsByClassName("displayCount")[i].innerHTML = counter;
     }
@@ -91,7 +133,7 @@ function myWebQuiz(inputChoice) {
 // *************************************
 // Web Quiz 1
 // *************************************
-var newBrTag = document.createElement("BR");
+
 function myQuizWebAnswerQ1() {
     "use strict";
     var number = 0, inputChoice = document.getElementById("result").value;
@@ -140,7 +182,9 @@ function myQuizWebAnswerQ1() {
 
 function myQuizWebAnswerQ2() {
     "use strict";
+    // Local variables
     var number = 0, inputChoice = document.getElementById("result").value;
+    // Global var used: newBrTag
     
     if (inputChoice === "choice1q2") {
         document.getElementById('radioAQ2').innerHTML = "&#10003";
@@ -185,11 +229,13 @@ function myQuizWebAnswerQ2() {
 
 function myQuizWebAnswerQ3() {
     "use strict";
+    // Local var
     var number = 0, inputChoice = document.getElementById("result").value;
+    // global var used: newBrTag
     if (inputChoice === "choice1q3") {
         document.getElementById('radioAQ3').innerHTML = "&#10003";
         document.getElementById('radioAQ3').style.color = "limegreen";
-        document.getElementById("radioA_WrittenAnswerQ3").innerHTML = '&nbsp;&nbsp; function is the correct way to declaire a method in javaScript since methods are called function. &nbsp;&nbsp;';
+        document.getElementById("radioA_WrittenAnswerQ3").innerHTML = "&nbsp;&nbsp; 'function' is the correct way to declaire a method in javaScript since methods are called function. &nbsp;&nbsp;";
         document.getElementById("radioA_WrittenAnswerQ3").style.backgroundColor = "palegreen";
         document.getElementById("radioA_WrittenAnswerQ3").appendChild(newBrTag);
         number = 1;
@@ -346,7 +392,7 @@ function myQuizWebAnswerQ6() {
     }
 }
 
-
+// Results
 function calculateResults() {
     "use strict";
 // denominator = attempts
