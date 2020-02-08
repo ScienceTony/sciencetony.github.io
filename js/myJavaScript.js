@@ -2,7 +2,7 @@
 /* exported myFunction, myQuiz1, myQuiz2, myQuiz3, myQuizWebAnswerQ1, myQuizWebAnswerQ2, myQuizWebAnswerQ3, myQuizWebAnswerQ4, myQuizWebAnswerQ5, myQuizWebAnswerQ6, myWebQuiz, calculateResults */
 
 // Author: Tony McDonald 
-// Twitter: ScienceTony
+// Twitter: ScienceTony 
 
 // Learning note: variables outside of any functions are global variables and can be used by numerous functions anywhere in the program providing they are decllaired before a function attempts to use them.
 
@@ -10,11 +10,11 @@
 // Global Variables 
 // *****************************
 
-// Variable attempts is used in: 
+// Variable 'attempts' is used in: 
 // • Total questions answered 'attemptsCount()' 
 // • Calculating the result 'calculateResults()'
 // Variable counter is used in: 
-// • Total counter 'correctAnswerCount()' and the for loop within the same function. 
+// • Total 'counter' 'correctAnswerCount()' and the for loop within the same function. 
 // • Results calculator 'calculateResults()'
 var attempts = document.getElementById("numberOfQuestionsAttempted"), counter = document.getElementById("quizCounter");
 
@@ -84,17 +84,18 @@ function myQuiz3(evt, btn) {
 // ================================
 
 
-// Total questions answered.
-
+// Total questions answered. ++++++++++++++++++++++++++
+// Output: 
 function attemptsCount() {
     "use strict";
-    var iTotal;
+    // Local var
+    var i;
     // NOTE: attempts is a global var. 
     attempts += 1;
     
-    // Iterates over the arry and posts to span tags.
-    for (iTotal = 0; iTotal < document.getElementsByClassName("displayCount").length; iTotal += 1) {
-        document.getElementsByClassName("displayCount2")[iTotal].innerHTML = attempts;
+    // Iterates over the array and posts to span tags in multiple places.
+    for (i = 0; i < document.getElementsByClassName("displayCount").length; i += 1) {
+        document.getElementsByClassName("displayCount2")[i].innerHTML = attempts;
     }
     
     // Checks if all questions have been answered
@@ -120,7 +121,6 @@ function correctAnswerCount() {
     for (i = 0; i < document.getElementsByClassName("displayCount").length; i += 1) {
         document.getElementsByClassName("displayCount")[i].innerHTML = counter;
     }
-    attemptsCount();
 }
 
 
@@ -131,35 +131,45 @@ function myWebQuiz(inputChoice) {
     document.getElementById("result").value = inputChoice;
 }
 
+// @ number 
+// @ subBtnNum
+// Both the above inputs come from the web quizes in this section.
+// decides if Submite buttons are open or locked.
+// Output: boolean
+/* exported btnLock */
+function btnLock(number, subBtnNum) {
+    "use strict";
+    if (number >= 1) {
+        document.getElementById(subBtnNum).disabled = true;
+    }
+}
+
 // *************************************
 // Web Quiz 1
 // *************************************
 
 function myQuizWebAnswerQ1() {
     "use strict";
+    // Local vars
     var number = 0, inputChoice = document.getElementById("result").value, newBrTag = document.createElement("BR");
     if (inputChoice === "choice2") {
         document.getElementById('radioB').innerHTML = "&#10003";
         document.getElementById('radioB').style.color = "limegreen";
-        
         document.getElementById("radioB_WrittenAnswer").innerHTML = 'Correct! This is the standard tag used to emphasise text.';
         document.getElementById("radioB_WrittenAnswer").style.backgroundColor = "palegreen";
         document.getElementById("radioB_WrittenAnswer").appendChild(newBrTag);
         number = 1;
         correctAnswerCount();
-        
     }
 
     if (inputChoice === "choice1") {
         document.getElementById('radioA').innerHTML = "&#10008";
         document.getElementById('radioA').style.color = "red";
-        
         document.getElementById("radioA_WrittenAnswer").innerHTML = ' Although this tag can be used to emphasise text, it is also used for another which will cause problems in your code. For this reason, it is not the standard tag for emphasising text anymore. ';
         document.getElementById("radioA_WrittenAnswer").style.backgroundColor = "#ffbfc5";
-        document.createElement("BR");
         document.getElementById("radioA_WrittenAnswer").appendChild(newBrTag);
         number = 1;
-        attemptsCount();
+        
     }
     
     if (inputChoice === "choice3") {
@@ -167,14 +177,11 @@ function myQuizWebAnswerQ1() {
         document.getElementById('radioC').style.color = "red";
         document.getElementById("radioC_WrittenAnswer").innerHTML = ' This is not a tag in HTML. ';
         document.getElementById("radioC_WrittenAnswer").style.backgroundColor = "#ffbfc5";
-        document.createElement("BR");
         document.getElementById("radioC_WrittenAnswer").appendChild(newBrTag);
         number = 1;
-        attemptsCount();
     }
-    if (number >= 1) {
-        document.getElementById("mySubmit1").disabled = true;
-    }
+    attemptsCount();
+    btnLock(number, "mySubmit1");
 }
 
 // *************************************
@@ -202,10 +209,8 @@ function myQuizWebAnswerQ2() {
         document.getElementById('radioBQ2').style.color = "red";
         document.getElementById("radioB_WrittenAnswerQ2").innerHTML = '&nbsp;&nbsp; This is the doctype declaration for HTML4 not 5. &nbsp;&nbsp;';
         document.getElementById("radioB_WrittenAnswerQ2").style.backgroundColor = "#ffbfc5";
-        document.createElement("BR");
         document.getElementById("radioB_WrittenAnswerQ2").appendChild(newBrTag);
         number = 1;
-        attemptsCount();
     }
     
     if (inputChoice === "choice3q2") {
@@ -213,15 +218,11 @@ function myQuizWebAnswerQ2() {
         document.getElementById('radioCQ2').style.color = "red";
         document.getElementById("radioC_WrittenAnswerQ2").innerHTML = '&nbsp;&nbsp; This is not the correct way to start an HTML5 documnet. &nbsp;&nbsp;';
         document.getElementById("radioC_WrittenAnswerQ2").style.backgroundColor = "#ffbfc5";
-        document.createElement("BR");
         document.getElementById("radioC_WrittenAnswerQ2").appendChild(newBrTag);
         number = 1;
-        attemptsCount();
     }
-    if (number >= 1) {
-        document.getElementById("mySubmit2").disabled = true;
-    }
-
+    attemptsCount();
+    btnLock(number, "mySubmit2");
 }
 
 // *************************************
@@ -250,23 +251,18 @@ function myQuizWebAnswerQ3() {
         document.getElementById("radioB_WrittenAnswerQ3").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioB_WrittenAnswerQ3").appendChild(newBrTag);
         number = 1;
-        attemptsCount();
     }
     
     if (inputChoice === "choice3q3") {
         document.getElementById('radioCQ3').innerHTML = "&#10008";
         document.getElementById('radioCQ3').style.color = "red";
-        
         document.getElementById("radioC_WrittenAnswerQ3").innerHTML = '&nbsp;&nbsp; Although function is a keyword in javaScript, this keyword has no angeled brackets. &nbsp;&nbsp;';
         document.getElementById("radioC_WrittenAnswerQ3").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioC_WrittenAnswerQ3").appendChild(newBrTag);
         number = 1;
-        attemptsCount();
     }
-    if (number >= 1) {
-        document.getElementById("mySubmit3").disabled = true;
-    }
-
+    attemptsCount();
+    btnLock(number, "mySubmit3");
 }
 
 // *************************************
@@ -279,7 +275,6 @@ function myQuizWebAnswerQ4() {
     if (inputChoice === "choice2q4") {
         document.getElementById('radioBQ4').innerHTML = "&#10003";
         document.getElementById('radioBQ4').style.color = "limegreen";
-        
         document.getElementById("radioB_WrittenAnswerQ4").innerHTML = '&nbsp;&nbsp; Yes, this will find the element with attribute myColour and chage it to red. &nbsp;&nbsp;';
         document.getElementById("radioB_WrittenAnswerQ4").style.backgroundColor = "palegreen";
         document.getElementById("radioB_WrittenAnswerQ4").appendChild(newBrTag);
@@ -294,7 +289,6 @@ function myQuizWebAnswerQ4() {
         document.getElementById("radioA_WrittenAnswerQ4").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioA_WrittenAnswerQ4").appendChild(newBrTag);
         number = 1;
-        attemptsCount();
     }
     
     if (inputChoice === "choice3q4") {
@@ -304,11 +298,9 @@ function myQuizWebAnswerQ4() {
         document.getElementById("radioC_WrittenAnswerQ4").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioC_WrittenAnswerQ4").appendChild(newBrTag);
         number = 1;
-        attemptsCount();
     }
-    if (number >= 1) {
-        document.getElementById("mySubmit4").disabled = true;
-    }
+    attemptsCount();
+    btnLock(number, "mySubmit4");
 }
 
 // *************************************
@@ -335,7 +327,6 @@ function myQuizWebAnswerQ5() {
         document.getElementById("radioA_WrittenAnswerQ5").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioA_WrittenAnswerQ5").appendChild(newBrTag);
         number = 1;
-        attemptsCount();
     }
     
     if (inputChoice === "choice3q5") {
@@ -345,11 +336,10 @@ function myQuizWebAnswerQ5() {
         document.getElementById("radioC_WrittenAnswerQ5").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioC_WrittenAnswerQ5").appendChild(newBrTag);
         number = 1;
-        attemptsCount();
+        
     }
-    if (number >= 1) {
-        document.getElementById("mySubmit5").disabled = true;
-    }
+    attemptsCount();
+    btnLock(number, "mySubmit5");
 }
 
 // *************************************
@@ -362,7 +352,7 @@ function myQuizWebAnswerQ6() {
     if (inputChoice === "choice3q6") {
         document.getElementById('radioCQ6').innerHTML = "&#10003";
         document.getElementById('radioCQ6').style.color = "limegreen";
-        document.getElementById("radioC_WrittenAnswerQ6").innerHTML = '&nbsp;&nbsp; Correct! &nbsp;&nbsp;';
+        document.getElementById("radioC_WrittenAnswerQ6").innerHTML = '&nbsp;&nbsp; Correct! The &#35; is used for id. &nbsp;&nbsp;';
         document.getElementById("radioC_WrittenAnswerQ6").style.backgroundColor = "palegreen";
         document.getElementById("radioC_WrittenAnswerQ6").appendChild(newBrTag);
         number = 1;
@@ -372,26 +362,25 @@ function myQuizWebAnswerQ6() {
     if (inputChoice === "choice1q6") {
         document.getElementById('radioAQ6').innerHTML = "&#10008";
         document.getElementById('radioAQ6').style.color = "red";
-        document.getElementById("radioA_WrittenAnswerQ6").innerHTML = ' &nbsp;&nbsp; Wrong! &nbsp;&nbsp; ';
+        document.getElementById("radioA_WrittenAnswerQ6").innerHTML = ' &nbsp;&nbsp; This is not the correct selector for and HTML id.  &nbsp;&nbsp; ';
         document.getElementById("radioA_WrittenAnswerQ6").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioA_WrittenAnswerQ6").appendChild(newBrTag);
         number = 1;
-        attemptsCount();
     }
     
     if (inputChoice === "choice2q6") {
         document.getElementById('radioBQ6').innerHTML = "&#10008";
         document.getElementById('radioBQ6').style.color = "red";
-        document.getElementById("radioB_WrittenAnswerQ6").innerHTML = ' &nbsp;&nbsp; Wrong! &nbsp;&nbsp;. ';
+        document.getElementById("radioB_WrittenAnswerQ6").innerHTML = ' &nbsp;&nbsp; A dot is used for classes. &nbsp;&nbsp; ';
         document.getElementById("radioB_WrittenAnswerQ6").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioB_WrittenAnswerQ6").appendChild(newBrTag);
         number = 1;
-        attemptsCount();
     }
-    if (number >= 1) {
-        document.getElementById("mySubmit6").disabled = true;
-    }
+    attemptsCount();
+    btnLock(number, "mySubmit6");
 }
+
+
 
 // Results
 function calculateResults() {
