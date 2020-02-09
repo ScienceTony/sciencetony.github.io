@@ -696,7 +696,7 @@ li.dropdown {
 }
 .journal h2 {
     font-family: initial;
-    text-transform: initial;
+    text-transform: capitalize;
     text-decoration: underline;
     text-decoration-color: red;
 }
