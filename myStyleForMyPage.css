@@ -907,8 +907,7 @@ button:disabled {
     text-align: left;
     padding: 10px ;
     min-width: 7em;
-    margin-left: 0;
-    margin-bottom: 0;
+    margin: 0;
     transition: 0.3s;
     font-size: 17px;
     border-top-right-radius: 30px;
