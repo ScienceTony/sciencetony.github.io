@@ -736,7 +736,7 @@ h2 {
     text-transform: uppercase;
 }
 
-h3{
+h3 {
     color: orangered;
     font-family: "Courier New";
     background-color: white;
@@ -749,7 +749,7 @@ h3{
 
 }
 
-h4{
+h4 {
     font-family:sans-serif;
     text-transform: capitalize;
 }
@@ -901,7 +901,8 @@ button:disabled {
 /* Style the buttons inside the tab */
 .tab button.tablinks {
     float: left;
-    border: solid skyblue 1px;
+    border: solid skyblue;
+    border-bottom: none;
     outline: none;
     cursor: pointer;
     text-align: left;
@@ -930,8 +931,8 @@ button:disabled {
 .tab button.active {
     background-color: white;
     box-shadow: none;
-    border: solid orangered 1.5px;
-    border-bottom: solid white 1.5px;
+    border: solid orangered;
+    border-bottom: none;
 }
 
 /* Style the tab content */
