@@ -204,7 +204,7 @@ Share links START
 }
 
 .resp-sharing-button--linkedin {
-  background-color: aliceblue;
+  background-color: #0077b5;
   border-color: #0077b5;
 }
 
@@ -315,7 +315,7 @@ Download Link
 
 .card a.downloadLink {
 /* Deals with the text in box */
-    color: deepskyblue;
+    color: dodgerblue;
     font-family: sans-serif;
     text-decoration: none;
     font-weight: bold;
