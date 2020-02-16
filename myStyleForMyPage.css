@@ -193,13 +193,13 @@ Share links START
 }
 
 .resp-sharing-button--email {
-  background-color: #777777;
+  background-color: darkolivegreen;
   border-color: #777777;
 }
 
 .resp-sharing-button--email:hover,
 .resp-sharing-button--email:active {
-  background-color: #5e5e5e;
+  background-color: aliceblue;
   border-color: #5e5e5e;
 }
 
