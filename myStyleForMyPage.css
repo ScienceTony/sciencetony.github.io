@@ -232,7 +232,7 @@ Share links START
 
 .resp-sharing-button--reddit:hover,
 .resp-sharing-button--reddit:active {
-  background-color: #3a80c1;
+  background-color: aliceblue;
   border-color: #3a80c1;
 }
 
@@ -242,7 +242,8 @@ Share links START
 }
 
 .resp-sharing-button--telegram:hover {
-    background-color: #4B97D1;}
+    background-color: aliceblue
+}
 
 
 /* ================================
