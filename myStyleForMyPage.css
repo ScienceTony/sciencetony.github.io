@@ -171,7 +171,7 @@ Share links START
 }
 
 .resp-sharing-button--twitter {
-  background-color: #55acee;
+  background-color: dodgerblue;
   border-color: #55acee;
 }
 
@@ -226,7 +226,7 @@ Share links START
 }
 
 .resp-sharing-button--reddit {
-  background-color: #5f99cf;
+  background-color: orangered;
   border-color: #5f99cf;
 }
 
@@ -237,7 +237,7 @@ Share links START
 }
 
 .resp-sharing-button--telegram {
-    background-color: #54A9EB;
+    background-color: mediumblue;
     min-width: 12em;
 }
 
