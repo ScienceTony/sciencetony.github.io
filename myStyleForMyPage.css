@@ -316,7 +316,7 @@ Download Link
 
 .card a.downloadLink {
 /* Deals with the text in box */
-    color: dodgerblue;
+    color: blue;
     font-family: sans-serif;
     text-decoration: none;
     font-weight: bold;
