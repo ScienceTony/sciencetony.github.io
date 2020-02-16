@@ -166,18 +166,18 @@ Share links START
 
 .resp-sharing-button--facebook:hover,
 .resp-sharing-button--facebook:active {
-    background-color: #2d4373;
+    background-color: aliceblue;
     border-color: #2d4373;
 }
 
 .resp-sharing-button--twitter {
-  background-color: dodgerblue;
+  background-color: blue;
   border-color: #55acee;
 }
 
 .resp-sharing-button--twitter:hover,
 .resp-sharing-button--twitter:active {
-  background-color: #2795e9;
+  background-color: aliceblue;
   border-color: #2795e9;
 }
 
@@ -188,7 +188,7 @@ Share links START
 
 .resp-sharing-button--tumblr:hover,
 .resp-sharing-button--tumblr:active {
-  background-color: #222d3c;
+  background-color: aliceblue;
   border-color: #222d3c;
 }
 
@@ -204,13 +204,13 @@ Share links START
 }
 
 .resp-sharing-button--linkedin {
-  background-color: #0077b5;
+  background-color: aliceblue;
   border-color: #0077b5;
 }
 
 .resp-sharing-button--linkedin:hover,
 .resp-sharing-button--linkedin:active {
-  background-color: #046293;
+  background-color: aliceblue;
   border-color: #046293;
 }
 
@@ -226,7 +226,7 @@ Share links START
 }
 
 .resp-sharing-button--reddit {
-  background-color: orangered;
+  background-color: darkred;
   border-color: #5f99cf;
 }
 
