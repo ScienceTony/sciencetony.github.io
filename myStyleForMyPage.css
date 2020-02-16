@@ -928,7 +928,10 @@ button:disabled {
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: lightskyblue;
+    background-color: white;
+    box-shadow: none;
+    border: solid orangered 1.5px;
+    border-bottom: solid white 1.5px;
 }
 
 /* Style the tab content */
