@@ -10,13 +10,6 @@ body {
     line-height:1.5em;
     
 }
-/* =========================== 
-Displayed answers after submiting a radio 
-============================ */
-
-.displayedAnswerSpan{
-
-}
 
 
 /* ===================
@@ -933,6 +926,7 @@ button:disabled {
     box-shadow: none;
     border: solid orangered;
     border-bottom: none;
+    font-weight: bold;
 }
 
 /* Style the tab content */
