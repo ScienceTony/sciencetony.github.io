@@ -1,19 +1,13 @@
  *  {
     box-sizing: border-box;
 }
-@font-face {
-  font-family: 'Pacifico';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
-  font-display: swap;
-}
+
 
 body {
     /* background: #e5f2ff;*/
     /* background: #f3d163;*/
     background-color: white;
-    font-family: sans-serif;
+    font-family: sans-serif, Roboto, Arial, Helvetica;
     line-height:1.5em;
     
 }
