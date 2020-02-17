@@ -867,7 +867,7 @@ input[type=submit] {
     font-size: 1em;
     font-weight: bolder;
   background-color: lightblue;
-  color: white;
+  color: blue;
   padding: 5px 10px;
   border: none;
   border-radius: 6px;
@@ -876,6 +876,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: blue;
+    color: white;
 }
 
 input[type=submit]:disabled,
