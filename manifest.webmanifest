@@ -1,7 +1,7 @@
 {
   "short_name": "ScienceTony",
-  "name": "How to build a website",
-  "description": "Build a website bit by bit",
+  "name": "Building a webpage",
+  "description": "Learn to make a webpage",
   "icons": [
     {
       "src": "/images/icons-192.png",
@@ -15,6 +15,7 @@
     }
   ],
   "start_url": "/?source=pwa",
+  "background_color": "#3367D6",
   "display": "standalone",
   "scope": "/",
   "theme_color": "fuchsia"
