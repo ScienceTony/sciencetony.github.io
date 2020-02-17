@@ -2,6 +2,18 @@
   "short_name": "ScienceTony",
   "name": "How to build a website",
   "description": "Build a website bit by bit",
+  "icons": [
+    {
+      "src": "/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
   "start_url": "/?source=pwa",
   "display": "standalone",
   "scope": "/",
