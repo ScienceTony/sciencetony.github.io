@@ -1,0 +1,9 @@
+{
+  "short_name": "ScienceTony",
+  "name": "How to build a website",
+  "description": "Build a website bit by bit",
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6"
+}
