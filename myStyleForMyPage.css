@@ -609,9 +609,11 @@ li a {
     font-family:sans-serif, serif;
 }
 
+
  li.top a:hover, .dropdown:hover .dropbtn, li#right a:hover, #myTopnav a.icon:hover {
     background-color: goldenrod;
     color: white;
+     text-decoration: none;
 }
 /* Accessablity for tab and focus*/
 li.top a:focus, li#right a:focus , .dropdown a:focus{
