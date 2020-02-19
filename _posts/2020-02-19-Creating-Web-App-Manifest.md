@@ -4,7 +4,7 @@ title: "Creating Web App Manifest"
 date: 2020-02-19
 ---
 
-#Learning Curve
+# Learning Curve
 
 ## Task outline
 1. Test each webpage of sciencetony.github.io
@@ -30,5 +30,5 @@ This involved altering the code in the webmaster file, which I chose to save as 
 Once I added this to the site, I referenced it in the header and this solved the problem. The file has some mandatory aspects such as icon for splash screens and name amongst others. 
 Now, when I went to developer tools in chrome, under the 'Application tab' I could see the web manifest. 
 ### Resources:
-[MDN Web docs](https://developer.mozilla.org/en-US/docs/Web/Manifest)
+[MDN Web docs](https://developer.mozilla.org/en-US/docs/Web/Manifest)<br>
 [web.dev](https://web.dev/add-manifest/#create-the-manifest.webmanifest-file)
