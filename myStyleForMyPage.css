@@ -268,7 +268,6 @@ a.inTextLink:hover {
 a {
     color: blue;
     text-decoration:none;
-    padding: none;
 }
 
 a:hover {
@@ -278,6 +277,7 @@ a:hover {
 
 a.backButton:hover{
     color: darkgoldenrod;
+    text-decoration:none;
 }
 
 /* ================ 
@@ -312,6 +312,30 @@ li.blogLink a:visited {
 }
 
 li.blogLink a:hover {
+    text-decoration: underline;
+}
+/* +++++++ These are cards for the actual blogs ++++++++++ */
+
+.journal {
+    background: whitesmoke;
+    padding: 20px;
+    margin-top: 10px;
+}
+.journal h2 {
+    font-family: initial;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+.journal li a {
+    colour: blue;
+    text-align: initial;
+    padding: none;
+    
+}
+
+.journal a:hover {
+    colour: red;
     text-decoration: underline;
 }
 
@@ -690,27 +714,7 @@ li.dropdown {
     margin-top: 10px;
 }
 
-.journal {
-    background: whitesmoke;
-    padding: 20px;
-    margin-top: 10px;
-}
-.journal h2 {
-    font-family: initial;
-    text-transform: capitalize;
-    text-decoration: underline;
-    text-decoration-color: red;
-}
-.journal a {
-    colour: blue;
-    text-align: initial;
-    
-}
 
-.journal a:hover {
-    colour: red;
-    text-decoration: underline;
-}
 
 /* ========== My picture ===========*/
 img#animated {
