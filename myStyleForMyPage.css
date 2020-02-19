@@ -327,7 +327,7 @@ li.blogLink a:hover {
     text-decoration: underline;
     text-decoration-color: red;
 }
-.journal li a {
+.journal a, .post li a {
     colour: blue;
     text-align: initial;
     padding: none;
