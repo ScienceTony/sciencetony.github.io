@@ -329,8 +329,8 @@ li.blogLink a:hover {
 }
 .journal a, .post li a {
     color: blue;
-    text-align: initial;
-    pading: none;
+    text-align: left;
+    padding: 0;
     
 }
 
