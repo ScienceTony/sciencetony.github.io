@@ -255,7 +255,7 @@ Share links END
 intext links 
 ================= */
 a.inTextLink {
-    color: green;
+    color: initial;
     text-decoration:none;
     font-weight: normal;
 }
@@ -695,7 +695,17 @@ li.dropdown {
     text-decoration: underline;
     text-decoration-color: red;
 }
+.journal a {
+    colour: initial;
+    text-decoration: initial;
+    text-decoration-color: blue;
+}
 
+.journal a:hover {
+    colour: initial;
+    text-decoration: initial;
+    text-decoration-color: initial;
+}
 
 /* ========== My picture ===========*/
 img#animated {
