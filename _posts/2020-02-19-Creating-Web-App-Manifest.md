@@ -4,8 +4,6 @@ title: "Creating Web App Manifest"
 date: 2020-02-19
 ---
 
-# Learning Curve
-
 ## Task outline
 1. Test each webpage of sciencetony.github.io
 2. Reduce any errors, warnings and suggestions thrown by Google [PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/about) 
