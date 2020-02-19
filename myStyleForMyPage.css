@@ -336,12 +336,12 @@ li.blogLink a:hover {
 }
 
 .post li a:hover {
-    colour: red;
+    color: red;
     text-decoration: underline;
 }
 
 .post li a:visited {
-    colour: green;
+    color: green;
 }
 
 /* ============
