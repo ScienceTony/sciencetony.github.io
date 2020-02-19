@@ -270,6 +270,11 @@ a {
     text-decoration:none;
 }
 
+a:hover {
+    color: darkgoldenrod;
+    text-decoration:underline;
+}
+
 a.backButton:hover{
     color: darkgoldenrod;
 }
@@ -694,15 +699,14 @@ li.dropdown {
     text-decoration-color: red;
 }
 .journal a {
-    colour: initial;
-    text-decoration: initial;
-    text-decoration-color: blue;
+    colour: blue;
+    text-align: initial;
+    
 }
 
 .journal a:hover {
-    colour: initial;
-    text-decoration: initial;
-    text-decoration-color: initial;
+    colour: red;
+    text-decoration: underline;
 }
 
 /* ========== My picture ===========*/
