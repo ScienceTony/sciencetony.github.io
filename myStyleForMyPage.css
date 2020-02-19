@@ -327,7 +327,7 @@ li.blogLink a:hover {
     text-decoration: underline;
     text-decoration-color: red;
 }
-.journal a, .post li a {
+.post li a {
     color: blue;
     text-align: left;
     padding: 0;
@@ -335,9 +335,13 @@ li.blogLink a:hover {
     
 }
 
-.post a:hover {
+.post li a:hover {
     colour: red;
     text-decoration: underline;
+}
+
+.post li a:visited {
+    colour: green;
 }
 
 /* ============
