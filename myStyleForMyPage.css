@@ -331,7 +331,7 @@ li.blogLink a:hover {
     color: blue;
     text-align: left;
     padding: 0;
-    display: none;
+    display: initial;
     
 }
 
