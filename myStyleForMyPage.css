@@ -331,10 +331,11 @@ li.blogLink a:hover {
     color: blue;
     text-align: left;
     padding: 0;
+    display: none;
     
 }
 
-.journal a:hover {
+.post a:hover {
     colour: red;
     text-decoration: underline;
 }
