@@ -335,12 +335,12 @@ li.blogLink a:hover {
     
 }
 
-.post li a:hover {
+.journal a, .post li a:hover {
     color: red;
     text-decoration: underline;
 }
 
-.post li a:visited {
+.journal a, .post li a:visited {
     color: green;
 }
 
