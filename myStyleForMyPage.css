@@ -311,6 +311,13 @@ li.blogLink a:hover {
     padding: 80px 150px 80px 150px;
     margin-top: 10px;
 }
+
+.journal h1 {
+    font-family: arial;
+    text-transform: capitalize;
+    line-height: 130%;
+}
+
 .journal h2 {
     font-family: arial;
     text-transform: capitalize;
