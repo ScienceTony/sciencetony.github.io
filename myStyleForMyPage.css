@@ -317,15 +317,16 @@ li.blogLink a:hover {
 /* +++++++ These are cards for the actual blogs ++++++++++ */
 
 .journal {
-    background: whitesmoke;
+    background: ghostwhite;
     padding: 20px;
     margin-top: 10px;
 }
 .journal h2 {
-    font-family: initial;
+    font-family: arial;
     text-transform: capitalize;
-    text-decoration: underline;
-    text-decoration-color: red;
+}
+.journalHR {
+    border-top: 1px solid #d3d3d3;
 }
 .post li a {
     color: blue;
