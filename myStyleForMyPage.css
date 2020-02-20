@@ -754,7 +754,7 @@ img#animated {
 }
 
     @keyframes roundImg {
-        50% {box-shadow: 0px 0px 10px red;}
+        50% {box-shadow: 0px 0px 10px dodgerblue;}
     }
 
 /*===== End left and right columns  ======*/
