@@ -8,7 +8,7 @@ date: 2020-02-19
 1. Validate each webpage of sciencetony.github.io 
 2. Test each page using audits within Google developer tools.
 3. Reduce any errors, warnings and suggestions thrown by Google developer tools 
-for my webpage. Holding down <kbd>Option</kbd> + <kbd>Cmd / Ctl</kbd>  + <kdb>I</kdb> will open Google developer tools; obviously, in Chrome browser.
+for my webpage. Holding down <kbd>Option</kbd> + <kbd>Cmd / Ctl</kbd>  + <kbd>I</kbd> will open Google developer tools; obviously, in Chrome browser.
 
 About PageSpeed Insights [PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/about) 
 
