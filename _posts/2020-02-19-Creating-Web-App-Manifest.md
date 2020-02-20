@@ -24,10 +24,10 @@ After creating the web app manifest, all the errors in the PWA Optimized section
 However, problems related to the service worker remain since it is about to be depreciated. 
 
 ## Comments on knowledge and skills demonstrated 
-Reading and researching on the internet until I found a solution. 
+This took a lot of reading and researching on the internet until I found a solution. 
 Once I found a solution, it was simple to understand the code and instructions in order to make the final solution workable for my needs. 
-This involved altering the code in the webmaster file, which I chose to save as a JSON extension.  It turns out that the code is JSON, yet i code save it as a webmaster extension.
-Once I added this to the site, I referenced it in the header and this solved the problem. The file has some mandatory aspects such as icon for splash screens and name amongst others. 
+This involved altering the code in the webmaster file, which I chose to save as a JSON extension.  It turns out that the code is JSON, yet I could have saved it as a webmaster extension.
+Once I added this to the site, I referenced it in the header, this solved most of the problem. Some warnings in the PWA still remain because of the service worker. Notably, the file has some mandatory aspects such as icon for splash screens and name amongst others. 
 Now, when I went to developer tools in chrome, under the 'Application tab' I could see the web manifest.
 
 ### Resources:
