@@ -347,9 +347,6 @@ li.blogLink a:hover {
     text-decoration: none;
 }
 
-.journalTitle {
-    display: block;
-}
 
 /* ============
 Download Link 
@@ -750,8 +747,9 @@ img#animated {
     border-radius: 50%;
     border: solid fuchsia 1px;
     margin: 1.5em 1em 1.5em 0;
-    position: relative;
     float: left;
+    display: inline-block;
+    
     animation: roundImg 5s infinite; 
 }
 
