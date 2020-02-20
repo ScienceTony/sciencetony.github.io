@@ -8,6 +8,9 @@ body {
     font-family: sans-serif, roboto, arial, helvetica;
     line-height:1.5em;  
 }
+/* ===================
+Keyboard figures
+=====================*/
 kbd {
     box-shadow: 1px 1px 2px gray;
     padding: 2px;
@@ -581,9 +584,7 @@ logo{
     padding-left:1em;
 }
 
-header{
-/* colour jasmin */
-/*    background: #f3d163; */
+header {
     background: #1E90FF;
     text-shadow: 2px 2px blue;
     color: white;
@@ -592,7 +593,7 @@ header{
     margin: 0 auto;
     position: sticky;
     position: -webkit-sticky; /* Needed for macOS */
-    border-style: groove ;
+    
     top: 0px;
     z-index:1;
 }
