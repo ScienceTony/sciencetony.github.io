@@ -301,7 +301,7 @@ li.blogLink a:hover {
 /* +++++++ These are cards for the actual blogs ++++++++++ */
 
 .journal {
-    background: ghostwhite;
+    background: white;
     padding: 80px 150px 80px 150px;
     margin-top: 10px;
 }
@@ -704,7 +704,7 @@ li.dropdown {
 
 /* Add a card effect for articles */
 .card {
-    background: whitesmoke;
+    background: ghostwhite;
     padding: 20px;
     margin-top: 10px;
 }
