@@ -349,7 +349,7 @@ li.blogLink a:hover {
 }
 
 .journal hr {
-    clear: both; /* Clears both floats img and title with date */
+    clear: both; /* Clears both floats pic and title with date */
 }
 #journalTitleAndDate {
     float: left;
@@ -756,7 +756,7 @@ img#animated {
     border: solid fuchsia 1px;
     margin: 1.5em 1em 1.5em 0;
     float: left;
-    display: inline-block;
+    
     
     animation: roundImg 5s infinite; 
 }
@@ -766,7 +766,6 @@ img#animated {
     }
 
 /*===== End left and right columns  ======*/
-
 
 
 /* Clear floats after the columns */
