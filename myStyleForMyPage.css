@@ -346,7 +346,9 @@ li.blogLink a:hover {
     color: green;
     text-decoration: none;
 }
-
+#journalTitleAndDate {
+    float: left;
+}
 
 /* ============
 Download Link 
