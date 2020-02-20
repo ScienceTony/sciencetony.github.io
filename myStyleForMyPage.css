@@ -743,11 +743,11 @@ img#animated {
 .roundImage {
     border-radius: 50%;
     margin-right: 1em;
-    animation: roundImg 3s infinite; 
+    animation: roundImg 10s infinite; 
 }
 
     @keyframes roundImg {
-        50% {box-shadow: 0px 0px 15px red;}
+        50% {box-shadow: 0px 0px 10px red;}
     }
 
 /*===== End left and right columns  ======*/
