@@ -4,12 +4,9 @@
 
 
 body {
-    /* background: #e5f2ff;*/
-    /* background: #f3d163;*/
     background-color: white;
     font-family: sans-serif, roboto, arial, helvetica;
-    line-height:1.5em;
-    
+    line-height:1.5em;  
 }
 
 
@@ -48,7 +45,7 @@ Like and dislike cards
 
 /* ==================================
 Share links START
-====================================*/
+==================================== */
 #mediaShare {
     background-color: floralwhite;
 }
