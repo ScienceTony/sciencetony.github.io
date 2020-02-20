@@ -8,7 +8,9 @@ body {
     font-family: sans-serif, roboto, arial, helvetica;
     line-height:1.5em;  
 }
-
+kbd {
+    box-shadow: 1px 2px 4px grey;
+}
 
 /* ===================
 Like and dislike cards
@@ -301,7 +303,7 @@ li.blogLink a:hover {
 /* +++++++ These are cards for the actual blogs ++++++++++ */
 
 .journal {
-    background: white;
+    background: ghostwhite;
     padding: 80px 150px 80px 150px;
     margin-top: 10px;
 }
@@ -704,7 +706,7 @@ li.dropdown {
 
 /* Add a card effect for articles */
 .card {
-    background: ghostwhite;
+    background: whitesmoke;
     padding: 20px;
     margin-top: 10px;
 }
