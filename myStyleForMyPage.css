@@ -327,6 +327,7 @@ li.blogLink a:hover {
 }
 .journalHR {
     border-top: 1px solid #d3d3d3;
+    border-bottom: 0;
 }
 .post li a {
     color: blue;
@@ -744,7 +745,7 @@ img#animated {
 .roundImage {
     border-radius: 50%;
     margin-right: 1em;
-    margin-top: 1em;
+    margin-top: 0.7em;
     float: left;
     animation: roundImg 5s infinite; 
 }
