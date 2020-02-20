@@ -328,6 +328,7 @@ li.blogLink a:hover {
 .journalHR {
     border-top: 1px solid #d3d3d3;
     border-bottom: 0;
+    clear: both; /* Clears both floats img and title with date */
 }
 .post li a {
     color: blue;
