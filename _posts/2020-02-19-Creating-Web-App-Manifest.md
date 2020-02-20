@@ -15,8 +15,8 @@ A particular point of interest was the 'Progressive Web App (PWA)' section of th
 This was failing on many issues:
 * Fast and reliable
 * Installable
-* PWA Optimized
-<a/>
+* PWA Optimized</li>
+
 I decided to investigate PWA Optimized, which meant reading and researching on the internet until I found a solution: 
 create a web app manifest.
 After creating the web app manifest, all the errors in the PWA Optimized section went away and 'Web app manifest meets the installability requirements' in the 'Installable' section.
