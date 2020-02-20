@@ -593,7 +593,7 @@ header {
     margin: 0 auto;
     position: sticky;
     position: -webkit-sticky; /* Needed for macOS */
-    border-style: none;
+    border-style: groove;
     top: 0px;
     z-index:1;
 }
