@@ -13,10 +13,10 @@ for my webpage.
 ## Output or results of activity
 A particular point of interest was the 'Progressive Web App (PWA)' section of the tests.  
 This was failing on many issues:
-* Fast and reliable
-* Installable
-* PWA Optimized
-[//]: # (Break)
+* Fast and reliable.
+* Installable.
+* PWA Optimized.
+
 
 I decided to investigate PWA Optimized, which meant reading and researching on the internet until I found a solution: 
 create a web app manifest.
