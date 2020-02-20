@@ -1,0 +1,11 @@
+
+<div class="card" onclick="closeMenu()">
+	<h2 style="color: #1E90FF;">Learning Curve</h2>
+	<hr>
+	<ul class="posts">
+
+	  {% for post in site.posts %}
+	    <li class="blogLink" ><span>{{ post.date | date_to_string }}</span> » <a class="blogLink" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
+</div>
