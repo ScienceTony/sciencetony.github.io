@@ -5,10 +5,13 @@ date: yyyy-mm-dd
 ---
 
 ## Task outline
+<hr class="journalHR">
 
 ## Output or results of activity
+<hr class="journalHR">
 
 ## Comments on knowledge and skills demonstrated 
+<hr class="journalHR">
 
 ### Resources:
 []()
