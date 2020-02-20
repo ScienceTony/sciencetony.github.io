@@ -745,7 +745,7 @@ img#animated {
 .roundImage {
     border-radius: 50%;
     border: solid fuchsia 1px;
-    margin: 1em 1em 2em 0;
+    margin: 1.5em 1em 2em 0;
     position: relative;
     float: left;
     animation: roundImg 5s infinite; 
