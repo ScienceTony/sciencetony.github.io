@@ -617,7 +617,7 @@ i {
 #myTopnav,  #myTopnav2{
     position: -webkit-sticky; /* Needed for macOS */
     position: sticky;
-    top: 4em;
+    top: 4.1em;
     z-index:1;    
 }
 
@@ -631,7 +631,7 @@ ul.top {
     background-color: #E6E8FA; ;
     position: -webkit-sticky; /* Needed for macOS */
     position: sticky;
-    top: 4em;
+    top: 4.1em;
     z-index:1;
 }
 /* Notice the dot notation. This is li with class top*/
