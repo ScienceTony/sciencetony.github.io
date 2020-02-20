@@ -302,7 +302,7 @@ li.blogLink a:hover {
 
 .journal {
     background: ghostwhite;
-    padding: 200px;
+    padding: 0 200px 100px 200px;
     margin-top: 10px;
 }
 .journal h2 {
@@ -1039,6 +1039,11 @@ iframe {
         width: 415px;
         height: 270px;
     }
+    .journal {
+    background: ghostwhite;
+    padding: 20px;
+    margin-top: 10px;
+}
 /* width="515" height="270" */
 
 }
