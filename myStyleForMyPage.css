@@ -324,7 +324,7 @@ li.blogLink a:hover {
 .journal h2 {
     font-family: arial;
     text-transform: capitalize;
-    padding-bottom: 5px;
+    padding-bottom: 9px;
     border-bottom: 1px solid #d3d3d3;
 }
 /* This selector is not currently in use */
