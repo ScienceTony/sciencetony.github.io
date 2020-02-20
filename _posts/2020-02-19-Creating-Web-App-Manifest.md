@@ -5,14 +5,12 @@ date: 2020-02-19
 ---
 
 ## Task outline
-<hr class="journalHR">
 1. Test each webpage of sciencetony.github.io
 2. Reduce any errors, warnings and suggestions thrown by Google [PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/about) 
 for my webpage.
 3. Test each page using audits within google developer tools.
 
 ## Output or results of activity
-<hr class="journalHR">
 A particular point of interest was the 'Progressive Web App (PWA)' section of the tests.  
 This was failing on many issues:
 * Fast and reliable.
@@ -26,7 +24,6 @@ After creating the web app manifest, all the errors in the PWA Optimized section
 However, problems related to the service worker remain since it is about to be depreciated. 
 
 ## Comments on knowledge and skills demonstrated 
-<hr class="journalHR">
 Reading and researching on the internet until I found a solution. 
 Once I found a solution, it was simple to understand the code and instructions in order to make the final solution workable for my needs. 
 This involved altering the code in the webmaster file, which I chose to save as a JSON extension.  It turns out that the code is JSON, yet i code save it as a webmaster extension.
