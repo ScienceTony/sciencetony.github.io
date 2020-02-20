@@ -5,10 +5,12 @@ date: 2020-02-19
 ---
 
 ## Task outline
-1. Test each webpage of sciencetony.github.io
-2. Reduce any errors, warnings and suggestions thrown by Google [PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/about) 
-for my webpage.
-3. Test each page using audits within google developer tools.
+1. Validate each webpage of sciencetony.github.io 
+2. Test each page using audits within Google developer tools.
+3. Reduce any errors, warnings and suggestions thrown by Google developer tools 
+for my webpage. Holding down Option + command/control + I will open Google developer tools; obviously, in Chrome browser.
+
+About PageSpeed Insights [PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/about) 
 
 ## Output or results of activity
 A particular point of interest was the 'Progressive Web App (PWA)' section of the tests.  
@@ -33,3 +35,4 @@ Now, when I went to developer tools in chrome, under the 'Application tab' I cou
 ### Resources:
 [MDN Web docs](https://developer.mozilla.org/en-US/docs/Web/Manifest)<br>
 [web.dev](https://web.dev/add-manifest/#create-the-manifest.webmanifest-file)
+[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) 
