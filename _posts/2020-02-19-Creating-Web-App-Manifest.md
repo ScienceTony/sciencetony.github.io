@@ -31,8 +31,8 @@ Reading and researching on the internet until I found a solution.
 Once I found a solution, it was simple to understand the code and instructions in order to make the final solution workable for my needs. 
 This involved altering the code in the webmaster file, which I chose to save as a JSON extension.  It turns out that the code is JSON, yet i code save it as a webmaster extension.
 Once I added this to the site, I referenced it in the header and this solved the problem. The file has some mandatory aspects such as icon for splash screens and name amongst others. 
-Now, when I went to developer tools in chrome, under the 'Application tab' I could see the web manifest. 
-## Resources:
-<hr class="journalHR">
+Now, when I went to developer tools in chrome, under the 'Application tab' I could see the web manifest.
+
+### Resources:
 [MDN Web docs](https://developer.mozilla.org/en-US/docs/Web/Manifest)<br>
 [web.dev](https://web.dev/add-manifest/#create-the-manifest.webmanifest-file)
