@@ -34,5 +34,5 @@ Now, when I went to developer tools in chrome, under the 'Application tab' I cou
 
 ### Resources:
 [MDN Web docs](https://developer.mozilla.org/en-US/docs/Web/Manifest)<br>
-[web.dev](https://web.dev/add-manifest/#create-the-manifest.webmanifest-file)
+[web.dev](https://web.dev/add-manifest/#create-the-manifest.webmanifest-file)<br>
 [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) 
