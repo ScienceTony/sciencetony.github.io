@@ -347,6 +347,10 @@ li.blogLink a:hover {
     text-decoration: none;
 }
 
+.journalTitle {
+    display: inline-block;
+}
+
 /* ============
 Download Link 
 =============== */
