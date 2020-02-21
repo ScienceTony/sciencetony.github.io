@@ -577,11 +577,7 @@ End of js buttons for quiz
 ========================================= */
 
 logo{
-    margin: 5px;
-    top:18px;
-    position: relative;
-    display:inline;
-    padding-left:1em;
+    display:none;
 }
 
 header {
