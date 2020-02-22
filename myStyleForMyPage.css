@@ -1,4 +1,4 @@
- *{
+ * {
     box-sizing: border-box;
 }
 
@@ -280,8 +280,7 @@ page visit counter
     width: 70%;
     border-radius: 10px;
     box-shadow: -1px 1px 4px 1px inset lawngreen;
-    text-align: center;
-    
+    text-align: center; 
 }
 
 /* ====================================================
