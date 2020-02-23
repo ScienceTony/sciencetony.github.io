@@ -159,7 +159,9 @@ function myQuizWebAnswerQ1() {
         document.getElementById("radioB_WrittenAnswer").innerHTML = 'Correct! This is the standard tag used to emphasise text.';
         document.getElementById("radioB_WrittenAnswer").style.backgroundColor = "palegreen";
         document.getElementById("radioB_WrittenAnswer").appendChild(newBrTag);
+        attemptsCount();
         correctAnswerCount();
+        number = 1;
     }
 
     if (inputChoice === "choice1") {
@@ -168,7 +170,8 @@ function myQuizWebAnswerQ1() {
         document.getElementById("radioA_WrittenAnswer").innerHTML = ' Although this tag can be used to emphasise text, it is also used for another which will cause problems in your code. For this reason, it is not the standard tag for emphasising text anymore. ';
         document.getElementById("radioA_WrittenAnswer").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioA_WrittenAnswer").appendChild(newBrTag);
-        
+        attemptsCount();
+        number = 1;
         
     }
     
@@ -178,10 +181,11 @@ function myQuizWebAnswerQ1() {
         document.getElementById("radioC_WrittenAnswer").innerHTML = ' This is not a tag in HTML. ';
         document.getElementById("radioC_WrittenAnswer").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioC_WrittenAnswer").appendChild(newBrTag);
-        
+        attemptsCount();
+        number = 1;
     }
-    number = 1;
-    attemptsCount();
+    
+    
     btnLock(number, "mySubmit1");
 }
 
@@ -203,6 +207,7 @@ function myQuizWebAnswerQ2() {
         document.getElementById("radioA_WrittenAnswerQ2").appendChild(newBrTag);
         number = 1;
         correctAnswerCount();
+        attemptsCount();
     }
 
     if (inputChoice === "choice2q2") {
@@ -212,6 +217,7 @@ function myQuizWebAnswerQ2() {
         document.getElementById("radioB_WrittenAnswerQ2").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioB_WrittenAnswerQ2").appendChild(newBrTag);
         number = 1;
+        attemptsCount();
     }
     
     if (inputChoice === "choice3q2") {
@@ -221,8 +227,9 @@ function myQuizWebAnswerQ2() {
         document.getElementById("radioC_WrittenAnswerQ2").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioC_WrittenAnswerQ2").appendChild(newBrTag);
         number = 1;
+        attemptsCount();
     }
-    attemptsCount();
+    
     btnLock(number, "mySubmit2");
 }
 
@@ -243,6 +250,7 @@ function myQuizWebAnswerQ3() {
         document.getElementById("radioA_WrittenAnswerQ3").appendChild(newBrTag);
         number = 1;
         correctAnswerCount();
+        attemptsCount();
     }
 
     if (inputChoice === "choice2q3") {
@@ -252,6 +260,7 @@ function myQuizWebAnswerQ3() {
         document.getElementById("radioB_WrittenAnswerQ3").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioB_WrittenAnswerQ3").appendChild(newBrTag);
         number = 1;
+        attemptsCount();
     }
     
     if (inputChoice === "choice3q3") {
@@ -261,8 +270,9 @@ function myQuizWebAnswerQ3() {
         document.getElementById("radioC_WrittenAnswerQ3").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioC_WrittenAnswerQ3").appendChild(newBrTag);
         number = 1;
+        attemptsCount();
     }
-    attemptsCount();
+    
     btnLock(number, "mySubmit3");
 }
 
@@ -281,6 +291,7 @@ function myQuizWebAnswerQ4() {
         document.getElementById("radioB_WrittenAnswerQ4").appendChild(newBrTag);
         number = 1;
         correctAnswerCount();
+        attemptsCount();
     }
 
     if (inputChoice === "choice1q4") {
@@ -290,6 +301,7 @@ function myQuizWebAnswerQ4() {
         document.getElementById("radioA_WrittenAnswerQ4").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioA_WrittenAnswerQ4").appendChild(newBrTag);
         number = 1;
+        attemptsCount();
     }
     
     if (inputChoice === "choice3q4") {
@@ -299,8 +311,8 @@ function myQuizWebAnswerQ4() {
         document.getElementById("radioC_WrittenAnswerQ4").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioC_WrittenAnswerQ4").appendChild(newBrTag);
         number = 1;
+        attemptsCount();
     }
-    attemptsCount();
     btnLock(number, "mySubmit4");
 }
 
@@ -319,6 +331,7 @@ function myQuizWebAnswerQ5() {
         document.getElementById("radioB_WrittenAnswerQ5").appendChild(newBrTag);
         number = 1;
         correctAnswerCount();
+        attemptsCount();
     }
 
     if (inputChoice === "choice1q5") {
@@ -328,6 +341,7 @@ function myQuizWebAnswerQ5() {
         document.getElementById("radioA_WrittenAnswerQ5").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioA_WrittenAnswerQ5").appendChild(newBrTag);
         number = 1;
+        attemptsCount();
     }
     
     if (inputChoice === "choice3q5") {
@@ -337,9 +351,9 @@ function myQuizWebAnswerQ5() {
         document.getElementById("radioC_WrittenAnswerQ5").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioC_WrittenAnswerQ5").appendChild(newBrTag);
         number = 1;
+        attemptsCount();
         
     }
-    attemptsCount();
     btnLock(number, "mySubmit5");
 }
 
@@ -358,6 +372,7 @@ function myQuizWebAnswerQ6() {
         document.getElementById("radioC_WrittenAnswerQ6").appendChild(newBrTag);
         number = 1;
         correctAnswerCount();
+        attemptsCount();
     }
 
     if (inputChoice === "choice1q6") {
@@ -367,6 +382,7 @@ function myQuizWebAnswerQ6() {
         document.getElementById("radioA_WrittenAnswerQ6").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioA_WrittenAnswerQ6").appendChild(newBrTag);
         number = 1;
+        attemptsCount();
     }
     
     if (inputChoice === "choice2q6") {
@@ -376,8 +392,8 @@ function myQuizWebAnswerQ6() {
         document.getElementById("radioB_WrittenAnswerQ6").style.backgroundColor = "#ffbfc5";
         document.getElementById("radioB_WrittenAnswerQ6").appendChild(newBrTag);
         number = 1;
+        attemptsCount();
     }
-    attemptsCount();
     btnLock(number, "mySubmit6");
 }
 
