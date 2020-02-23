@@ -2,7 +2,7 @@
 /* exported myFunction, myQuiz1, myQuiz2, myQuiz3, myQuizWebAnswerQ1, myQuizWebAnswerQ2, myQuizWebAnswerQ3, myQuizWebAnswerQ4, myQuizWebAnswerQ5, myQuizWebAnswerQ6, myWebQuiz, calculateResults */
 
 // Author: Tony McDonald 
-// Twitter: ScienceTony 
+// Twitter: @ScienceTony 
 
 // Learning note: variables outside of any functions are global variables and can be used by numerous functions anywhere in the program providing they are decllaired before a function attempts to use them.
 
@@ -123,7 +123,6 @@ function correctAnswerCount() {
     }
 }
 
-
 // The user answer for the radio buttons is pass to and
 // then stored in var with the id result.
 function myWebQuiz(inputChoice) {
@@ -152,7 +151,7 @@ function myQuizWebAnswerQ1() {
     "use strict";
     // Local vars
     var number = 0, inputChoice = document.getElementById("result").value, newBrTag = document.createElement("BR");
-    if (inputChoice === "choice2") {
+    if (inputChoice === "q1choice2") {
         document.getElementById('radioB').innerHTML = "&#10003";
         document.getElementById('radioB').style.color = "limegreen";
         document.getElementById("radioB_WrittenAnswer").innerHTML = 'Correct! This is the standard tag used to emphasise text.';
@@ -162,7 +161,7 @@ function myQuizWebAnswerQ1() {
         correctAnswerCount();
     }
 
-    if (inputChoice === "choice1") {
+    if (inputChoice === "q1choice1") {
         document.getElementById('radioA').innerHTML = "&#10008";
         document.getElementById('radioA').style.color = "red";
         document.getElementById("radioA_WrittenAnswer").innerHTML = ' Although this tag can be used to emphasise text, it is also used for another which will cause problems in your code. For this reason, it is not the standard tag for emphasising text anymore. ';
@@ -172,7 +171,7 @@ function myQuizWebAnswerQ1() {
         
     }
     
-    if (inputChoice === "choice3") {
+    if (inputChoice === "q1choice3") {
         document.getElementById('radioC').innerHTML = "&#10008";
         document.getElementById('radioC').style.color = "red";
         document.getElementById("radioC_WrittenAnswer").innerHTML = ' This is not a tag in HTML. ';
