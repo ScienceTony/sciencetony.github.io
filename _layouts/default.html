@@ -4,14 +4,15 @@
 Twitter: @ScienceTony
 
 This is the default layout
-"About Tony McDonald and computer science and contains examples of qhat you can do with a simple static website."
+
 Project Website 
 Try to build an about you site with links and files. 
 -->
 <head>
     <meta charset="utf-8"/>
     <title>{{ page.title }}</title>
-    <meta name="keywords" content="Tony McDonald, Computer, Science, Computing, analysist, analyst, SQL, quiz, programming"/>
+    {% assign my_secret_string = "Tony McDonald, Computer, Science, Computing, analysist, analyst, SQL, quiz, programming" %}
+    <meta name="keywords" content="{{ page.keywords }}"/>
     <meta name="description" content="{{ page.description }}"/>
     <meta name="author" content="Tony McDonald">
     <!-- Allows Chrome to react to media queries while in developer tools device mode  -->
