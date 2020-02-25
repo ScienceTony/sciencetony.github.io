@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Creating Web App Manifest"
+postTitle: "Creating Web App Manifest"
 keywords: "Web manifest, Computing, Tony McDonald, Computer Science, Sciencetony, Learning Curve, Journal"
 description: "A journal post, from Tony McDonald, about using a web manifest to  pass some google audits."
 date: 2020-02-19
