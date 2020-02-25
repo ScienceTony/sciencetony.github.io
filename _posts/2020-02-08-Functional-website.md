@@ -53,6 +53,6 @@ __Areas investigated and things learned:__
 * I learned to tidy up the JS and make it easier to read. 
 
 ### Resources:
-<p>[w3schools](https://www.w3schools.com/)</p> <br> 
-<p>[stackoverflow](https://stackoverflow.com/)</p>
+[w3schools](https://www.w3schools.com/) <br> 
+[stackoverflow](https://stackoverflow.com/)
 
