@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Functional website"
+keywords: "js, javascript, functional, journal"
+description: "My learning jounal while increasing the functionality of a website"
 date: 2020-02-08
 ---
 
@@ -51,5 +53,6 @@ __Areas investigated and things learned:__
 * I learned to tidy up the JS and make it easier to read. 
 
 ### Resources:
-[w3schools](https://www.w3schools.com/) <br> 
-[stackoverflow](https://stackoverflow.com/)
+<p>[w3schools](https://www.w3schools.com/)</p> <br> 
+<p>[stackoverflow](https://stackoverflow.com/)</p>
+
