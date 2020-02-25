@@ -2,11 +2,10 @@
 layout: post
 title: "Creating Web App Manifest"
 keywords: "Web manifest, Computing, Tony McDonald, Computer Science, Sciencetony, Learning Curve, Journal"
-description: "A journal post"
+description: "A journal post from Tony McDonald"
 date: 2020-02-19
 ---
 
-Last updated: {{ article.published_at | date: "%a %b %d %Y" }}
 ## Task outline
 1. Validate each webpage of sciencetony.github.io 
 2. Test each page using audits within Google developer tools.
