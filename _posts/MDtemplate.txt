@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "title of post"
+keywords: "[put post keywords here],Computing, Tony McDonald, Computer Science, Sciencetony, Learning Curve, Journal"
+description: ""
 date: yyyy-mm-dd
 ---
 
