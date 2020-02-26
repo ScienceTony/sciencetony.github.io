@@ -1,7 +1,6 @@
- * {
+* {
     box-sizing: border-box;
 }
-
 body{
     background-color: white;
     font-family: sans-serif, roboto, arial, helvetica;
@@ -17,11 +16,9 @@ kbd{
     border: solid gray 0.5px;
     background-color: beige;
 }
-
 /* ===================
 Like and dislike cards
 =====================*/
-
 /* Create two equal columns that floats next to each other */
 .columnLike {
     flex: 50%;
@@ -446,47 +443,38 @@ for social media icons
   background: #007bb5;
   color: white;
 }
-
 .fa-youtube {
   background: #bb0000;
   color: white;
 }
-
 .fa-tumblr {
   background: #2c4762;
   color: white;
 }
-
 .fa-stumbleupon {
   background: #eb4924;
   color: white;
 }
-
 .fa-flickr {
   background: #f40083;
   color: white;
 }
-
 .fa-rss {
   background: #ff6600;
   color: white;
 }
-
 .mediaIconCard {
     text-align: center;
 }
-
 /* Accessabilty  */
 .mediaLinks a:focus, a.ButtonLinks:focus{
     color: hotpink;
     background-color: khaki;
     box-shadow: 0px 2px 5px inset navy;
 }
-
 /* ======================================
 js buttons for quiz
 ========================================= */
-
 button{
     font-size: 100%;
     width:9em;
@@ -496,52 +484,41 @@ button{
     padding: 5px;
     margin: 5px;
 }
-
 #button1{ /* This is for the test button this will do something cool*/
     display: inline; 
     border: 1px solid red;
     padding: 5px;
 }
-
 /* ======== Quiz one button =========== */
-
 #button2{
     padding-left: 1em;
     padding-top: 1em;
     display:block; /* This makes the span tag display beneith the button */
     font-size: 1.5em
 }
-
 #button3{ /* This is for the test button this will do something cool*/
     display: inline; 
     border: 1px solid green;
     padding: 5px;
 }
-
 /* ======== Quiz two buttons =========== */
-
 #buttonA, #buttonB, #buttonC{
     display:inline-block;
     font-size: 1.5em; 
 }
-
 .Q2button {
     text-align: left;
 }
-
 /* This will breakup any long groups of text such as the long peices of code with no spaces. Q2 and Q4 */
 .break {
     word-break: break-all;
 }
-
 /* ======================================
 End of js buttons for quiz
 ========================================= */
-
-logo{
+#logo{
     display:none;
 }
-
 header {
     background: #1E90FF;
     text-shadow: 2px 2px blue;
@@ -556,7 +533,6 @@ header {
     top: 0px;
     z-index:1;
 }
-
 /*========= The Nav Bar with Dropdown menu ========*/
 /* downward facing arrows next to menu */
 i {
