@@ -267,11 +267,9 @@ a.backButton:hover{
     color: darkgoldenrod;
     text-decoration:none;
 }
-
 /* ================ 
 page visit counter
 =================== */
-
 #counter{
     background-color: black;
     padding-top: 8px;
@@ -282,11 +280,9 @@ page visit counter
     box-shadow: -1px 1px 4px 1px inset lawngreen;
     text-align: center; 
 }
-
 /* ====================================================
 This is for the blog links within sciencetony's journal 
 ====================================================== */
-
 li.blogLink a{
     display: inline;
     color: blue;
@@ -302,60 +298,45 @@ li.blogLink a:hover {
     text-decoration: underline;
 }
 /* +++++++ These are cards for the actual blogs ++++++++++ */
-
 .journal {
     background: ghostwhite;
     padding: 80px 150px 80px 150px;
     margin-top: 10px;
 }
-
 .journal h1 {
     font-family: arial;
     text-transform: capitalize;
-    line-height: 130%;
+    line-height: 120%;
 }
-
 .journal h2 {
     font-family: arial;
     text-transform: capitalize;
     padding-bottom: 9px;
     border-bottom: 1px solid #d3d3d3;
 }
-/* This selector is not currently in use */
-.journalHR {
-    border-top: 1px solid #d3d3d3;
-    border-bottom: 0;
-    
-}
 .post li a {
     color: blue;
     text-align: left;
     padding: 0;
-    display: initial;
-    
+    display: initial;  
 }
-
 .journal a:hover, .post li a:hover {
     color: red;
     text-decoration: underline;
 }
-
 .journal a:visited, .post li a:visited {
     color: green;
     text-decoration: none;
 }
-
 .journal hr {
     clear: both; /* Clears both floats pic and title with date */
 }
-#journalTitleAndDate {
+#journalTitleAndDate, myNameCard {
     float: left;
 }
-
 /* ============
 Download Link 
 =============== */
-
 .card a.downloadLink {
 /* Deals with the text in box */
     color: blue;
