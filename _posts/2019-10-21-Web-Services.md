@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Web Services"
+keywords: "web services, SOAP, REST, journal, learning curve"
+description: "A breith outline of how I learned about web services"
 date: 2019-10-21
 ---
 
