@@ -32,15 +32,17 @@ I found this an interesting project to complete.
 
 ## Comments on knowledge and skills demonstrated 
 I used a lot of already learned knowledge to create the HTML and style with CSS. However, I needed to learn more JS in order to complete the project. This involved searching the internet and finding suitable learning and resource sites. For this project I used a lot of functions and both local and global variables. With some thought, I was able to put some code into functions that can be called by the other functions when needed; thus, cutting down on repeated code. I chose to used radio buttons for the questions since only one answer is needed to answer a question. <br>
-
-<img src="/images/forBlog/radio.png" alt="Radio Buttons" width="256" >
-
-_Figure 1 example of question with radio buttons used to select an answer._ 
-
-<br>
-
-<img src="/images/forBlog/CorIncor.png" alt="Correct and incorrect answers" width="256" title="Correct and incorrect answers">
-
+<picture>
+<source media="(min-width: 859px)" srcset="/images/forBlog/functionalWebsite/radio60.jpg">
+<source media="(min-width: 573px)" srcset="/images/forBlog/functionalWebsite/radio40.jpg">
+<img src="/images/forBlog/functionalWebsite/radio20.jpg" alt="Radio Buttons" style="width:auto;" >
+</picture>
+_Figure 1 example of question with radio buttons used to select an answer._ <br>
+<picture>
+<source media="(min-width: 905px)" srcset="/images/forBlog/functionalWebsite/CorIncor60.jpg">
+<source media="(min-width: 603px)" srcset="/images/forBlog/FunctionalWebsite/CorIncor40.jpg">
+<img src="/images/forBlog/FunctionalWebsite/CorIncor20.jpg" alt="Correct and incorrect answers" style="width:auto;" title="Correct and incorrect answers">
+</picture>
 _Figure 2 example of correct and incorrect answers._
 
 __Areas investigated and things learned:__
