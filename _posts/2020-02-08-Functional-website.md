@@ -37,6 +37,7 @@ I used a lot of already learned knowledge to create the HTML and style with CSS.
 <source media="(min-width: 573px)" srcset="/images/forBlog/functionalWebsite/radio40.jpg">
 <img src="/images/forBlog/functionalWebsite/radio20.jpg" alt="Radio Buttons" style="width:auto;" >  
 </picture>
+<br>
 _Figure 1 example of question with radio buttons used to select an answer._ 
 <br>
 
