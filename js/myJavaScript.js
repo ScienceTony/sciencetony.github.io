@@ -84,7 +84,6 @@ function myQuiz3(evt, btn) {
 // Web Quizes 
 // ================================
 
-
 // Total questions answered. ++++++++++++++++++++++++++
 // Output: 
 function attemptsCount() {
@@ -485,8 +484,6 @@ function menuFunction2() {
     }
 }
 
- 
-
 // This is for the slide show in index
 var slideimages = [];
 slideimages[0] = new Image();
@@ -508,7 +505,6 @@ function slideshow1() {
     setTimeout(slideshow1, 4000);
 }
 
-
 var slideimages2 = [];
 slideimages2[0] = new Image();
 slideimages2[0].src = "images/Garden/sf.JPG";
@@ -516,7 +512,6 @@ slideimages2[1] = new Image();
 slideimages2[1].src = "images/Garden/rsf.jpg";
 slideimages2[2] = new Image();
 slideimages2[2].src = "images/Garden/cat.jpg";
-
 
 var step2 = 0;
 function slideshow2() {
@@ -540,7 +535,6 @@ slideimages3[1].src = "images/Church/BBQ.jpg";
 slideimages3[2] = new Image();
 slideimages3[2].src = "images/Church/ChristChurch.jpg";
 
-
 var step3 = 0;
 function slideshow3() {
     "use strict";
@@ -552,7 +546,6 @@ function slideshow3() {
     }
     setTimeout(slideshow3, 4000);
 }
-
 
 /*  This is the function for my spare time  */
 /* exported openCity */
