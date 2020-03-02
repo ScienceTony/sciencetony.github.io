@@ -29,4 +29,5 @@ Next, I logged in to Facebook and went to the debugger page and followed the ins
 [Facebook Debugger](https://developers.facebook.com/tools/debug/og/object/)<br>
 [Twitter Card validator](https://cards-dev.twitter.com/validator)<br>
 [Open Graph Protocol](https://ogp.me/#types)<br>
-[SangFroid Web Design](https://www.sangfroidwebdesign.com/web-design/facebook-share-image-is-wrong/)
+[SangFroid Web Design](https://www.sangfroidwebdesign.com/web-design/facebook-share-image-is-wrong/)<br>
+[The Essential Meta Tags for Social Media](https://css-tricks.com/essential-meta-tags-social-media/)
