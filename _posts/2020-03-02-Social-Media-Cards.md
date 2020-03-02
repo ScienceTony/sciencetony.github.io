@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Social Media Cards"
-keywords: "Social media, cards, Computing, Tony McDonald, Computer Science, Sciencetony, Learning Curve, Journal"
-description: "Adding social media cards to a website.  This allows an image and description to be displayed when the site is shared to social media sites like Facebook and twitter."
+keywords: "Social media, cards, Computing, Tony McDonald, Computer Science, Sciencetony, Learning Curve, Journal, fixed, solved"
+description: "[Fixed], Adding social media cards to a website.  This allows an image and description to be displayed when the site is shared to social media sites like Facebook and twitter."
 date: 2020-03-02
 ---
 
