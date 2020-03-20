@@ -1,0 +1,82 @@
+---
+layout: default
+title: ScienceTony
+---
+</head>
+
+{% include header.html %}
+{% include navbar.html %}
+
+<div class="row" onclick="closeMenu()">  
+<!-- Remebember that the right column on this page is actually the left -->
+    <div class="rightcolumn">
+        <div class="card">
+        <h2>Coronavirus (COVID-19)</h2>
+        <hr>
+
+            <!-- volunteering card -->
+            <div class="card" id="COVID-19">
+                <p>Coronavirus possesses a real threat to the elderly and those with a compromised immune system or an immune system under pressure. </p>
+                <h4>Links about Coronavirus (COVID-19)</h4>
+
+                    <p><a href="https://www.gov.uk/government/publications/wuhan-novel-coronavirus-infection-prevention-and-control" >Infection Control.</a> Gives information on Coronavirus (COVID-19) syptoms</p>
+                
+                    <p><a href="https://www.nhs.uk/conditions/coronavirus-covid-19/" >What the NHS has to say about COVID-19.</a> </p>
+                
+                <h4>Links about viruses</h4>
+                
+                    <p><a href="https://youtu.be/wUgEhfo_qxU" >What is a virus?</a> </p>
+                
+                    <p><a href="https://youtu.be/P_9DXEnEd-Q" >Differences between viruses and bacteria.</a> </p>
+                
+                <hr>
+                <br>
+                <iframe src="https://api-bridge.azurewebsites.net/findservices/?uid=YW50b255bWNkb25hbGQzMzdAYnRpbnRlcm5ldC5jb20=&w=400&h=500&o=1,2,4,15&a=1&t=1&e=1" style="border: none; height: 500px; width: 400px;"></iframe>
+                
+                <iframe src="https://api-bridge.azurewebsites.net/livewell/?uid=YW50b255bWNkb25hbGQzMzdAYnRpbnRlcm5ldC5jb20=&w=400&h=500" style="border: none; height: 500px; width: 400px;"></iframe>
+                
+                
+            </div>  <!-- End of card -->
+            <div>
+                <h2>Cleaning List</h2>
+                <hr>
+                <p>Ask yourself, 'Where do hands touch?' Now clean those areas.</p>
+                <input type="checkbox" id="vehicle1">
+                <label for="vehicle1">Kitchen is cleaned</label><br>
+                <input type="checkbox" id="vehicle2">
+                <label for="vehicle2">Bathroom</label><br>
+                <input type="checkbox" id="vehicle3">
+                <label for="vehicle3">All door handles inside and out</label><br><br>
+                
+            </div>
+            
+            <div>
+                <hr>
+                <h4>Things to keep you and your family amused during this crises. </h4>
+
+                <p><a href="https://www.jigsawplanet.com/" >Jigsaw puzzles</a> </p>
+
+                <p><a href="https://www.games.co.uk/" >Online Games</a> </p>
+
+                <h4>If you need more educational stimulus</h4>
+
+                <p><a href="https://www.khanacademy.org/" >Khan Academy</a> </p>
+
+                <p><a href="https://www.bbc.co.uk/bitesize" >BBC Bitesize</a> </p>
+            </div>
+        </div>  <!-- card -->
+    </div> <!-- End of right column --> 
+    </div> <!-- End of main column -->   
+       
+  <div class="rightcolumn_contact sideCard" > 
+	 
+	<!-- note about me does not come in a div tag because it is used within other tags with class card -->  
+        <div class="card"> 
+	{% include about_me.html %}
+	</div><!-- End of card --> 
+	  
+	{% include mediaLinks.html %}
+	{% include quizTwo.html %}
+	  
+  </div> <!-- End of rightcolumn_contact -->
+</div> <!-- End of row -->
