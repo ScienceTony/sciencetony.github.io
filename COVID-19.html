@@ -12,12 +12,16 @@ description: "A simple page with COVID-19 resorces including information from th
 <div class="row" onclick="closeMenu()">  
 <!-- Remebember that the right column on this page is actually the left -->
     <div class="rightcolumn">
+        <!-- CORONAVIRUS card -->
         <div class="card">
         <h2>Coronavirus (COVID-19)</h2>
         <hr>
-
-            <!-- volunteering card -->
-            <div class="card" id="COVID-19">
+            
+            <div id="dailyReport">
+                <iframe src="https://www.arcgis.com/apps/opsdashboard/index.html#/ae5dda8f86814ae99dde905d2a9070ae" style="border: solid; height: 660px; width: 100%;"></iframe>
+            </div>
+            
+            <div id="COVID-19">
                 <p>Coronavirus possesses a real threat to the elderly and those with a compromised immune system or an immune system under pressure. </p>
                 <h4>Links about Coronavirus (COVID-19)</h4>
 
@@ -36,17 +40,19 @@ description: "A simple page with COVID-19 resorces including information from th
 
                 <hr>
                 <br>
-		</div>
-		<div id="dailyReport">
-			<iframe src="https://www.arcgis.com/apps/opsdashboard/index.html#/ae5dda8f86814ae99dde905d2a9070ae" style="border: solid; height: 660px; width: 400px;"></iframe>
-		</div>
-	    </div> <!-- End of Card -->	
-	<div class="card">
+            </div> <!--End of COVID19-->       
+		</div> <!-- End of Coronavirus Card -->
+          
+ 
+	    
+	<div class="card" id="NHS_Widgets">
               <iframe src="https://api-bridge.azurewebsites.net/findservices/?uid=YW50b255bWNkb25hbGQzMzdAYnRpbnRlcm5ldC5jb20=&w=400&h=500&o=1,2,4,15&a=1&t=1&e=1" style="border: none; height: 500px; width: 400px;"></iframe>
                 
               <iframe src="https://api-bridge.azurewebsites.net/livewell/?uid=YW50b255bWNkb25hbGQzMzdAYnRpbnRlcm5ldC5jb20=&w=400&h=500" style="border: none; height: 500px; width: 400px;"></iframe>      
-        </div>  <!-- End of card -->
-            <div class="card">
+    </div>  <!-- End of NHS_Widgets card -->
+        
+        
+    <div class="card">
                 <h2>Cleaning List</h2>
                 <hr>
                 <p>Ask yourself, 'Where do hands touch?' Now clean those areas.</p>
@@ -62,10 +68,9 @@ description: "A simple page with COVID-19 resorces including information from th
 		<label for="item5">Watch a video on how to wash hands correctly</label><br>
 		<input type="checkbox" id="item6">
 		<label for="item6">Wash hands as in video</label><br>
-            </div>
-		<div>
+    
 			<p><a href="https://youtu.be/aGJNspLRdrc">How to wash hands correctly</a></p>
-		</div>
+    </div>
             <div class="card">
                 <hr>
                 <h4>Things to keep you and your family amused during this crisis. </h4>
@@ -79,8 +84,7 @@ description: "A simple page with COVID-19 resorces including information from th
                 <p><a href="https://www.khanacademy.org/" >Khan Academy</a> </p>
 
                 <p><a href="https://www.bbc.co.uk/bitesize" >BBC Bitesize</a> </p>
-            </div>
-        </div>  <!-- card -->
+            </div> <!-- card -->
     </div> <!-- End of right column --> 
       
        
