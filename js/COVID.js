@@ -41,7 +41,7 @@ var app = {
 	
 	// Update DOM on a Received Event
 	receivedEvent: function(id) {
-		
+	alert("Inside receivedEvent");	
         
         var x = document.createElement("IMG");
 		/**
