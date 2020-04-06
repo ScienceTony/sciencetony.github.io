@@ -6,7 +6,7 @@
      ************/
  -->
 
-    <div class="app">
+   <div class="app">
         <h1>COVID&#45;19 Statistics App</h1>
         <div>
             <div><p><label for="country">Enter a country:</label> <input type="text" size="20" id="country" value="" placeholder="Eg Spain"></p></div>
@@ -16,17 +16,31 @@
         </div><br>
         <div id="flagContainer"></div>
 
-		<h1>Today's statistics for <span id="CountryName">entered country will be displayed here.</span></h1>
+		<h1>Today's statistics for <span id="CountryName">entered country will be displayed here. </span></h1>
         <div>
             <ul style="list-style-type:none;">
                 <li><span id="results-deathsToday"></span></li>
-                <li><span id="results-casesToday"></span></li>
+                <li><span id="results-casesToday"></span></li><br>
                 <li><span id="results-totalCases"></span></li>
-                <li><span id="results-totalDeaths"></span></li>
+                <li><span id="results-totalDeaths"></span></li><br>
                 <li><span id="results-critical"></span></li>
+                <li><span id="recov"></span></li>
             </ul>
         </div>
-	<hr>
+        <hr>
+        <div>
+            <h1>World Totals</h1>
+            
+                <ul style="list-style-type:none;">
+                    <li>Deaths today: <span id="worldDeathsToday" style="color: red;"></span></li>
+                    <li>Total deaths: <span id="worldDeathsTotal" style="color: blue;"></span></li><br>
+                    <li>New cases today: <span id="worldCasesToday" style="color: red;"></span></li>
+                    <li>Total case: <span id="worldCasesTotal" style="color: blue;"></span></li><br>
+                    <li>Total recoveries: <span id="recovered" style="color: green;"></span></li>
+                </ul>
+            <p><strong>Last updated: </strong><span id="lastUpdated"></span></p>
+            <hr>
+        </div>
     </div>
 
 
