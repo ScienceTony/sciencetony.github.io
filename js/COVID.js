@@ -42,8 +42,8 @@ var app = {
         function worldStats() {
                 var onSuccess = function(data){
                 var d = new Date();
-				// obj = $.parseJSON(data);
-                document.getElementById("worldDeathsToday").innerHTML = data.todayDeaths;
+				// obj = $.parseJSON(data); 
+               document.getElementById("affectedCountries").innerHTML = data.affectedCountries; document.getElementById("worldDeathsToday").innerHTML = data.todayDeaths;
                 document.getElementById("worldDeathsTotal").innerHTML = data.deaths;
                 document.getElementById("worldCasesToday").innerHTML = data.todayCases;
                 document.getElementById("worldCasesTotal").innerHTML = data.cases;
@@ -72,7 +72,7 @@ var app = {
                 
                 x.setAttribute("src", data.countryInfo.flag);
                 x.setAttribute("width", "auto");
-                x.setAttribute("height", "100");
+                x.setAttribute("height", "200");
                 x.setAttribute("alt", "flag of "+country);
                 document.getElementById("flagContainer").appendChild(x);
                 document.getElementById("CountryName").innerHTML = country+":";
