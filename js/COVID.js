@@ -33,13 +33,12 @@ var app = {
 	},
 	// deviceready Event Handler
 	onDeviceReady: function() {
-		alert("Inside onDeviceReady");
+		
 		this.receivedEvent("deviceready");
 	},
 	
 	// Update DOM on a Received Event
-	receivedEvent: function(id) {
-	alert("Inside receivedEvent");	
+	receivedEvent: function(id) {	
         
         var x = document.createElement("IMG");
 		/**
@@ -92,15 +91,11 @@ var app = {
 				var country = get_name_value("country", "France");
 				updateStats(country);
 			}
-			
 			//return the intialised object
 			return covidStatsObject;
 		}
-		
 		//Create the object, visible in the HTML file as app.covid19
-		app.covid19 = new COVID19Stats();
-		
+		app.covid19 = new COVID19Stats();	
 	}
 };
-alert("hello");
 app.initialize();
