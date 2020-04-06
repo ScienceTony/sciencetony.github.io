@@ -26,7 +26,7 @@ var app = {
 	
 	initialize: function() {
 	alert("Inside initialize");
-        this.onDeviceReady();
+        //this.onDeviceReady();
 		document.addEventListener(
 			"deviceready",
 			this.onDeviceReady(this),
@@ -35,6 +35,7 @@ var app = {
 	},
 	// deviceready Event Handler
 	onDeviceReady: function() {
+		alert("Inside onDeviceReady");
 		this.receivedEvent("deviceready");
 	},
 	
