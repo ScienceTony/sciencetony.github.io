@@ -50,7 +50,7 @@ var app = {
                document.getElementById("recovered").innerHTML = data.recovered;
                document.getElementById("lastUpdated").innerHTML = d;
             }      
-			var uri = "https://corona.lmao.ninja/all";
+	var uri = "https://corona.lmao.ninja/all";
             $.get(uri,onSuccess); 
         }    
         
@@ -72,7 +72,7 @@ var app = {
                 
                 x.setAttribute("src", data.countryInfo.flag);
                 x.setAttribute("width", "auto");
-                x.setAttribute("height", "120");
+                x.setAttribute("height", "100");
                 x.setAttribute("alt", "flag of "+country);
                 document.getElementById("flagContainer").appendChild(x);
                 document.getElementById("CountryName").innerHTML = country+":";
