@@ -87,7 +87,7 @@ var app = {
 		// This function creates the public interface to covid19, these fuctions may be called 
 		// by the JavaScript in the HTML file.
 		function COVID19Stats(){
-		
+			alert("COVID19Stats called");
 			// These varibles are private
 			var covidStatsObject = {};
 			
