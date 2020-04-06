@@ -20,6 +20,9 @@ description: "A simple page with COVID-19 resorces including information from th
 <div class="row" onclick="closeMenu()">  
 <!-- Remebember that the right column on this page is actually the left -->
     <div class="rightcolumn">
+	<div class="card">
+		{% include covidStats.html %}
+	</div>
         <!-- CORONAVIRUS card -->
         <div class="card">
         <h2>Coronavirus (COVID-19)</h2>
