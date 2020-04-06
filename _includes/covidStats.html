@@ -1,56 +1,125 @@
-<!--
-    /***********
-     * COVID19 Statistics App
-     * 
-     * File by: (Tony McDonald)
-     ************/
- -->
+/***********
+ * COVID19 Statistics App
+ * 
+ * File modified by: (Tony McDonald)
+ ************/
 
-   <div class="app">
-        <h1>COVID&#45;19 Statistics App</h1>
-        <div>
-            <div><p><label for="country">Enter a country:</label> <input type="text" size="20" id="country" value="" placeholder="Eg Spain"></p></div>
-        </div>
-        <div>
-            <button type="button" id="update" onclick="app.covid19.update()">Get statistics</button>
-        </div><br>
-        <div id="flagContainer"></div>
+/**
+ * Utility to get default value from the field name if it was undefined or empty
+ * @param {type} fieldName
+ * @param {type} defaultValue
+ * @returns {jQuery}
+ */
+function get_name_value(fieldName, defaultValue) {
+    "use strict"
+  var value = $("#" + fieldName).val();
+  if (value == "") {
+    value = defaultValue;
+    $("#" + fieldName).val(value);
+  }
+  return value;
+}
 
-	<h1>Today's statistics for <span id="CountryName">entered country will be displayed in the table below. </span></h1>
-        <div>
-            <table style="width:250px">
-              <tr>
-                <th>&nbsp;</th>
-                <th>Today</th>
-                <th>In Total</th>
-              </tr>
-              <tr>
-                <td>Deaths</td>
-                <td id="results-deathsToday" style="text-align:center;">-</td> 
-                <td id="results-totalDeaths" style="text-align:center;">-</td>
-              </tr>
-              <tr>
-                <td>Cases</td>
-                <td id="results-casesToday" style="text-align:center;">-</td> 
-                <td id="results-totalCases" style="text-align:center;">-</td>
-              </tr>
-            </table>
-            <br>
-        </div>
-        <div><span id="results-critical"></span></div><br>
-        <div>
-            <h1>World Totals</h1>
-            <p><strong>A total of <span id="affectedCountries" style="color: red;"></span> countries have been affected.</strong></p>
-                <ul style="list-style-type:none;">
-                    <li>Deaths today: <span id="worldDeathsToday" style="color: red;"></span></li>
-                    <li>Total deaths: <span id="worldDeathsTotal" style="color: blue;"></span></li><br>
-                    <li>New cases today: <span id="worldCasesToday" style="color: red;"></span></li>
-                    <li>Total case: <span id="worldCasesTotal" style="color: blue;"></span></li><br>
-                    <li>Total recoveries: <span id="recovered" style="color: green;"></span></li>
-                </ul>
-            <p><strong>Last updated: </strong><span id="lastUpdated"></span></p>
-            <hr>
-        </div>
-    </div>
+/**
+ * This is the main class
+ */
+var app = {
+	initialize: function() {
+        // this.onDeviceReady();
+		document.addEventListener(
+			"deviceready",
+			this.onDeviceReady(this),
+			false
+        );
+	},
+	// deviceready Event Handler
+	onDeviceReady: function() {
+		this.receivedEvent("deviceready");
+	},
+	
+	// Update DOM on a Received Event
+	receivedEvent: function(id) {
+		
+        function worldStats() {
+                var onSuccess = function(data){
+                var d = new Date();
+				// obj = $.parseJSON(data); 
+               document.getElementById("affectedCountries").innerHTML = data.affectedCountries; document.getElementById("worldDeathsToday").innerHTML = data.todayDeaths;
+                document.getElementById("worldDeathsTotal").innerHTML = data.deaths;
+                document.getElementById("worldCasesToday").innerHTML = data.todayCases;
+                document.getElementById("worldCasesTotal").innerHTML = data.cases;
+                document.getElementById("recovered").innerHTML = data.recovered;
+                document.getElementById("lastUpdated").innerHTML = d;
+            }      
+			var uri = "https://corona.lmao.ninja/all";
+            $.get(uri,onSuccess); 
+        }    
+        
+        var x = document.createElement("IMG");
+		/**
+		 * Updates the html page with the statistics from the requested country
+		 * @param {type} country
+		 * @returns {undefined}
+		 */
+		function updateStats(country) {
+			//app_id=  ""; 	
+			//app_code= "";  
 
+			/* Invoke the RESTful API to get the data */
+			var onSuccess = function(data){
+                
+                if (data.country != ""){
+				// obj = $.parseJSON(data);
+                
+                x.setAttribute("src", data.countryInfo.flag);
+                x.setAttribute("width", "auto");
+                x.setAttribute("height", "130");
+                x.setAttribute("alt", "flag of "+country);
+                document.getElementById("flagContainer").appendChild(x);
+                document.getElementById("CountryName").innerHTML = country+":";
+				document.getElementById("results-deathsToday").innerHTML = data.todayDeaths;
+				document.getElementById("results-casesToday").innerHTML = data.todayCases;
+                document.getElementById("results-totalCases").innerHTML = data.cases;
+                document.getElementById("results-totalDeaths").innerHTML = data.deaths;
+                document.getElementById("results-critical").innerHTML = "People in "+ country +" in a critical condition " + data.critical;
+			}else{
+                alert("Something went wrong! " + country + " is not a valid country name.")
+            }
+            }
+			// Post the country using the "countries" API
+			var uri = "https://corona.lmao.ninja/countries/"+country;
 
+			if (country != "") 
+                $.get(uri,onSuccess);
+
+		}
+
+		// This function creates the public interface to covid19, these fuctions may be called 
+		// by the JavaScript in the HTML file.
+		function COVID19Stats(){
+		
+			// These varibles are private
+			var covidStatsObject = {};
+			
+			//Call to read in the address and turn this into a weather report
+			covidStatsObject.update = function (){
+				var country = get_name_value("country", "United Kingdom");
+				updateStats(country);
+			}
+            
+            covidStatsObject.stats = function(){
+                //if (timerId) clearInterval(timerId);
+                timerId = setInterval(worldStats, 600000); 
+                worldStats();
+            }
+			
+			//return the intialised object
+			return covidStatsObject;
+		}
+
+		//Create the Weather object, visible in the HTML file as app.weather
+		app.covid19 = new COVID19Stats();
+	}
+};
+app.initialize();
+app.covid19.stats(); 
