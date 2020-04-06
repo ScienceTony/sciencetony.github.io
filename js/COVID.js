@@ -87,7 +87,6 @@ var app = {
 			
 			//Call to read in the country and turn this into a covid19 report
 			covidStatsObject.update = function (){
-				alert("COVID19Stats called");
 				var country = get_name_value("country", "France");
 				updateStats(country);
 			}
