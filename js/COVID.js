@@ -23,6 +23,7 @@ function get_name_value(fieldName, defaultValue) {
  * This is the main class
  */
 var app = {
+	alert("inside app")
 	initialize: function() {
         // this.onDeviceReady();
 		document.addEventListener(
