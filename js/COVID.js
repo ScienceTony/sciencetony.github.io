@@ -88,7 +88,7 @@ var app = {
 			// These varibles are private
 			var covidStatsObject = {};
 			
-			//Call to read in the address and turn this into a weather report
+			//Call to read in the country and turn this into a covid19 report
 			covidStatsObject.update = function (){
 				var country = get_name_value("country", "France");
 				updateStats(country);
@@ -99,8 +99,9 @@ var app = {
 		}
 		
 		 
-		//Create the Weather object, visible in the HTML file as app.weather
+		//Create the object, visible in the HTML file as app.covid19
 		app.covid19 = new COVID19Stats();
 	}
 };
+alert("hello");
 app.initialize();
