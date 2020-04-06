@@ -2,6 +2,7 @@
  * COVID19 Statistics App
  * 
  * File modified by: (Tony McDonald)
+ * API licence https://github.com/NovelCOVID/API/blob/master/LICENSE
  ************/
 
 /**
