@@ -72,12 +72,12 @@ var app = {
                 
                 x.setAttribute("src", data.countryInfo.flag);
                 x.setAttribute("width", "auto");
-                x.setAttribute("height", "200");
+                x.setAttribute("height", "150");
                 x.setAttribute("alt", "flag of "+country);
                 document.getElementById("flagContainer").appendChild(x);
                 document.getElementById("CountryName").innerHTML = country+":";
-				document.getElementById("results-deathsToday").innerHTML = data.todayDeaths+" deaths reported today.";
-				document.getElementById("results-casesToday").innerHTML = data.todayCases + " cases reported today";
+		document.getElementById("results-deathsToday").innerHTML = data.todayDeaths+" deaths reported today.";
+		document.getElementById("results-casesToday").innerHTML = data.todayCases + " cases reported today";
                 document.getElementById("results-totalCases").innerHTML = "Total case to date for " + country + " is " + data.cases;
                 document.getElementById("results-totalDeaths").innerHTML = "Total deaths to date for " + country + " is " + data.deaths;
                 document.getElementById("results-critical").innerHTML = "People in "+ country +" in a critical condition " + data.critical;
@@ -102,7 +102,7 @@ var app = {
 			
 			//Call to read in the address and turn this into a weather report
 			covidStatsObject.update = function (){
-				var country = get_name_value("country", "Israel");
+				var country = get_name_value("country", "Great Britian");
 				updateStats(country);
 			}
             
