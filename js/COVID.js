@@ -11,6 +11,7 @@
  * @returns {jQuery}
  */
 function get_name_value(fieldName, defaultValue) {
+	alert("Inside get_name_value");
   var value = $("#" + fieldName).val();
   if (value == "") {
     value = defaultValue;
@@ -25,7 +26,7 @@ function get_name_value(fieldName, defaultValue) {
 var app = {
 	
 	initialize: function() {
-	alert("Inside initialize");
+	
         //this.onDeviceReady();
 		document.addEventListener(
 			"deviceready",
