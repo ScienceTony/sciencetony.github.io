@@ -72,7 +72,7 @@ var app = {
                 
                 x.setAttribute("src", data.countryInfo.flag);
                 x.setAttribute("width", "auto");
-                x.setAttribute("height", "150");
+                x.setAttribute("height", "120");
                 x.setAttribute("alt", "flag of "+country);
                 document.getElementById("flagContainer").appendChild(x);
                 document.getElementById("CountryName").innerHTML = country+":";
