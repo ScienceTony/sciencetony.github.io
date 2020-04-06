@@ -11,6 +11,7 @@
  * @returns {jQuery}
  */
 function get_name_value(fieldName, defaultValue) {
+    "use strict"
   var value = $("#" + fieldName).val();
   if (value == "") {
     value = defaultValue;
@@ -40,20 +41,19 @@ var app = {
 	receivedEvent: function(id) {
 		
         function worldStats() {
-               var onSuccess = function(data){
-               var d = new Date();
-		// obj = $.parseJSON(data);
-               document.getElementById("affectedCountries").innerHTML = data.affectedCountries;
-		document.getElementById("worldDeathsToday").innerHTML = data.todayDeaths;
-               document.getElementById("worldDeathsTotal").innerHTML = data.deaths;
-               document.getElementById("worldCasesToday").innerHTML = data.todayCases;
-               document.getElementById("worldCasesTotal").innerHTML = data.cases;
-               document.getElementById("recovered").innerHTML = data.recovered;
-               document.getElementById("lastUpdated").innerHTML = d;
-            }
-	var uri = "https://corona.lmao.ninja/all";
+                var onSuccess = function(data){
+                var d = new Date();
+				// obj = $.parseJSON(data); 
+               document.getElementById("affectedCountries").innerHTML = data.affectedCountries; document.getElementById("worldDeathsToday").innerHTML = data.todayDeaths;
+                document.getElementById("worldDeathsTotal").innerHTML = data.deaths;
+                document.getElementById("worldCasesToday").innerHTML = data.todayCases;
+                document.getElementById("worldCasesTotal").innerHTML = data.cases;
+                document.getElementById("recovered").innerHTML = data.recovered;
+                document.getElementById("lastUpdated").innerHTML = d;
+            }      
+			var uri = "https://corona.lmao.ninja/all";
             $.get(uri,onSuccess); 
-        }
+        }    
         
         var x = document.createElement("IMG");
 		/**
@@ -77,10 +77,10 @@ var app = {
                 x.setAttribute("alt", "flag of "+country);
                 document.getElementById("flagContainer").appendChild(x);
                 document.getElementById("CountryName").innerHTML = country+":";
-		document.getElementById("results-deathsToday").innerHTML = data.todayDeaths+" deaths reported today.";
-		document.getElementById("results-casesToday").innerHTML = data.todayCases + " cases reported today";
-                document.getElementById("results-totalCases").innerHTML = "Total case to date for " + country + " is " + data.cases;
-                document.getElementById("results-totalDeaths").innerHTML = "Total deaths to date for " + country + " is " + data.deaths;
+				document.getElementById("results-deathsToday").innerHTML = data.todayDeaths;
+				document.getElementById("results-casesToday").innerHTML = data.todayCases;
+                document.getElementById("results-totalCases").innerHTML = data.cases;
+                document.getElementById("results-totalDeaths").innerHTML = data.deaths;
                 document.getElementById("results-critical").innerHTML = "People in "+ country +" in a critical condition " + data.critical;
 			}else{
                 alert("Something went wrong! " + country + " is not a valid country name.")
