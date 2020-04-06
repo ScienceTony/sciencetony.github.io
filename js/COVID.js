@@ -44,11 +44,11 @@ var app = {
                 var d = new Date();
 				// obj = $.parseJSON(data); 
                document.getElementById("affectedCountries").innerHTML = data.affectedCountries; document.getElementById("worldDeathsToday").innerHTML = data.todayDeaths;
-                document.getElementById("worldDeathsTotal").innerHTML = data.deaths;
-                document.getElementById("worldCasesToday").innerHTML = data.todayCases;
-                document.getElementById("worldCasesTotal").innerHTML = data.cases;
-                document.getElementById("recovered").innerHTML = data.recovered;
-                document.getElementById("lastUpdated").innerHTML = d;
+               document.getElementById("worldDeathsTotal").innerHTML = data.deaths;
+               document.getElementById("worldCasesToday").innerHTML = data.todayCases;
+               document.getElementById("worldCasesTotal").innerHTML = data.cases;
+               document.getElementById("recovered").innerHTML = data.recovered;
+               document.getElementById("lastUpdated").innerHTML = d;
             }      
 			var uri = "https://corona.lmao.ninja/all";
             $.get(uri,onSuccess); 
@@ -102,7 +102,7 @@ var app = {
 			
 			//Call to read in the address and turn this into a weather report
 			covidStatsObject.update = function (){
-				var country = get_name_value("country", "Great Britian");
+				var country = get_name_value("country", "United Kingdom");
 				updateStats(country);
 			}
             
