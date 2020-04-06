@@ -19,7 +19,14 @@ description: "About Tony McDonald and computer science. Contains examples of wha
     
     <!-- Right sidebar -->
  <div class="rightcolumn_contact sideCard" >
-
+	<!-- note about me does not come in a div tag because it is used within other tags with class card -->  
+        <div class="card"> 
+	{% include about_me.html %}
+	</div><!-- End of card --> 
+	  
+	{% include mediaLinks.html %}
+	{% include COVID19blog.html %}
+	{% include quizTwo.html %}
 	
 	</div> <!-- End of rightcolumn_contact -->
     
