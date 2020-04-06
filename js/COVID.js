@@ -40,19 +40,20 @@ var app = {
 	receivedEvent: function(id) {
 		
         function worldStats() {
-                var onSuccess = function(data){
-                var d = new Date();
-				// obj = $.parseJSON(data); 
-               document.getElementById("affectedCountries").innerHTML = data.affectedCountries; document.getElementById("worldDeathsToday").innerHTML = data.todayDeaths;
+               var onSuccess = function(data){
+               var d = new Date();
+		// obj = $.parseJSON(data);
+               document.getElementById("affectedCountries").innerHTML = data.affectedCountries;
+		document.getElementById("worldDeathsToday").innerHTML = data.todayDeaths;
                document.getElementById("worldDeathsTotal").innerHTML = data.deaths;
                document.getElementById("worldCasesToday").innerHTML = data.todayCases;
                document.getElementById("worldCasesTotal").innerHTML = data.cases;
                document.getElementById("recovered").innerHTML = data.recovered;
                document.getElementById("lastUpdated").innerHTML = d;
-            }      
+            }
 	var uri = "https://corona.lmao.ninja/all";
             $.get(uri,onSuccess); 
-        }    
+        }
         
         var x = document.createElement("IMG");
 		/**
@@ -72,7 +73,7 @@ var app = {
                 
                 x.setAttribute("src", data.countryInfo.flag);
                 x.setAttribute("width", "auto");
-                x.setAttribute("height", "100");
+                x.setAttribute("height", "130");
                 x.setAttribute("alt", "flag of "+country);
                 document.getElementById("flagContainer").appendChild(x);
                 document.getElementById("CountryName").innerHTML = country+":";
