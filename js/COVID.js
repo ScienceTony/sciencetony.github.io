@@ -11,7 +11,6 @@
  * @returns {jQuery}
  */
 function get_name_value(fieldName, defaultValue) {
-	alert("Inside get_name_value");
   var value = $("#" + fieldName).val();
   if (value == "") {
     value = defaultValue;
@@ -26,8 +25,6 @@ function get_name_value(fieldName, defaultValue) {
 var app = {
 	
 	initialize: function() {
-	
-        //this.onDeviceReady();
 		document.addEventListener(
 			"deviceready",
 			this.onDeviceReady(this),
@@ -58,32 +55,29 @@ var app = {
 			var onSuccess = function(data){
                 
                 if (data.country != ""){
-				// obj = $.parseJSON(data);
-                
+		// obj = $.parseJSON(data);
                 x.setAttribute("src", data.countryInfo.flag);
                 x.setAttribute("width", "auto");
                 x.setAttribute("height", "100");
                 x.setAttribute("alt", "flag of "+country);
                 document.getElementById("flagContainer").appendChild(x);
                 document.getElementById("CountryName").innerHTML = country+":";
-				document.getElementById("results-deathsToday").innerHTML = data.todayDeaths+" deaths reported today.";
-				document.getElementById("results-casesToday").innerHTML = data.todayCases + " cases reported today";
+		document.getElementById("results-deathsToday").innerHTML = data.todayDeaths+" deaths reported today.";
+		document.getElementById("results-casesToday").innerHTML = data.todayCases + " cases reported today";
                 document.getElementById("results-totalCases").innerHTML = "Total case to date for " + country + " is " + data.cases;
                 document.getElementById("results-totalDeaths").innerHTML = "Total deaths to date for " + country + " is " + data.deaths;
                 document.getElementById("results-critical").innerHTML = "People in "+ country +" in a critical condition " + data.critical;
 			}else{
                 alert("Something went wrong! " + country + " is not a valid country name.")
+            	}
             }
-            }
-			// Post the country using the "countries" API
-			var uri = "https://corona.lmao.ninja/countries/"+country;
+	// Post the country using the "countries" API
+	var uri = "https://corona.lmao.ninja/countries/"+country;
 
-			if (country != "") 
-                $.get(uri,onSuccess);
+	if (country != "") 
+             $.get(uri,onSuccess);
 
-		}
-
-
+	}
 
 		// This function creates the public interface to covid19, these fuctions may be called 
 		// by the JavaScript in the HTML file.
@@ -103,10 +97,9 @@ var app = {
 			return covidStatsObject;
 		}
 		
-		 
 		//Create the object, visible in the HTML file as app.covid19
 		app.covid19 = new COVID19Stats();
-		alert("Object created");
+		
 	}
 };
 alert("hello");
