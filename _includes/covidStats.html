@@ -16,18 +16,28 @@
         </div><br>
         <div id="flagContainer"></div>
 
-		<h1>Today's statistics for <span id="CountryName">entered country will be displayed here. </span></h1>
+	<h1>Today's statistics for <span id="CountryName">entered country will be displayed in the table below. </span></h1>
         <div>
-            <ul style="list-style-type:none;">
-                <li><span id="results-deathsToday"></span></li>
-                <li><span id="results-casesToday"></span></li><br>
-                <li><span id="results-totalCases"></span></li>
-                <li><span id="results-totalDeaths"></span></li><br>
-                <li><span id="results-critical"></span></li>
-                <li><span id="recov"></span></li>
-            </ul>
+            <table style="width:250px">
+              <tr>
+                <th>&nbsp;</th>
+                <th>Today</th>
+                <th>In Total</th>
+              </tr>
+              <tr>
+                <td>Deaths</td>
+                <td id="results-deathsToday" style="text-align:center;">-</td> 
+                <td id="results-totalDeaths" style="text-align:center;">-</td>
+              </tr>
+              <tr>
+                <td>Cases</td>
+                <td id="results-casesToday" style="text-align:center;">-</td> 
+                <td id="results-totalCases" style="text-align:center;">-</td>
+              </tr>
+            </table>
+            <br>
         </div>
-        <hr>
+        <div><span id="results-critical"></span></div><br>
         <div>
             <h1>World Totals</h1>
             <p><strong>A total of <span id="affectedCountries" style="color: red;"></span> countries have been affected.</strong></p>
