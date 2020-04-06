@@ -104,6 +104,7 @@ var app = {
 		 
 		//Create the object, visible in the HTML file as app.covid19
 		app.covid19 = new COVID19Stats();
+		alert("Object created");
 	}
 };
 alert("hello");
