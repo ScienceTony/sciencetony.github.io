@@ -49,7 +49,7 @@ var app = {
                document.getElementById("worldCasesToday").innerHTML = data.todayCases;
                document.getElementById("worldCasesTotal").innerHTML = data.cases;
                document.getElementById("recovered").innerHTML = data.recovered;
-               document.getElementById("lastUpdated").innerHTML = d.toUTCString();
+               document.getElementById("lastUpdated").innerHTML = d;
             }
 	var uri = "https://corona.lmao.ninja/all";
             $.get(uri,onSuccess); 
