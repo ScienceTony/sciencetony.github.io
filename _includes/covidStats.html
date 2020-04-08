@@ -1,7 +1,9 @@
 <div class="app">
         <h1>COVID&#45;19 Statistics App</h1>
         <div>
-            <div><p><label for="country">Enter a country:</label> <input type="text" size="20" id="country" value="" placeholder="Eg Spain"></p></div>
+            <div>
+		    <p>Note that if the results are 0, it is likely that country has not yet posted any official results.  For instance, the UK will not usually have any results until tea time.</p><br>
+		    <p><label for="country">Enter a country:</label> <input type="text" size="20" id="country" value="" placeholder="Eg Spain"></p></div>
         </div>
         <div>
             <button type="button" id="update" onclick="app.covid19.update()">Get statistics</button>
