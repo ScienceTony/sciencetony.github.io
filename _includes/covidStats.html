@@ -46,4 +46,34 @@
             <p><strong>Last updated: </strong><span id="lastUpdated"></span></p>
             <hr>
         </div>
+	<div>
+            <h1>Top 5 countries with the highest number of total recorded <span id="sortFilter"></span>:</h1>
+            <button type="button" id="deceased" onclick="app.covid19.sortByDeaths()">Deceased</button>
+            <button type="button" id="recoveries" onclick="app.covid19.sortByRecoveries()">Recoveries</button>
+            <button type="button" id="recoveries" onclick="app.covid19.sortByTests()">&nbsp;&nbsp;&nbsp;Tests&nbsp;&nbsp;&nbsp;</button>
+            <br>
+            <br>
+            <div><table style="width:180px">
+                <tr style="color: red;">
+                    <td><span id="index0"></span><span id="results-0"></span> </td> 
+                    <td><span id="resultsValue-0"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="index1"></span><span id="results-1"></span></td>  
+                    <td><span id="resultsValue-1"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="index2"></span><span id="results-2"></span></td>  
+                    <td><span id="resultsValue-2"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="index3"></span><span id="results-3"></span></td>  
+                    <td><span id="resultsValue-3"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="index4"></span><span id="results-4"></span></td> 
+                    <td><span id="resultsValue-4"></span></td>
+                </tr>
+                </table>
+            </div>
     </div>
