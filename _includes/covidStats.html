@@ -1,9 +1,29 @@
-<div class="app">
+<!--
+    /***********
+     * COVID19 Statistics App
+     * 
+     * File modified by: (Tony McDonald)
+     ************/
+ --->
+<html lang="en">
+    <head>
+
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	    <meta http-equiv="Content-Security-Policy" content="">
+
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+		<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+		
+		<script type="text/javascript" src="cordova.js"></script>
+        <title>COVID19 Stats App</title>
+    </head>
+    <body>
+    <div class="app">
         <h1>COVID&#45;19 Statistics App</h1>
         <div>
-            <div>
-		    <p>Note that if the results are 0, it is likely that country has not yet posted any official results.  For instance, the UK will not usually have any results until tea time.</p><br>
-		    <p><label for="country">Enter a country:</label> <input type="text" size="20" id="country" value="" placeholder="Eg Spain"></p></div>
+            <div><p><label for="country">Enter a country:</label> <input type="text" size="20" id="country" value="" placeholder="Eg Spain"></p></div>
         </div>
         <div>
             <button type="button" id="update" onclick="app.covid19.update()">Get statistics</button>
@@ -12,30 +32,37 @@
 
 		<h1>Today's statistics for <span id="CountryName">entered country will be displayed in the table below. </span></h1>
         <div>
-            <table style="width:250px">
+            <table style="width:280px">
+                
               <tr>
                 <th>&nbsp;</th>
                 <th>Today</th>
+                <th>Yesterday</th>
                 <th>In Total</th>
               </tr>
               <tr>
                 <td>Deaths</td>
                 <td id="results-deathsToday" style="text-align:center;">-</td> 
+                <td id="results-deathsYesterday" style="text-align:center;">-</td> 
                 <td id="results-totalDeaths" style="text-align:center;">-</td>
               </tr>
               <tr>
                 <td>Cases</td>
-                <td id="results-casesToday" style="text-align:center;">-</td> 
+                <td id="results-casesToday" style="text-align:center;">-</td>
+                <td id="results-casesYesterday" style="text-align:center;">-</td>
                 <td id="results-totalCases" style="text-align:center;">-</td>
               </tr>
             </table>
             <br>
         </div>
-        <div><span id="results-critical"></span></div><br>
+        <div><span id="results-critical"></span></div>
+        <div><span id="results-tests"></span></div><br>
+        <br>
+
         <hr>
         <div>
             <h1>World Totals</h1>
-            <p>A total of <span id="affectedCountries" style="color: red;"></span> countries have been affected.</p>
+            <h3>A total of <span id="affectedCountries" style="color: red;"></span> countries have been affected.</h3>
                 <ul style="list-style-type:none;">
                     <li>Deaths today: <span id="worldDeathsToday" style="color: red;"></span></li>
                     <li>Total deaths: <span id="worldDeathsTotal" style="color: blue;"></span></li><br>
@@ -46,14 +73,17 @@
             <p><strong>Last updated: </strong><span id="lastUpdated"></span></p>
             <hr>
         </div>
-	<div>
-            <h1>Top 5 countries with the highest number of total recorded <span id="sortFilter"></span>:</h1>
+        <div>
+            <h1>Countries with the highest number of total recorded <span id="sortFilter">(category)</span>:</h1>
+            <labal for="numb">Number  rows to show (between 3 and 10)</labal>
+            <input id="numb" type="text" placeholder="5" value=""  style="width:50px"><br><br>
+            
             <button type="button" id="deceased" onclick="app.covid19.sortByDeaths()">Deceased</button>
             <button type="button" id="recoveries" onclick="app.covid19.sortByRecoveries()">Recoveries</button>
             <button type="button" id="recoveries" onclick="app.covid19.sortByTests()">&nbsp;&nbsp;&nbsp;Tests&nbsp;&nbsp;&nbsp;</button>
             <br>
             <br>
-            <div><table style="width:180px">
+            <div><table style="width:180px" >
                 <tr style="color: red;">
                     <td><span id="index0"></span><span id="results-0"></span> </td> 
                     <td><span id="resultsValue-0"></span></td>
@@ -74,7 +104,36 @@
                     <td><span id="index4"></span><span id="results-4"></span></td> 
                     <td><span id="resultsValue-4"></span></td>
                 </tr>
+                <tr>
+                    <td><span id="index5"></span><span id="results-5"></span> </td> 
+                    <td><span id="resultsValue-5"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="index6"></span><span id="results-6"></span></td>  
+                    <td><span id="resultsValue-6"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="index7"></span><span id="results-7"></span></td>  
+                    <td><span id="resultsValue-7"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="index8"></span><span id="results-8"></span></td>  
+                    <td><span id="resultsValue-8"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="index9"></span><span id="results-9"></span></td> 
+                    <td><span id="resultsValue-9"></span></td>
+                </tr>
                 </table>
             </div>
-	</div><br>
+            
+            <div>
+                <canvas id="myCanvas"></canvas>
+            </div>
+            
+        </div><br>
     </div>
+        
+	<script  src="js/COVID.js"></script>
+ </body>
+</html>
