@@ -2,7 +2,6 @@
  * COVID19 Statistics App
  * 
  * File modified by: (Tony McDonald)
- * API licence https://github.com/NovelCOVID/API/blob/master/LICENSE
  ************/
 
 /**
@@ -56,6 +55,45 @@ var app = {
             $.get(uri,onSuccess); 
         }    
         
+        function sort(request) {
+                var onSuccess = function(data){
+                 
+                if (request == "deaths" ) {
+                    document.getElementById("sortFilter").innerHTML = "deaths"
+                    $.each(data, function(index) {
+                     if (index < 6) {document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
+                    document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].deaths;
+                    document.getElementById("index"+index.toString()).innerHTML = index + 1 + ".&nbsp;";   
+                    }else{ return false}
+                       
+                });
+                } 
+                
+                if (request == "recovered" ) {
+                   document.getElementById("sortFilter").innerHTML = "recoveries"
+                    $.each(data, function(index) {
+                     if (index < 6){ document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
+                    document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].recovered;}else{return false}
+                        
+                });
+                }
+                
+                if (request == "tests" ) {
+                    document.getElementById("sortFilter").innerHTML = "tests"
+                    $.each(data, function(index) {
+                     if (index < 6) {document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
+                    document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].tests;}else{return false}
+                        
+                });
+                }
+				
+               
+               
+            }      
+			var uri = "https://corona.lmao.ninja/countries?sort="+request;
+            $.get(uri,onSuccess); 
+        };   
+        
         var x = document.createElement("IMG");
 		/**
 		 * Updates the html page with the statistics from the requested country
@@ -102,10 +140,23 @@ var app = {
 			// These varibles are private
 			var covidStatsObject = {};
 			
-			//Call to read in the address and turn this into a weather report
+			//Call to read in the address and turn this into a report
 			covidStatsObject.update = function (){
 				var country = get_name_value("country", "United Kingdom");
 				updateStats(country);
+			}
+            
+            covidStatsObject.sortByDeaths = function (){
+ 
+                sort("deaths");
+			}
+            
+            covidStatsObject.sortByRecoveries = function (){
+				sort("recovered");
+			}
+            
+            covidStatsObject.sortByTests = function (){
+				sort("tests");
 			}
             
             covidStatsObject.stats = function(){
