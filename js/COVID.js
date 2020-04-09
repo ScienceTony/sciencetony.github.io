@@ -73,7 +73,9 @@ var app = {
                    document.getElementById("sortFilter").innerHTML = "recoveries"
                     $.each(data, function(index) {
                      if (index < 6){ document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
-                    document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].recovered;}else{return false}
+                    document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].recovered;
+                    document.getElementById("index"+index.toString()).innerHTML = index + 1 + ".&nbsp;"; 
+                    }else{return false}
                         
                 });
                 }
@@ -82,7 +84,9 @@ var app = {
                     document.getElementById("sortFilter").innerHTML = "tests"
                     $.each(data, function(index) {
                      if (index < 6) {document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
-                    document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].tests;}else{return false}
+                    document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].tests;
+                     document.getElementById("index"+index.toString()).innerHTML = index + 1 + ".&nbsp;"; 
+                    }else{return false}
                         
                 });
                 }
@@ -169,7 +173,7 @@ var app = {
 			return covidStatsObject;
 		}
 
-		//Create the Weather object, visible in the HTML file as app.weather
+		//Create the object, visible in the HTML file as app.covid19
 		app.covid19 = new COVID19Stats();
 	}
 };
