@@ -55,13 +55,24 @@ var app = {
             $.get(uri,onSuccess); 
         }    
         
-        function sort(request) {
+        function clearTable(numb) {
+            var i = 0;
+            while (i < 10){
+                document.getElementById("resultsValue-"+i.toString()).innerHTML = "";
+                document.getElementById("results-"+i.toString()).innerHTML = "";
+                document.getElementById("index"+i.toString()).innerHTML = "";
+                i++;
+            }
+        }
+        
+        function sort(request, numb) {
+            
                 var onSuccess = function(data){
-                 
                 if (request == "deaths" ) {
+                   
                     document.getElementById("sortFilter").innerHTML = "deaths"
                     $.each(data, function(index) {
-                     if (index < 6) {document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
+                     if (index < numb) {document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
                     document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].deaths;
                     document.getElementById("index"+index.toString()).innerHTML = index + 1 + ".&nbsp;";   
                     }else{ return false}
@@ -70,9 +81,10 @@ var app = {
                 } 
                 
                 if (request == "recovered" ) {
+                 
                    document.getElementById("sortFilter").innerHTML = "recoveries"
                     $.each(data, function(index) {
-                     if (index < 6){ document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
+                     if (index < numb){ document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
                     document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].recovered;
                     document.getElementById("index"+index.toString()).innerHTML = index + 1 + ".&nbsp;"; 
                     }else{return false}
@@ -83,7 +95,7 @@ var app = {
                 if (request == "tests" ) {
                     document.getElementById("sortFilter").innerHTML = "tests"
                     $.each(data, function(index) {
-                     if (index < 6) {document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
+                     if (index < numb) {document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
                     document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].tests;
                      document.getElementById("index"+index.toString()).innerHTML = index + 1 + ".&nbsp;"; 
                     }else{return false}
@@ -130,10 +142,20 @@ var app = {
             }
             }
 			// Post the country using the "countries" API
+            var onSuccess2 = function(data){
+                if (data.country != ""){
+                
+                document.getElementById("results-deathsYesterday").innerHTML = data.todayDeaths;
+                document.getElementById("results-casesYesterday").innerHTML = data.todayCases;
+            }
+            }
 			var uri = "https://corona.lmao.ninja/countries/"+country;
-
-			if (country != "") 
+            var uri2 = "https://corona.lmao.ninja/yesterday/"+country;
+            
+			if (country != "") {
                 $.get(uri,onSuccess);
+                $.get(uri2,onSuccess2);
+            }
 
 		}
 
@@ -151,16 +173,33 @@ var app = {
 			}
             
             covidStatsObject.sortByDeaths = function (){
- 
-                sort("deaths");
+                var numb = get_name_value("numb", 5);
+                if (numb >2 && numb <11){
+                clearTable();
+                sort("deaths", numb);
+                }else{
+                    alert("Please enter a number between 3 and 10.")
+                }
 			}
             
             covidStatsObject.sortByRecoveries = function (){
-				sort("recovered");
+                var numb = get_name_value("numb", 5);
+                if (numb >2 && numb <11){
+                clearTable();
+				sort("recovered", numb);
+                }else{
+                    alert("Please enter a number between 3 and 10.")
+                }
 			}
             
             covidStatsObject.sortByTests = function (){
-				sort("tests");
+				var numb = get_name_value("numb", 5);
+                if (numb >2 && numb <11){
+                clearTable();
+				sort("tests", numb);
+                }else{
+                    alert("Please enter a number between 3 and 10.")
+                }
 			}
             
             covidStatsObject.stats = function(){
@@ -173,7 +212,7 @@ var app = {
 			return covidStatsObject;
 		}
 
-		//Create the object, visible in the HTML file as app.covid19
+		//Create the Weather object, visible in the HTML file as app.weather
 		app.covid19 = new COVID19Stats();
 	}
 };
