@@ -1,8 +1,7 @@
-
-    <div class="app">
+<div class="app">
         <h1>COVID&#45;19 Statistics App</h1>
         <div>
-            <div><p><label for="country">Enter a country:</label> <input type="text" size="20" id="country" style="width: 250px" value="" placeholder="Eg Spain"></p></div>
+            <div><p><label for="country">Enter a country:</label> <input type="text" size="20" id="country" value="" placeholder="Eg Spain"></p></div>
         </div>
         <div>
             <button type="button" id="update" onclick="app.covid19.update()">Get statistics</button>
@@ -41,13 +40,14 @@
         <hr>
         <div>
             <h1>World Totals</h1>
-            <p><strong>A total of <span id="affectedCountries" style="color: red;"></span> countries have been affected.</strong></p>
+            <h3>A total of <span id="affectedCountries" style="color: red;"></span> countries have been affected.</h3>
                 <ul style="list-style-type:none;">
                     <li>Deaths today: <span id="worldDeathsToday" style="color: red;"></span></li>
                     <li>Total deaths: <span id="worldDeathsTotal" style="color: blue;"></span></li><br>
                     <li>New cases today: <span id="worldCasesToday" style="color: red;"></span></li>
                     <li>Total case: <span id="worldCasesTotal" style="color: blue;"></span></li><br>
                     <li>Total recoveries: <span id="recovered" style="color: green;"></span></li>
+                    <li>Deaths per million: <span id="deathsPerOneMillion" style="color: crimson;"></span></li>
                 </ul>
             <p><strong>Last updated: </strong><span id="lastUpdated"></span></p>
             <hr>
@@ -60,9 +60,12 @@
             <button type="button" id="deceased" onclick="app.covid19.sortByDeaths()">Deceased</button>
             <button type="button" id="recoveries" onclick="app.covid19.sortByRecoveries()">Recoveries</button>
             <button type="button" id="recoveries" onclick="app.covid19.sortByTests()">&nbsp;&nbsp;&nbsp;Tests&nbsp;&nbsp;&nbsp;</button>
+            <button type="button" id="deathsPerOneMillion" onclick="app.covid19.sortByPerMil()">Deaths per millon</button>
             <br>
             <br>
-            <div><table style="width:180px" >
+            <div>
+                <span id="tableHeading"></span><br><br>
+                <table style="width:180px" >
                 <tr style="color: red;">
                     <td><span id="index0"></span><span id="results-0"></span> </td> 
                     <td><span id="resultsValue-0"></span></td>
