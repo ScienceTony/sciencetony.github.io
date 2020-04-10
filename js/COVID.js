@@ -49,6 +49,9 @@ var app = {
                 document.getElementById("worldCasesToday").innerHTML = data.todayCases;
                 document.getElementById("worldCasesTotal").innerHTML = data.cases;
                 document.getElementById("recovered").innerHTML = data.recovered;
+                
+                document.getElementById("deathsPerOneMillion").innerHTML = data.deathsPerOneMillion;
+                
                 document.getElementById("lastUpdated").innerHTML = d;
             }      
 			var uri = "https://corona.lmao.ninja/all";
@@ -66,48 +69,55 @@ var app = {
         }
         
         function sort(request, numb) {
-            
-                var onSuccess = function(data){
+            var requestedPretty;
+            var onSuccess = function(data){
+                
                 if (request == "deaths" ) {
-                   
-                    document.getElementById("sortFilter").innerHTML = "deaths"
                     $.each(data, function(index) {
                      if (index < numb) {document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
                     document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].deaths;
-                    document.getElementById("index"+index.toString()).innerHTML = index + 1 + ".&nbsp;";   
+                   requestedPretty = "deaths"; document.getElementById("index"+index.toString()).innerHTML = index + 1 + ".&nbsp;";   
                     }else{ return false}
                        
                 });
                 } 
                 
                 if (request == "recovered" ) {
-                 
-                   document.getElementById("sortFilter").innerHTML = "recoveries"
                     $.each(data, function(index) {
                      if (index < numb){ document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
                     document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].recovered;
-                    document.getElementById("index"+index.toString()).innerHTML = index + 1 + ".&nbsp;"; 
+                   requestedPretty = "recoveries"; document.getElementById("index"+index.toString()).innerHTML = index + 1 + ".&nbsp;"; 
+                    }else{return false}       
+                });
+                }
+                
+                if (request == "tests" ) {
+                    $.each(data, function(index) {
+                     if (index < numb) {document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
+                    document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].tests;
+                    requestedPretty = "tests"; document.getElementById("index"+index.toString()).innerHTML = index + 1 + ".&nbsp;"; 
                     }else{return false}
                         
                 });
                 }
                 
-                if (request == "tests" ) {
-                    document.getElementById("sortFilter").innerHTML = "tests"
+                if (request == "deathsPerOneMillion" ) {
                     $.each(data, function(index) {
                      if (index < numb) {document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
-                    document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].tests;
+                    document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].deathsPerOneMillion;
+                    requestedPretty = "deaths per millon";
                      document.getElementById("index"+index.toString()).innerHTML = index + 1 + ".&nbsp;"; 
                     }else{return false}
                         
                 });
                 }
-				
-               
-               
-            }      
+			document.getElementById("sortFilter").innerHTML = requestedPretty;
+            document.getElementById("tableHeading").innerHTML = "Table showing " + numb + " highest countries by " + requestedPretty + ".";	   
+            } 
+            
 			var uri = "https://corona.lmao.ninja/countries?sort="+request;
             $.get(uri,onSuccess); 
+    
         };   
         
         var x = document.createElement("IMG");
@@ -197,6 +207,16 @@ var app = {
                 if (numb >2 && numb <11){
                 clearTable();
 				sort("tests", numb);
+                }else{
+                    alert("Please enter a number between 3 and 10.")
+                }
+			}
+            
+            covidStatsObject.sortByPerMil = function (){
+				var numb = get_name_value("numb", 5);
+                if (numb >2 && numb <11){
+                clearTable();
+				sort("deathsPerOneMillion", numb);
                 }else{
                     alert("Please enter a number between 3 and 10.")
                 }
