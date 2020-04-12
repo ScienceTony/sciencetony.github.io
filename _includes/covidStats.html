@@ -1,10 +1,10 @@
 <div class="app">
         <h1>COVID&#45;19 Statistics App</h1>
         <div>
-            <div><p><label for="country">Enter a country:</label> <input type="text" size="20" id="country" value="" placeholder="Eg Spain"></p></div>
+            <div><p><label for="country">Enter a country:</label> <input type="text" size="20" id="country" value="" placeholder="Eg Spain" style="max-width: 250px;"></p></div>
         </div>
         <div>
-            <button type="button" id="update" onclick="app.covid19.update()" style="width="10em">Get statistics</button>
+            <button type="button" id="update" onclick="app.covid19.update()" >Get statistics</button>
         </div><br>
         <div id="flagContainer"></div>
 
@@ -55,7 +55,7 @@
         <div>
             <h1>Countries with the highest number of total recorded <span id="sortFilter">(category)</span>:</h1>
             <labal for="numb">Number  rows to show (between 3 and 10)</labal>
-            <input id="numb" type="text" placeholder="5" value=""  style="width:50px"><br><br>
+            <input id="numb" type="text" placeholder="5" value=""  style="width:50px;"><br><br>
             
             <button type="button" id="deceased" onclick="app.covid19.sortByDeaths()">Deceased</button>
             <button type="button" id="recoveries" onclick="app.covid19.sortByRecoveries()">Recoveries</button>
