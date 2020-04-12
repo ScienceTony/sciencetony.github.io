@@ -224,7 +224,7 @@ var app = {
             
             covidStatsObject.stats = function(){
                 //if (timerId) clearInterval(timerId);
-                timerId = setInterval(worldStats, 600000); 
+                timerId = setInterval(worldStats, 6e4); 
                 worldStats();
             }
 			
