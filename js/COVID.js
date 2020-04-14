@@ -43,7 +43,7 @@ var app = {
         function worldStats() {
                 var onSuccess = function(data){
                 var d = new Date();
-				// obj = $.parseJSON(data); 
+		// obj = $.parseJSON(data); 
                document.getElementById("affectedCountries").innerHTML = data.affectedCountries; document.getElementById("worldDeathsToday").innerHTML = data.todayDeaths;
                 document.getElementById("worldDeathsTotal").innerHTML = data.deaths;
                 document.getElementById("worldCasesToday").innerHTML = data.todayCases;
@@ -134,7 +134,7 @@ var app = {
 			var onSuccess = function(data){
                 
                 if (data.country != ""){
-				// obj = $.parseJSON(data);
+		// obj = $.parseJSON(data);
                 
                 x.setAttribute("src", data.countryInfo.flag);
                 x.setAttribute("width", "auto");
@@ -142,19 +142,18 @@ var app = {
                 x.setAttribute("alt", "flag of "+country);
                 document.getElementById("flagContainer").appendChild(x);
                 document.getElementById("CountryName").innerHTML = country+":";
-				document.getElementById("results-deathsToday").innerHTML = data.todayDeaths;
-				document.getElementById("results-casesToday").innerHTML = data.todayCases;
+		document.getElementById("results-deathsToday").innerHTML = data.todayDeaths;
+		document.getElementById("results-casesToday").innerHTML = data.todayCases;
                 document.getElementById("results-totalCases").innerHTML = data.cases;
                 document.getElementById("results-totalDeaths").innerHTML = data.deaths;
                 document.getElementById("results-critical").innerHTML = "People in "+ country +" in a critical condition " + data.critical;
-			}else{
+		}else{
                 alert("Something went wrong! " + country + " is not a valid country name.")
             }
             }
 			// Post the country using the "countries" API
             var onSuccess2 = function(data){
-                if (data.country != ""){
-                
+                if (data.country != ""){  
                 document.getElementById("results-deathsYesterday").innerHTML = data.todayDeaths;
                 document.getElementById("results-casesYesterday").innerHTML = data.todayCases;
             }
