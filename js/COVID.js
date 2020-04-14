@@ -127,26 +127,24 @@ var app = {
 		 * @returns {undefined}
 		 */
 		function updateStats(country) {
-			//app_id=  ""; 	
-			//app_code= "";  
-
+            
+            
 			/* Invoke the RESTful API to get the data */
 			var onSuccess = function(data){
-                
                 if (data.country != ""){
+                    
 		// obj = $.parseJSON(data);
-                
                 x.setAttribute("src", data.countryInfo.flag);
                 x.setAttribute("width", "auto");
                 x.setAttribute("height", "130");
-                x.setAttribute("alt", "flag of "+country);
+                x.setAttribute("alt", "flag of "+ data.country);
                 document.getElementById("flagContainer").appendChild(x);
-                document.getElementById("CountryName").innerHTML = country+":";
+                document.getElementById("CountryName").innerHTML = data.country + ":";
 		document.getElementById("results-deathsToday").innerHTML = data.todayDeaths;
 		document.getElementById("results-casesToday").innerHTML = data.todayCases;
                 document.getElementById("results-totalCases").innerHTML = data.cases;
                 document.getElementById("results-totalDeaths").innerHTML = data.deaths;
-                document.getElementById("results-critical").innerHTML = "People in "+ country +" in a critical condition " + data.critical;
+                document.getElementById("results-critical").innerHTML = "People in "+ data.country + " in a critical condition " + data.critical;
 		}else{
                 alert("Something went wrong! " + country + " is not a valid country name.")
             }
