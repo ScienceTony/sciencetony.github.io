@@ -105,7 +105,7 @@ var app = {
                     $.each(data, function(index) {
                      if (index < numb) {document.getElementById("results-"+index.toString()).innerHTML = data[index].country;
                     document.getElementById("resultsValue-"+index.toString()).innerHTML = data[index].deathsPerOneMillion;
-                    requestedPretty = "deaths per millon";
+                    requestedPretty = "deaths per million";
                      document.getElementById("index"+index.toString()).innerHTML = index + 1 + ".&nbsp;"; 
                     }else{return false}
                         
