@@ -168,7 +168,7 @@ var app = {
                 var uri = "https://corona.lmao.ninja/countries/"+country;
                 var uri2 = "https://corona.lmao.ninja/yesterday/"+country;
                 $.get(uri).fail(function() { 
-                alert( "Error: " + "'" + country + "'"  + " is either not a valid country name or it is not an affected country.  \n 1. Please check your spelling and try again. \n 2. England, N Ireland and Wales are all grouded together under UK.");
+                alert( "Error: " + "'" + country + "'"  + " is either not a valid country name or it is not an affected country.  \n\n 1. Please check your spelling and try again. \n 2. England, N Ireland and Wales are all grouped together under UK.");
                 document.getElementById("country").value = ""; 
                 });
                 $.get(uri,onSuccess);
