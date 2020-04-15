@@ -130,7 +130,7 @@ var app = {
              
 			/* Invoke the RESTful API to get the data */
 			var onSuccess = function(data, status){
-               if (status === "success") { 
+               if (status == "success") { 
 		 //var obj = $.parseJSON(data);
                 x.setAttribute("src", data.countryInfo.flag);
                 x.setAttribute("width", "auto");
@@ -138,37 +138,50 @@ var app = {
                 x.setAttribute("alt", "flag of "+ data.country);
                 document.getElementById("flagContainer").appendChild(x);
                 document.getElementById("CountryName").innerHTML = data.country + ":";
-		document.getElementById("results-deathsToday").innerHTML = data.todayDeaths;
-		document.getElementById("results-casesToday").innerHTML = data.todayCases;
+                document.getElementById("results-deathsToday").innerHTML = data.todayDeaths;
+                document.getElementById("results-casesToday").innerHTML = data.todayCases;
                 document.getElementById("results-totalCases").innerHTML = data.cases;
                 document.getElementById("results-totalDeaths").innerHTML = data.deaths;
                 document.getElementById("results-critical").innerHTML = "People in "+ data.country + " in a critical condition " + data.critical;
              
-            }else{
-                alert("no");
+                }else{
+                    alert("Something went wrong.");
             }
             }
             
 			// Post the country using the "countries" API
             var onSuccess2 = function(data, status){
-             if (status === "success") {      
-                document.getElementById("results-deathsYesterday").innerHTML = data.todayDeaths;
-                document.getElementById("results-casesYesterday").innerHTML = data.todayCases;
-            } 
+                if (status === "success") {      
+                    document.getElementById("results-deathsYesterday").innerHTML = data.todayDeaths;
+                    document.getElementById("results-casesYesterday").innerHTML = data.todayCases;
+                }
             }
 
             var uri = "https://corona.lmao.ninja/countries/"+country;
             var uri2 = "https://corona.lmao.ninja/yesterday/"+country;
 
-            var jqXHR = $.get(uri);
-            jqXHR.fail(function() { 
-                alert( "Error: " + "'" + country + "'"  + " is not a valid country name.  Please check your spelling and try again.");
-                document.getElementById("country").value = "";
-            })
-            if (country !=""){
-            $.get(uri,onSuccess);
-            $.get(uri2,onSuccess2);
+                       
+            function isNumber(str) {
+              return (/[0-9]/i).test(str);
             }
+            try {
+                
+                if (isNaN(country) == false) throw country + " is a number.  You can't use IDs.";
+                if (isNumber(country)) throw "You have numbers and letters mixed together.";
+
+                $.get(uri).fail(function() { 
+                alert( "Error: " + "'" + country + "'"  + " is not a valid country name.  Please check your spelling and try again.");
+                document.getElementById("country").value = ""; 
+                });
+                $.get(uri,onSuccess);
+                $.get(uri2,onSuccess2);
+                
+            }
+            catch (err) {
+                alert(err);
+                document.getElementById("country").value = ""; 
+            }
+            
 		}
 
 		// This function creates the public interface to covid19, these fuctions may be called 
