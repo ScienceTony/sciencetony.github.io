@@ -157,10 +157,7 @@ var app = {
                 }
             }
 
-            var uri = "https://corona.lmao.ninja/countries/"+country;
-            var uri2 = "https://corona.lmao.ninja/yesterday/"+country;
-
-                       
+          
             function isNumber(str) {
               return (/[0-9]/i).test(str);
             }
@@ -168,9 +165,10 @@ var app = {
                 
                 if (isNaN(country) == false) throw country + " is a number.  You can't use IDs.";
                 if (isNumber(country)) throw "You have numbers and letters mixed together.";
-
+                var uri = "https://corona.lmao.ninja/countries/"+country;
+                var uri2 = "https://corona.lmao.ninja/yesterday/"+country;
                 $.get(uri).fail(function() { 
-                alert( "Error: " + "'" + country + "'"  + " is not a valid country name.  Please check your spelling and try again.");
+                alert( "Error: " + "'" + country + "'"  + " is either not a valid country name or it is not an affected country.  \n 1. Please check your spelling and try again. \n 2. England, N Ireland and Wales are all grouded together under UK.");
                 document.getElementById("country").value = ""; 
                 });
                 $.get(uri,onSuccess);
