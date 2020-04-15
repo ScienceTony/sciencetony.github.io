@@ -127,13 +127,11 @@ var app = {
 		 * @returns {undefined}
 		 */
 		function updateStats(country) {
-            
-            
+             
 			/* Invoke the RESTful API to get the data */
-			var onSuccess = function(data){
-                if (data.country != ""){
-                    
-		// obj = $.parseJSON(data);
+			var onSuccess = function(data, status){
+               if (status === "success") { 
+		 //var obj = $.parseJSON(data);
                 x.setAttribute("src", data.countryInfo.flag);
                 x.setAttribute("width", "auto");
                 x.setAttribute("height", "130");
@@ -145,25 +143,32 @@ var app = {
                 document.getElementById("results-totalCases").innerHTML = data.cases;
                 document.getElementById("results-totalDeaths").innerHTML = data.deaths;
                 document.getElementById("results-critical").innerHTML = "People in "+ data.country + " in a critical condition " + data.critical;
-		}else{
-                alert("Something went wrong! " + country + " is not a valid country name.")
+             
+            }else{
+                alert("no");
             }
             }
+            
 			// Post the country using the "countries" API
-            var onSuccess2 = function(data){
-                if (data.country != ""){  
+            var onSuccess2 = function(data, status){
+             if (status === "success") {      
                 document.getElementById("results-deathsYesterday").innerHTML = data.todayDeaths;
                 document.getElementById("results-casesYesterday").innerHTML = data.todayCases;
-            }
-            }
-			var uri = "https://corona.lmao.ninja/countries/"+country;
-            var uri2 = "https://corona.lmao.ninja/yesterday/"+country;
-            
-			if (country != "") {
-                $.get(uri,onSuccess);
-                $.get(uri2,onSuccess2);
+            } 
             }
 
+            var uri = "https://corona.lmao.ninja/countries/"+country;
+            var uri2 = "https://corona.lmao.ninja/yesterday/"+country;
+
+            var jqXHR = $.get(uri);
+            jqXHR.fail(function() { 
+                alert( "Error: " + country + " is not a valid country name.  Please check your spelling and try again.");
+                document.getElementById("country").value = "";
+            })
+            if (country !=""){
+            $.get(uri,onSuccess);
+            $.get(uri2,onSuccess2);
+            }
 		}
 
 		// This function creates the public interface to covid19, these fuctions may be called 
