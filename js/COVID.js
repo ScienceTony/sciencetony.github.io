@@ -162,7 +162,7 @@ var app = {
 
             var jqXHR = $.get(uri);
             jqXHR.fail(function() { 
-                alert( "Error: " + country + " is not a valid country name.  Please check your spelling and try again.");
+                alert( "Error: " + "'" + country + "'"  + " is not a valid country name.  Please check your spelling and try again.");
                 document.getElementById("country").value = "";
             })
             if (country !=""){
