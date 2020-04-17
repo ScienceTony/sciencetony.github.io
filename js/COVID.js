@@ -195,41 +195,11 @@ var app = {
 				updateStats(country);
 			}
             
-            covidStatsObject.sortByDeaths = function (){
+            covidStatsObject.sortBy = function (sortBy){
                 var numb = get_name_value("numb", 5);
                 if (numb >2 && numb <11){
                 clearTable();
-                sort("deaths", numb);
-                }else{
-                    alert("Please enter a number between 3 and 10.")
-                }
-			}
-            
-            covidStatsObject.sortByRecoveries = function (){
-                var numb = get_name_value("numb", 5);
-                if (numb >2 && numb <11){
-                clearTable();
-				sort("recovered", numb);
-                }else{
-                    alert("Please enter a number between 3 and 10.")
-                }
-			}
-            
-            covidStatsObject.sortByTests = function (){
-				var numb = get_name_value("numb", 5);
-                if (numb >2 && numb <11){
-                clearTable();
-				sort("tests", numb);
-                }else{
-                    alert("Please enter a number between 3 and 10.")
-                }
-			}
-            
-            covidStatsObject.sortByPerMil = function (){
-				var numb = get_name_value("numb", 5);
-                if (numb >2 && numb <11){
-                clearTable();
-				sort("deathsPerOneMillion", numb);
+                sort(sortBy, numb);
                 }else{
                     alert("Please enter a number between 3 and 10.")
                 }
@@ -251,4 +221,3 @@ var app = {
 	}
 };
 app.initialize();
- 
