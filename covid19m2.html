@@ -1,10 +1,9 @@
 ---
 layout: default
-title: ScienceTony
+title: COVID-19 App
 keywords: "Tony, McDonald, computer, science, computing, analysist, about"
-description: "About Tony McDonald and computer science. Contains examples of what you can do with a simple website."
+description: "Displays statistics for COVID-19.  Includes world statistics and by country. "
 ---
-
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="/js/COVID.js"></script>
@@ -18,22 +17,19 @@ description: "About Tony McDonald and computer science. Contains examples of wha
 	<div class="card">
 		{% include covidStats.html %}
 	</div>
-
   
 </div><!-- rightcolumn, which is actually left -->
-    
+
     <!-- Right sidebar -->
  <div class="rightcolumn_contact sideCard" >
 	<!-- note about me does not come in a div tag because it is used within other tags with class card -->  
         <div class="card"> 
 	{% include about_me.html %}
 	</div><!-- End of card --> 
-	  
+  
 	{% include mediaLinks.html %}
 	{% include COVID19blog.html %}
 	{% include quizTwo.html %}
-	
-	</div> <!-- End of rightcolumn_contact -->
-    
-</div> <!-- End of row -->
 
+	</div> <!-- End of rightcolumn_contact --> 
+</div> <!-- End of row -->
