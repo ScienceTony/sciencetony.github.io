@@ -54,7 +54,7 @@ var app = {
                 
                 document.getElementById("lastUpdated").innerHTML = d;
             }      
-			var uri = "https://corona.lmao.ninja/all";
+			var uri = "https://corona.lmao.ninja/v2/all";
             $.get(uri,onSuccess); 
         }    
         
@@ -115,7 +115,7 @@ var app = {
             document.getElementById("tableHeading").innerHTML = "Table showing " + numb + " highest countries by " + requestedPretty + ".";	   
             } 
             
-			var uri = "https://corona.lmao.ninja/countries?sort="+request;
+			var uri = "https://corona.lmao.ninja/v2/countries?sort="+request;
             $.get(uri,onSuccess); 
     
         };   
@@ -165,10 +165,10 @@ var app = {
                 
                 if (isNaN(country) == false) throw country + " is a number.  You can't use IDs.";
                 if (isNumber(country)) throw "You have numbers and letters mixed together.";
-                var uri = "https://corona.lmao.ninja/countries/"+country;
-                var uri2 = "https://corona.lmao.ninja/yesterday/"+country;
+                var uri = "https://corona.lmao.ninja/v2/countries/"+country;
+                var uri2 = "https://corona.lmao.ninja/v2/countries/"+country+"?yesterday=true";
                 $.get(uri).fail(function() { 
-                alert( "Error: " + "'" + country + "'"  + " is either not a valid country name or it is not an affected country.  \n\n 1. Please check your spelling and try again. \n 2. England, N Ireland and Wales are all grouped together under UK.");
+                alert( "Error: " + "'" + country + "'"  + " is either not a valid country name or it is not an affected country.  \n 1. Please check your spelling and try again. \n 2. England, N Ireland and Wales are all grouded together under UK.");
                 document.getElementById("country").value = ""; 
                 });
                 $.get(uri,onSuccess);
@@ -247,7 +247,8 @@ var app = {
 
 		//Create the Weather object, visible in the HTML file as app.weather
 		app.covid19 = new COVID19Stats();
+        app.covid19.stats();
 	}
 };
 app.initialize();
-app.covid19.stats(); 
+ 
