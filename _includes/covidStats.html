@@ -57,10 +57,10 @@
             <labal for="numb">Number  rows to show (between 3 and 10)</labal>
             <input id="numb" type="text" placeholder="5" value=""  style="width:50px;"><br><br>
             
-            <button type="button" id="deceased" onclick="app.covid19.sortByDeaths()">Deceased</button>
-            <button type="button" id="recoveries" onclick="app.covid19.sortByRecoveries()">Recoveries</button>
-            <button type="button" id="recoveries" onclick="app.covid19.sortByTests()">&nbsp;&nbsp;&nbsp;Tests&nbsp;&nbsp;&nbsp;</button>
-            <button type="button" id="deathsPerOneMillion" onclick="app.covid19.sortByPerMil()">Deaths per mil</button>
+            <button type="button" id="deceased" onclick="app.covid19.sortBy('deaths')">Deceased</button>
+            <button type="button" id="recoveries" onclick="app.covid19.sortBy('recovered')">Recoveries</button>
+            <button type="button" id="tests" onclick="app.covid19.sortBy('tests')">&nbsp;&nbsp;&nbsp;Tests&nbsp;&nbsp;&nbsp;</button>
+            <button type="button" id="deathsPerOneMillion" onclick="app.covid19.sortBy('deathsPerOneMillion')">Deaths per million</button>
             <br>
             <br>
             <div>
