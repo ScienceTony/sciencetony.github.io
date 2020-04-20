@@ -54,8 +54,11 @@
         </div>
         <div>
             <h1>Countries with the highest number of total recorded <span id="sortFilter">(category)</span>:</h1>
-            <labal for="numb">Number  rows to show (between 3 and 10)</labal>
-            <input id="numb" type="text" placeholder="5" value=""  style="width:50px;"><br><br>
+            <labal for="numb">Number  rows to show</labal>
+            <select id="numb" size="1" >
+            <option value="5">5</option>
+            <option value="10">10</option>
+            </select><br><br>
             
             <button type="button" id="deceased" onclick="app.covid19.sortBy('deaths')">Deceased</button>
             <button type="button" id="recoveries" onclick="app.covid19.sortBy('recovered')">Recoveries</button>
