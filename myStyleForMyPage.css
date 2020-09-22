@@ -233,7 +233,7 @@ Share links END
 intext links 
 ================= */
 
-a.inTextLink, li a.blogLink {
+a.inTextLink, li a.inTextLink {
     color: blue;
     text-align: left;
     text-decoration:none;
