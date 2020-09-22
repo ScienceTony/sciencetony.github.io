@@ -238,6 +238,7 @@ a.inTextLink, li a.inTextLink {
     text-align: left;
     text-decoration:none;
     font-weight: normal;
+    margin: 0;
     padding: 0;
 }
 
