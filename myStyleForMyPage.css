@@ -233,20 +233,13 @@ Share links END
 intext links 
 ================= */
 
-a.inTextLink, li a.inTextLink {
+a.inTextLink{
     color: blue;
     text-align: left;
     text-decoration:none;
     font-weight: normal;
-    margin: 0;
-    padding: 0;
-    border: 0;
 }
 
-li a.blogLink:hover {
-    color: darkgoldenrod;
-    text-decoration:underline;
-}
 
 a.inTextLink:hover {
     color: darkgoldenrod;
