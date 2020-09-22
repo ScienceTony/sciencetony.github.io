@@ -232,7 +232,8 @@ Share links END
 /* ===============
 intext links 
 ================= */
-a.inTextLink {
+
+a.inTextLink, li a.inTextLink {
     color: blue;
     text-decoration:none;
     font-weight: normal;
