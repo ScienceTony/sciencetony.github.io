@@ -235,7 +235,6 @@ intext links
 a.inTextLink {
     color: blue;
     text-decoration:none;
-    text-align: right;
     font-weight: normal;
 }
 
@@ -326,7 +325,7 @@ li.blogLink a:hover {
 /* ============
 Download Link 
 =============== */
-.card a.downloadLink {
+a.downloadLink {
 /* Deals with the text in box */
     color: blue;
     font-family: sans-serif;
