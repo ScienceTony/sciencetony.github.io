@@ -533,7 +533,7 @@ slideimages3[0].src = "images/Church/320/Angel.jpeg";
 slideimages3[1] = new Image();
 slideimages3[1].src = "images/Church/BBQ.jpg";
 slideimages3[2] = new Image();
-slideimages3[2].src = "images/Church/320/Xmas.jpg";
+slideimages3[2].src = "images/Church/320/Xmas.jpeg";
 
 var step3 = 0;
 function slideshow3() {
