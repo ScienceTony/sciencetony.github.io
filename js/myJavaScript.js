@@ -531,7 +531,7 @@ var slideimages3 = [];
 slideimages3[0] = new Image();
 slideimages3[0].src = "images/Church/320/Angel.jpeg";
 slideimages3[1] = new Image();
-slideimages3[1].src = "images/Church/BBQ.jpg";
+slideimages3[1].src = "images/Church/DSCF2377.jpg";
 slideimages3[2] = new Image();
 slideimages3[2].src = "images/Church/320/Xmas.jpeg";
 
