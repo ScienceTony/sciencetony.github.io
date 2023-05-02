@@ -487,11 +487,11 @@ function menuFunction2() {
 // This is for the slide show in index
 var slideimages = [];
 slideimages[0] = new Image();
-slideimages[0].src = "images/CRS2.jpg";
+slideimages[0].src = "images/baking/UpPine.jpeg";
 slideimages[1] = new Image();
-slideimages[1].src = "images/CRH.jpg";
+slideimages[1].src = "images/baking/Stolen.jpeg";
 slideimages[2] = new Image();
-slideimages[2].src = "images/BHF.jpg";
+slideimages[2].src = "images/baking/BranCake.jpeg";
 
 var step = 0;
 function slideshow1() {
